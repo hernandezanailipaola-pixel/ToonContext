@@ -1,54 +1,126 @@
 /* ==========================================================================
-   ToonInput 2.0 - Hyper-Modern UI & Luminescent Glassmorphism
-   Awwwards-Level Design & Microinteractions Framework
+   ToonInput 2.0 - Kuro Kiss Design System & Microinteractions Framework
+   Aesthetic: Kuro Obsidian (#09090b) + Vivid Kiss (#ff2e7e / #e11d48)
+   High Contrast Typography, WCAG AAA Readability & Full Mobile Responsiveness
    ========================================================================== */
 
 :root {
-  --primary: #4f46e5;
-  --primary-light: #6366f1;
-  --primary-glow: rgba(79, 70, 229, 0.35);
-  --emerald: #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.35);
-  --amber: #f59e0b;
-  --rose: #f43f5e;
-  --purple: #8b5cf6;
-  --cyan: #06b6d4;
+  /* Kuro Kiss Brand Tokens */
+  --kuro-pitch: #09090b;
+  --kuro-surface: #121019;
+  --kuro-card: #181524;
+  --kuro-elevated: #241e34;
+  --kuro-border: rgba(255, 46, 126, 0.22);
+  --kuro-border-subtle: rgba(255, 255, 255, 0.12);
 
-  /* Light Theme Palette (Frosted Serenity Day) */
-  --bg-base: #f8fafc;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --glass-surface: rgba(255, 255, 255, 0.82);
-  --glass-surface-elevated: rgba(255, 255, 255, 0.94);
-  --glass-border: rgba(226, 232, 240, 0.85);
-  --glass-border-glow: rgba(99, 102, 241, 0.25);
-  --glass-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(226, 232, 240, 0.8);
-  --glass-shadow-hover: 0 30px 60px -15px rgba(79, 70, 229, 0.16), 0 0 20px rgba(99, 102, 241, 0.2);
-  --dock-bg: rgba(255, 255, 255, 0.92);
+  --kiss-50: #fff1f2;
+  --kiss-100: #ffe4e6;
+  --kiss-200: #fecdd3;
+  --kiss-300: #fda4af;
+  --kiss-400: #fb7185;
+  --kiss-500: #ff2e7e; /* Neon Hot Kiss */
+  --kiss-600: #e11d48; /* Crimson Kiss Primary */
+  --kiss-700: #be123c; /* Deep Velvet */
+  --kiss-800: #9f1239;
+  --kiss-900: #881337;
+  --kiss-glow: rgba(255, 46, 126, 0.38);
+
+  --accent-violet: #a855f7;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+
+  /* LIGHT MODE (Frosted Kuro Kiss Day) - High Contrast & Large Readability */
+  --bg-base: #faf7f9;
+  --text-main: #09090b;       /* Pure Kuro Black - Extreme Legibility */
+  --text-secondary: #1e2430;  /* Rich Dark Charcoal */
+  --text-muted: #475569;      /* Clear Readable Slate - Never faint! */
+  --text-faint: #64748b;
+  --text-accent: #e11d48;     /* Crimson Kiss */
+
+  --glass-surface: rgba(255, 255, 255, 0.92);
+  --glass-surface-elevated: #ffffff;
+  --glass-border: rgba(225, 29, 72, 0.16);
+  --glass-border-glow: rgba(255, 46, 126, 0.35);
+  --glass-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.08), 0 0 1px 1px rgba(225, 29, 72, 0.12);
+  --glass-shadow-hover: 0 20px 45px -10px rgba(225, 29, 72, 0.22), 0 0 25px rgba(255, 46, 126, 0.25);
+  --dock-bg: rgba(255, 255, 255, 0.94);
+  --card-bg-subtle: #ffffff;
 }
 
 [data-theme="dark"] {
-  --bg-base: #090d16;
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --glass-surface: rgba(15, 23, 42, 0.72);
-  --glass-surface-elevated: rgba(22, 33, 56, 0.88);
-  --glass-border: rgba(51, 65, 85, 0.65);
-  --glass-border-glow: rgba(99, 102, 241, 0.45);
-  --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(51, 65, 85, 0.6);
-  --glass-shadow-hover: 0 30px 60px -15px rgba(99, 102, 241, 0.35), 0 0 25px rgba(99, 102, 241, 0.3);
-  --dock-bg: rgba(15, 23, 42, 0.88);
+  /* DARK MODE (Kuro Obsidian + Neon Kiss) - Crisp Pure Whites & Luminous Accents */
+  --bg-base: #09090b;         /* Deepest Kuro Obsidian */
+  --text-main: #ffffff;       /* Pure Crisp White - 100% Contrast */
+  --text-secondary: #f3f4f6;  /* Bright Silver White */
+  --text-muted: #cbd5e1;      /* Clear Silver Slate - Never unreadable! */
+  --text-faint: #94a3b8;
+  --text-accent: #ff2e7e;     /* Neon Kiss Pink */
+
+  --glass-surface: rgba(18, 16, 26, 0.88);
+  --glass-surface-elevated: rgba(28, 24, 38, 0.96);
+  --glass-border: rgba(255, 46, 126, 0.24);
+  --glass-border-glow: rgba(255, 46, 126, 0.5);
+  --glass-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 46, 126, 0.2);
+  --glass-shadow-hover: 0 25px 55px -10px rgba(255, 46, 126, 0.35), 0 0 30px rgba(255, 46, 126, 0.3);
+  --dock-bg: rgba(14, 12, 20, 0.94);
+  --card-bg-subtle: rgba(26, 22, 36, 0.9);
+}
+
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY & LEGIBILITY BOOST (NO MORE TINY UNREADABLE TEXT)
+   ========================================================================== */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem; /* ~15.2px standard body */
+  line-height: 1.6;
   background-color: var(--bg-base);
   color: var(--text-main);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
   overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-/* Ambient Moving Aurora Canvas */
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+/* Enhanced Readability Rule: Bump small text universally */
+p {
+  font-size: 0.925rem; /* ~14.8px */
+  line-height: 1.65;
+}
+
+/* Force legible font sizes on badges, buttons & labels */
+.text-xs,
+[class*="text-[10px]"],
+[class*="text-[11px]"] {
+  font-size: 0.8125rem !important; /* Minimum 13px */
+  line-height: 1.4 !important;
+}
+
+.text-sm {
+  font-size: 0.9375rem !important; /* ~15px */
+}
+
+.text-base {
+  font-size: 1.05rem !important; /* ~16.8px */
+}
+
+/* ==========================================================================
+   AMBIENT KURO KISS AURORA CANVAS
+   ========================================================================== */
 .ambient-aurora {
   position: fixed;
   inset: 0;
@@ -60,74 +132,86 @@ body {
 .aurora-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.45;
-  animation: orb-float 18s ease-in-out infinite alternate;
+  filter: blur(90px);
+  opacity: 0.38;
+  animation: orb-float 20s ease-in-out infinite alternate;
 }
 
 [data-theme="dark"] .aurora-orb {
   opacity: 0.28;
 }
 
+/* Orb 1: Hot Kiss Neon Pink */
 .aurora-orb.orb-1 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #6366f1 0%, rgba(99, 102, 241, 0) 70%);
-  top: -100px;
-  left: -100px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, #ff2e7e 0%, rgba(255, 46, 126, 0) 70%);
+  top: -80px;
+  left: -80px;
 }
 
+/* Orb 2: Deep Crimson / Violet Kuro */
 .aurora-orb.orb-2 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, #10b981 0%, rgba(16, 185, 129, 0) 70%);
-  top: 30%;
-  right: -150px;
-  animation-duration: 22s;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, #a855f7 0%, rgba(168, 85, 247, 0) 70%);
+  top: 35%;
+  right: -120px;
+  animation-duration: 24s;
 }
 
+/* Orb 3: Velvet Ruby */
 .aurora-orb.orb-3 {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, #f43f5e 0%, rgba(244, 63, 94, 0) 70%);
-  bottom: -100px;
-  left: 20%;
-  animation-duration: 20s;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, #e11d48 0%, rgba(225, 29, 72, 0) 70%);
+  bottom: -80px;
+  left: 25%;
+  animation-duration: 22s;
 }
 
 @keyframes orb-float {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(60px, 40px) scale(1.1); }
-  100% { transform: translate(-40px, 60px) scale(0.95); }
+  50% { transform: translate(50px, 35px) scale(1.12); }
+  100% { transform: translate(-35px, 50px) scale(0.96); }
 }
 
-/* Glassmorphism Classes */
+/* Top Glow Line in Kuro Kiss */
+.top-glow-line {
+  background: linear-gradient(90deg, #ff2e7e 0%, #a855f7 50%, #e11d48 100%);
+}
+
+/* ==========================================================================
+   GLASSMORPHISM & KURO KISS SURFACES
+   ========================================================================== */
 .glass-panel {
   background: var(--glass-surface);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  color: var(--text-main);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-panel-elevated {
   background: var(--glass-surface-elevated);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  color: var(--text-main);
 }
 
 .glass-dock {
   background: var(--dock-bg);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.15);
 }
 
-/* Card 3D Magnetic Lift & Glow */
+/* Card 3D Lift & Kuro Kiss Glow */
 .card-interactive {
   position: relative;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -139,25 +223,47 @@ body {
   border-color: var(--glass-border-glow);
 }
 
-/* Weekly Pack Spotlight Banner */
+/* Gradients */
+.text-gradient-kiss {
+  background: linear-gradient(135deg, #ff2e7e 0%, #e11d48 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-kuro {
+  background: linear-gradient(135deg, #09090b 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .text-gradient-kuro {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   WEEKLY SPOTLIGHT & PHRASE WIDGET IN KURO KISS
+   ========================================================================== */
 .weekly-spotlight-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(16, 185, 129, 0.06) 50%, rgba(244, 63, 94, 0.05) 100%);
-  border: 1.5px solid rgba(99, 102, 241, 0.3);
-  box-shadow: 0 20px 45px -12px rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, rgba(255, 46, 126, 0.08) 0%, rgba(168, 85, 247, 0.06) 50%, rgba(225, 29, 72, 0.06) 100%);
+  border: 1.5px solid rgba(255, 46, 126, 0.28);
+  box-shadow: 0 20px 45px -12px rgba(225, 29, 72, 0.18);
   border-radius: 2rem;
   overflow: hidden;
 }
 
 [data-theme="dark"] .weekly-spotlight-card {
-  background: linear-gradient(135deg, rgba(30, 27, 75, 0.6) 0%, rgba(6, 78, 59, 0.4) 50%, rgba(136, 19, 55, 0.3) 100%);
-  border-color: rgba(99, 102, 241, 0.45);
+  background: linear-gradient(135deg, rgba(28, 20, 36, 0.95) 0%, rgba(36, 18, 38, 0.9) 50%, rgba(20, 16, 28, 0.95) 100%);
+  border-color: rgba(255, 46, 126, 0.42);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 46, 126, 0.15);
 }
 
 .weekly-badge-glow {
-  background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+  background: linear-gradient(135deg, #ff2e7e 0%, #e11d48 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(255, 46, 126, 0.45);
 }
 
 /* Audio Wave Visualizer Animation */
@@ -165,7 +271,7 @@ body {
   display: inline-flex;
   align-items: flex-end;
   gap: 2.5px;
-  height: 14px;
+  height: 16px;
 }
 
 .audio-wave-bars span {
@@ -176,9 +282,9 @@ body {
 }
 
 .audio-wave-bars span:nth-child(1) { height: 6px; animation-delay: 0.1s; }
-.audio-wave-bars span:nth-child(2) { height: 12px; animation-delay: 0.3s; }
-.audio-wave-bars span:nth-child(3) { height: 8px; animation-delay: 0.15s; }
-.audio-wave-bars span:nth-child(4) { height: 14px; animation-delay: 0.4s; }
+.audio-wave-bars span:nth-child(2) { height: 14px; animation-delay: 0.3s; }
+.audio-wave-bars span:nth-child(3) { height: 9px; animation-delay: 0.15s; }
+.audio-wave-bars span:nth-child(4) { height: 16px; animation-delay: 0.4s; }
 
 @keyframes wave-pulse {
   0% { transform: scaleY(0.4); }
@@ -190,27 +296,240 @@ body {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   user-select: none;
+  font-size: 0.875rem !important;
+  min-height: 84px;
 }
+
 .match-card:hover {
   transform: translateY(-4px);
-  border-color: #6366f1;
+  border-color: #ff2e7e !important;
 }
+
 .match-card.selected {
-  border-color: #4f46e5;
-  background-color: rgba(99, 102, 241, 0.15);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  border-color: #ff2e7e !important;
+  background-color: rgba(255, 46, 126, 0.16) !important;
+  box-shadow: 0 0 0 3px rgba(255, 46, 126, 0.4) !important;
   transform: scale(1.03);
 }
+
 .match-card.matched {
-  border-color: #10b981;
-  background-color: rgba(16, 185, 129, 0.18);
-  color: #059669;
+  border-color: #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.18) !important;
+  color: #059669 !important;
   opacity: 0.65;
   pointer-events: none;
   transform: scale(0.97);
 }
 
-/* Custom Scrollbar */
+/* ==========================================================================
+   COMPREHENSIVE DARK MODE OVERRIDES (FIXES UNREADABLE TEXT IN DARK THEME)
+   ========================================================================== */
+[data-theme="dark"] body {
+  background-color: #09090b !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-slate-900,
+[data-theme="dark"] .text-slate-800,
+[data-theme="dark"] .text-gray-900,
+[data-theme="dark"] .text-gray-800,
+[data-theme="dark"] .text-neutral-900,
+[data-theme="dark"] .text-zinc-900 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-slate-700,
+[data-theme="dark"] .text-slate-600,
+[data-theme="dark"] .text-gray-700,
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-neutral-700,
+[data-theme="dark"] .text-zinc-700 {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .text-slate-500,
+[data-theme="dark"] .text-slate-400,
+[data-theme="dark"] .text-gray-500,
+[data-theme="dark"] .text-gray-400,
+[data-theme="dark"] .text-neutral-500 {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white\/90,
+[data-theme="dark"] .bg-white\/80,
+[data-theme="dark"] .bg-white\/70 {
+  background-color: rgba(22, 18, 30, 0.94) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 46, 126, 0.22) !important;
+}
+
+[data-theme="dark"] .bg-slate-50,
+[data-theme="dark"] .bg-slate-100,
+[data-theme="dark"] .bg-slate-50\/80,
+[data-theme="dark"] .bg-slate-50\/90,
+[data-theme="dark"] .bg-slate-100\/90,
+[data-theme="dark"] .bg-slate-200 {
+  background-color: rgba(30, 24, 42, 0.88) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 46, 126, 0.22) !important;
+}
+
+[data-theme="dark"] .border-slate-100,
+[data-theme="dark"] .border-slate-200,
+[data-theme="dark"] .border-slate-200\/80,
+[data-theme="dark"] .border-slate-200\/90 {
+  border-color: rgba(255, 46, 126, 0.22) !important;
+}
+
+/* Modals in Dark Mode */
+[data-theme="dark"] #catalog-modal > div,
+[data-theme="dark"] #custom-video-modal > div {
+  background-color: #121019 !important;
+  border-color: rgba(255, 46, 126, 0.35) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] #catalog-modal .bg-slate-50,
+[data-theme="dark"] #catalog-modal .bg-slate-50\/80,
+[data-theme="dark"] #custom-video-modal .bg-slate-50 {
+  background-color: #1a1526 !important;
+  border-color: rgba(255, 46, 126, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* Form inputs & controls */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #161224 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 46, 126, 0.32) !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Mini-games Elements in Dark Mode */
+[data-theme="dark"] .match-card {
+  background-color: rgba(24, 19, 34, 0.95) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 46, 126, 0.25) !important;
+}
+
+[data-theme="dark"] .cloze-option,
+[data-theme="dark"] .scramble-token,
+[data-theme="dark"] .idiom-option,
+[data-theme="dark"] .audio-option {
+  background-color: rgba(24, 19, 34, 0.95) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 46, 126, 0.28) !important;
+}
+
+[data-theme="dark"] .cloze-option:hover,
+[data-theme="dark"] .scramble-token:hover,
+[data-theme="dark"] .idiom-option:hover,
+[data-theme="dark"] .audio-option:hover {
+  border-color: #ff2e7e !important;
+  background-color: rgba(255, 46, 126, 0.15) !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & TOUCH OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent horizontal cut-offs */
+  .max-w-7xl {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+
+  /* Increase spacing and touch targets on phone screens */
+  button, a {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Sticky Bottom Mobile Dock */
+  .mobile-bottom-dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 45;
+    background: var(--dock-bg);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Ensure main content doesn't get covered by bottom dock */
+  body {
+    padding-bottom: 5.5rem !important;
+  }
+
+  /* Full screen / Sheet Modals on mobile */
+  #catalog-modal,
+  #custom-video-modal {
+    padding: 0 !important;
+  }
+
+  #catalog-modal > div,
+  #custom-video-modal > div {
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  /* Horizontal Snap Carousels */
+  .mobile-snap-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .mobile-snap-carousel > * {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Mini-games 2 columns on mobile */
+  #match-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.6rem !important;
+  }
+
+  .match-card {
+    min-height: 78px !important;
+    padding: 0.6rem !important;
+    font-size: 0.825rem !important;
+  }
+}
+
+/* Touch Active Feedback */
+button:active, 
+.card-interactive:active {
+  transform: scale(0.975);
+}
+
+/* Custom Scrollbar in Kuro Kiss */
 ::-webkit-scrollbar {
   height: 8px;
   width: 8px;
@@ -219,36 +538,43 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.4);
+  background: rgba(255, 46, 126, 0.35);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.6);
+  background: rgba(255, 46, 126, 0.7);
 }
 
-/* Toast Notifications */
+/* Toast Notifications in Kuro Kiss */
 .toon-toast {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 5.5rem;
+  right: 1.5rem;
   z-index: 100;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.9rem 1.5rem;
-  background: rgba(15, 23, 42, 0.92);
+  background: #121019;
   color: #ffffff;
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 46, 126, 0.4);
   border-radius: 9999px;
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.4);
-  font-size: 0.85rem;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 46, 126, 0.35);
+  font-size: 0.875rem;
   font-weight: 700;
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
+
+@media (min-width: 769px) {
+  .toon-toast {
+    bottom: 2rem;
+  }
+}
+
 .toon-toast.show {
   transform: translateY(0);
   opacity: 1;

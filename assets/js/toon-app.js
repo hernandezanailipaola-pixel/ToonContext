@@ -182,11 +182,25 @@ async function loadAllDatasets() {
 function applyTheme(theme) {
   STATE.theme = theme;
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('toon_theme', theme);
-  const icon = document.getElementById('theme-toggle-icon');
-  if (icon) {
-    icon.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
   }
+  localStorage.setItem('toon_theme', theme);
+  document.querySelectorAll('.theme-toggle-icon').forEach(icon => {
+    icon.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+  });
+}
+
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-nav-menu');
+  if (menu) menu.classList.toggle('hidden');
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobile-nav-menu');
+  if (menu) menu.classList.add('hidden');
 }
 
 function toggleTheme() {
@@ -266,12 +280,18 @@ function switchTab(tabId) {
 
   document.querySelectorAll('[data-nav-tab]').forEach(el => {
     const isTarget = el.getAttribute('data-nav-tab') === tabId;
-    if (isTarget) {
-      el.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-      el.classList.remove('text-slate-600', 'hover:text-slate-900', 'hover:bg-white/80');
+    if (el.closest('.mobile-bottom-dock')) {
+      if (isTarget) {
+        el.className = 'flex flex-col items-center gap-1 text-rose-600 dark:text-pink-500 font-black text-xs py-1 px-2';
+      } else {
+        el.className = 'flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2';
+      }
     } else {
-      el.classList.remove('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-      el.classList.add('text-slate-600', 'hover:text-slate-900', 'hover:bg-white/80');
+      if (isTarget) {
+        el.className = 'px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 bg-rose-600 text-white shadow-md shadow-rose-600/30';
+      } else {
+        el.className = 'px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800';
+      }
     }
   });
 
@@ -337,15 +357,15 @@ function renderWeeklySpotlight() {
       <!-- Card Top Ribbon -->
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2">
-          <span class="px-3.5 py-1 rounded-full weekly-badge-glow text-xs font-mono font-black flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+          <span class="px-4 py-1.5 rounded-full weekly-badge-glow text-xs font-mono font-black flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
             <span>Pack Semanal #${STATE.activePackIndex + 1}: ${pack.theme}</span>
           </span>
-          <span class="text-xs font-mono text-slate-500 font-bold hidden sm:inline">Renovación automática cada lunes</span>
+          <span class="text-xs font-mono text-slate-600 dark:text-slate-300 font-bold hidden sm:inline">Renovación automática cada lunes</span>
         </div>
 
         <div class="flex items-center gap-2">
-          <button onclick="cycleWeeklyPack()" class="px-3 py-1 rounded-xl bg-white/90 hover:bg-white text-indigo-700 text-xs font-bold border border-indigo-200 shadow-2xs transition flex items-center gap-1">
+          <button onclick="cycleWeeklyPack()" class="px-4 py-2 rounded-xl bg-white/95 dark:bg-zinc-800 hover:bg-white text-rose-700 dark:text-rose-300 text-xs font-bold border border-rose-200 dark:border-rose-800 shadow-2xs transition flex items-center gap-1.5 active:scale-95">
             <span>🎲 Explorar Siguiente Semana</span>
           </button>
         </div>
@@ -356,23 +376,23 @@ function renderWeeklySpotlight() {
         
         <!-- Left: Featured Short Card -->
         <div class="lg:col-span-5 space-y-3">
-          <span class="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider block">Cortometraje Destacado de la Semana:</span>
+          <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider block">Cortometraje Destacado de la Semana:</span>
           
-          <div class="p-4 rounded-2xl bg-white/90 border border-indigo-200/80 shadow-sm space-y-3 group cursor-pointer hover:border-indigo-400 transition" onclick="openVideoModal(${featuredMovie.id})">
-            <div class="relative h-44 rounded-xl overflow-hidden bg-slate-900">
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/95 dark:bg-zinc-900 border border-rose-200/80 dark:border-rose-900/40 shadow-sm space-y-3.5 group cursor-pointer hover:border-rose-400 transition" onclick="openVideoModal(${featuredMovie.id})">
+            <div class="relative h-48 sm:h-52 rounded-xl overflow-hidden bg-slate-900">
               <img src="${featuredMovie.thumbnail}" alt="${featuredMovie.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-2xl bg-indigo-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                  ▶
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-600 to-pink-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                  <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
-              <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-lg bg-black/60 text-white font-mono text-[10px] font-bold">⏱️ ${featuredMovie.duration}</span>
-              <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-lg bg-indigo-600 text-white font-mono text-[10px] font-black">${featuredMovie.cefr || 'A2'}</span>
+              <span class="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-white font-mono text-xs font-bold">⏱️ ${featuredMovie.duration}</span>
+              <span class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-rose-600 text-white font-mono text-xs font-black">${featuredMovie.cefr || 'A2'}</span>
             </div>
             <div>
-              <h4 class="font-heading font-black text-base text-slate-900 leading-snug group-hover:text-indigo-600 transition">${featuredMovie.title}</h4>
-              <p class="text-xs text-slate-600 line-clamp-2 mt-1">${featuredMovie.description}</p>
+              <h4 class="font-heading font-black text-lg text-slate-900 dark:text-white leading-snug group-hover:text-rose-600 dark:group-hover:text-pink-400 transition">${featuredMovie.title}</h4>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 line-clamp-2 mt-1 font-medium">${featuredMovie.description}</p>
             </div>
           </div>
         </div>
@@ -380,24 +400,24 @@ function renderWeeklySpotlight() {
         <!-- Right: 5 Weekly Spoken Phrases -->
         <div class="lg:col-span-7 space-y-3">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">5 Frases &amp; Modismos Clave de Esta Semana:</span>
-            <span class="text-[10px] text-indigo-600 font-bold">Click 🔊 para escuchar</span>
+            <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">5 Frases &amp; Modismos Clave de Esta Semana:</span>
+            <span class="text-xs text-rose-600 dark:text-pink-400 font-bold">Click 🔊 para escuchar</span>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             ${pack.phrases.map(p => `
-              <div class="p-3 rounded-2xl bg-white/90 border border-slate-200 hover:border-indigo-300 transition flex items-start justify-between gap-2 shadow-2xs">
+              <div class="p-3.5 rounded-2xl bg-white/95 dark:bg-zinc-900 border border-slate-200 dark:border-rose-900/40 hover:border-rose-300 transition flex items-start justify-between gap-3 shadow-2xs">
                 <div class="space-y-1">
-                  <div class="flex items-center gap-1.5">
-                    <span>${p.icon}</span>
-                    <strong class="font-heading font-black text-xs text-slate-900">${p.phrase}</strong>
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg">${p.icon}</span>
+                    <strong class="font-heading font-black text-sm text-slate-900 dark:text-white">${p.phrase}</strong>
                   </div>
-                  <span class="text-[10px] font-mono text-slate-400 block">${p.phonetic}</span>
-                  <p class="text-[11px] text-slate-600 leading-tight font-medium">${p.meaning_es}</p>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block">${p.phonetic}</span>
+                  <p class="text-xs text-slate-700 dark:text-slate-200 leading-tight font-medium">${p.meaning_es}</p>
                 </div>
                 <button 
-                  onclick="speakEnglish('${p.phrase.replace(/'/g, "\\'")}')" 
-                  class="w-7 h-7 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white flex items-center justify-center transition shrink-0" 
+                  onclick="speakEnglish('${p.phrase.replace(/'/g, "\'")}')" 
+                  class="w-8 h-8 rounded-xl bg-rose-50 dark:bg-zinc-800 hover:bg-rose-600 dark:hover:bg-rose-600 text-rose-700 dark:text-rose-300 hover:text-white flex items-center justify-center transition shrink-0 shadow-2xs" 
                   title="Escuchar pronunciación nativa">
                   🔊
                 </button>
@@ -406,12 +426,12 @@ function renderWeeklySpotlight() {
           </div>
 
           <!-- Weekly Challenge Bar -->
-          <div class="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200/90 flex items-center justify-between gap-3 text-xs">
+          <div class="p-4 rounded-2xl bg-rose-50/90 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900/50 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-xs">
             <div>
-              <strong class="text-emerald-900">🎯 Reto Semanal:</strong>
-              <span class="text-emerald-800 ml-1 font-medium">${pack.challenge_desc}</span>
+              <strong class="text-rose-950 dark:text-rose-100 text-sm">🎯 Reto Semanal:</strong>
+              <span class="text-rose-900 dark:text-rose-200 ml-1 font-semibold">${pack.challenge_desc}</span>
             </div>
-            <button onclick="logImmersionMinutes(packTarget = ${pack.target_minutes}, '${pack.theme}')" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shrink-0 transition shadow-xs">
+            <button onclick="logImmersionMinutes(packTarget = ${pack.target_minutes}, '${pack.theme}')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 text-white text-xs font-bold shrink-0 transition shadow-xs active:scale-95">
               Completar Reto (+${pack.target_minutes}m)
             </button>
           </div>
@@ -470,32 +490,32 @@ function renderDailyPhraseWidget() {
 
   const p = STATE.currentDailyPhrase;
   container.innerHTML = `
-    <div class="glass-panel p-5 rounded-3xl space-y-3 relative overflow-hidden">
+    <div class="glass-panel p-6 rounded-3xl space-y-4 relative overflow-hidden">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
-          <span class="text-[11px] font-mono font-bold text-amber-600 uppercase tracking-wider">Frase del Día</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+          <span class="text-xs font-mono font-bold text-rose-600 dark:text-pink-400 uppercase tracking-wider">Frase del Día • Daily Idiom</span>
         </div>
-        <button onclick="generateRandomDailyPhrase()" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+        <button onclick="generateRandomDailyPhrase()" class="text-xs font-bold text-rose-600 dark:text-pink-400 hover:text-rose-800 dark:hover:text-pink-300 flex items-center gap-1.5 p-1 transition">
           <span>✨ Generar Otra</span>
         </button>
       </div>
 
       <div class="flex items-center justify-between gap-3">
         <div>
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">${p.icon}</span>
-            <h4 class="font-heading font-black text-xl text-slate-900 leading-tight">"${p.phrase}"</h4>
-            <button onclick="speakEnglish('${p.phrase.replace(/'/g, "\\'")}')" class="w-8 h-8 rounded-xl bg-amber-100 hover:bg-amber-600 text-amber-800 hover:text-white flex items-center justify-center transition shadow-2xs" title="Escuchar pronunciación">
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <span class="text-3xl">${p.icon}</span>
+            <h4 class="font-heading font-black text-2xl text-slate-900 dark:text-white leading-tight">"${p.phrase}"</h4>
+            <button onclick="speakEnglish('${p.phrase.replace(/'/g, "\'")}')" class="w-10 h-10 rounded-2xl bg-rose-50 dark:bg-zinc-800 hover:bg-rose-600 text-rose-700 dark:text-rose-300 hover:text-white flex items-center justify-center transition shadow-2xs text-lg" title="Escuchar pronunciación">
               🔊
             </button>
           </div>
-          <span class="text-xs font-mono text-slate-400 font-bold block mt-0.5">${p.phonetic}</span>
+          <span class="text-xs font-mono text-slate-500 dark:text-slate-400 font-bold block mt-1">${p.phonetic}</span>
         </div>
       </div>
 
-      <p class="text-xs text-slate-600 font-medium">
-        <strong>Significado:</strong> ${p.meaning_es} <span class="text-slate-400">(${p.meaning})</span>
+      <p class="text-sm text-slate-700 dark:text-slate-200 font-semibold leading-relaxed">
+        <strong class="text-slate-900 dark:text-white">Significado:</strong> ${p.meaning_es} <span class="text-slate-500 dark:text-slate-400 font-normal">(${p.meaning})</span>
       </p>
     </div>
   `;
@@ -600,12 +620,12 @@ function renderCatalog() {
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div class="col-span-full py-16 text-center space-y-4">
-        <div class="w-16 h-16 mx-auto rounded-3xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold">
+        <div class="w-16 h-16 mx-auto rounded-3xl bg-rose-50 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-2xl font-bold">
           🔍
         </div>
-        <h3 class="text-xl font-heading font-black text-slate-800">No hay cortometrajes que coincidan con la búsqueda</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Prueba limpiando los términos o agregando tu propio video con el botón '+ Agregar Video'.</p>
-        <button onclick="clearCatalogFilters()" class="px-5 py-2.5 rounded-2xl bg-indigo-600 text-white text-xs font-bold shadow-md hover:bg-indigo-700 transition">
+        <h3 class="text-xl font-heading font-black text-slate-900 dark:text-white">No hay cortometrajes que coincidan con la búsqueda</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto">Prueba limpiando los términos o agregando tu propio video con el botón '+ Agregar Video'.</p>
+        <button onclick="clearCatalogFilters()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 text-white text-xs font-bold shadow-md transition">
           Restablecer Filtros
         </button>
       </div>
@@ -615,23 +635,23 @@ function renderCatalog() {
 
   grid.innerHTML = filtered.map(movie => {
     const isWatched = STATE.tracker.watchedIds.includes(movie.id);
-    const levelBadgeClass = movie.level === 'Beginner' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
-                            movie.level === 'Intermediate' ? 'bg-indigo-50 text-indigo-700 border-indigo-200' :
-                            'bg-purple-50 text-purple-700 border-purple-200';
+    const levelBadgeClass = movie.level === 'Beginner' ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-200 border-emerald-300 dark:border-emerald-700' :
+                            movie.level === 'Intermediate' ? 'bg-rose-50 dark:bg-rose-950/80 text-rose-800 dark:text-rose-200 border-rose-300 dark:border-rose-700' :
+                            'bg-purple-50 dark:bg-purple-950/80 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700';
 
     const mainVocab = movie.vocabulary && movie.vocabulary[0] ? movie.vocabulary[0].word : '';
 
     return `
-      <div class="glass-panel rounded-3xl overflow-hidden card-interactive flex flex-col justify-between group relative">
+      <div class="glass-panel rounded-3xl overflow-hidden card-interactive flex flex-col justify-between group relative bg-white dark:bg-zinc-900 border border-slate-200 dark:border-rose-900/40">
         ${isWatched ? `
-          <div class="absolute top-3 left-3 z-20 px-3 py-1 rounded-full bg-emerald-600/95 backdrop-blur-md text-white text-[11px] font-mono font-bold flex items-center gap-1.5 shadow-md">
+          <div class="absolute top-3 left-3 z-20 px-3 py-1 rounded-full bg-emerald-600/95 backdrop-blur-md text-white text-xs font-mono font-bold flex items-center gap-1.5 shadow-md">
             <span>✓</span>
             <span>Adquirido</span>
           </div>
         ` : ''}
 
         <!-- Media Thumbnail -->
-        <div class="relative h-52 overflow-hidden bg-slate-900 cursor-pointer" onclick="openVideoModal(${movie.id})">
+        <div class="relative h-48 sm:h-52 overflow-hidden bg-slate-900 cursor-pointer" onclick="openVideoModal(${movie.id})">
           <img 
             src="${movie.thumbnail}" 
             alt="${movie.title}" 
@@ -643,14 +663,14 @@ function renderCatalog() {
           
           <!-- Play Overlay Icon -->
           <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="w-14 h-14 rounded-2xl bg-indigo-600/95 text-white flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-600 to-pink-600 text-white flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
               <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
 
           <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
-            <span class="px-2.5 py-1 rounded-xl bg-black/60 backdrop-blur-md font-mono font-bold">⏱️ ${movie.duration}</span>
-            <span class="px-2.5 py-1 rounded-xl bg-indigo-600/90 backdrop-blur-md font-mono font-black">${movie.cefr || movie.level}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-black/70 backdrop-blur-md font-mono font-bold">⏱️ ${movie.duration}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-rose-600/95 backdrop-blur-md font-mono font-black">${movie.cefr || movie.level}</span>
           </div>
         </div>
 
@@ -658,29 +678,29 @@ function renderCatalog() {
         <div class="p-5 sm:p-6 space-y-3.5 flex-1 flex flex-col justify-between">
           <div class="space-y-2">
             <div class="flex items-center justify-between gap-2">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black border ${levelBadgeClass}">
+              <span class="px-3 py-0.5 rounded-full text-xs font-mono font-black border ${levelBadgeClass}">
                 ${movie.level}
               </span>
-              <span class="text-[11px] font-mono text-slate-400 font-bold">${movie.studio || movie.category || 'Animación'}</span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400 font-bold">${movie.studio || movie.category || 'Animación'}</span>
             </div>
 
-            <h3 class="font-heading text-lg font-black text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug">
+            <h3 class="font-heading text-lg font-black text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-pink-400 transition-colors leading-snug">
               ${movie.title}
             </h3>
             
-            <p class="text-xs text-slate-600 leading-relaxed font-medium line-clamp-3">
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-semibold line-clamp-3">
               ${movie.description}
             </p>
           </div>
 
           <!-- Quick Audio Pronunciation Preview -->
           ${mainVocab ? `
-            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between text-xs">
-              <span class="text-[11px] text-slate-500 font-mono">Palabra clave: <strong class="text-indigo-700">${mainVocab}</strong></span>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-zinc-800/80 border border-slate-200/80 dark:border-rose-900/40 flex items-center justify-between text-xs">
+              <span class="text-xs text-slate-600 dark:text-slate-300 font-mono">Palabra clave: <strong class="text-rose-600 dark:text-pink-400 font-bold">${mainVocab}</strong></span>
               <button 
                 type="button" 
-                onclick="event.stopPropagation(); speakEnglish('${mainVocab.replace(/'/g, "\\'")}')" 
-                class="w-6 h-6 rounded-lg bg-indigo-100 hover:bg-indigo-600 text-indigo-700 hover:text-white flex items-center justify-center transition" 
+                onclick="event.stopPropagation(); speakEnglish('${mainVocab.replace(/'/g, "\'")}')" 
+                class="w-7 h-7 rounded-lg bg-rose-100 dark:bg-zinc-700 hover:bg-rose-600 text-rose-700 dark:text-rose-300 hover:text-white flex items-center justify-center transition shadow-2xs" 
                 title="Escuchar pronunciación">
                 🔊
               </button>
@@ -688,22 +708,22 @@ function renderCatalog() {
           ` : ''}
 
           <!-- Tags & Action Button -->
-          <div class="pt-3 border-t border-slate-100 space-y-2.5">
+          <div class="pt-3 border-t border-slate-100 dark:border-zinc-800 space-y-2.5">
             <div class="flex items-center justify-between gap-2">
               <button 
                 type="button" 
                 onclick="openVideoModal(${movie.id})" 
-                class="flex-1 py-2.5 px-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:scale-98 text-white text-xs font-bold shadow-md shadow-indigo-600/25 flex items-center justify-center gap-2 transition-all">
+                class="flex-1 py-3 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 active:scale-98 text-white text-xs font-bold shadow-md shadow-rose-600/25 flex items-center justify-center gap-2 transition-all">
                 <span>Ver con Pistas i+1</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </button>
 
               <a 
                 href="${movie.direct_youtube_url || `https://www.youtube.com/watch?v=${movie.youtube_id}`}" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="p-2.5 rounded-2xl bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-600 border border-slate-200 transition" 
-                title="Ver directamente en YouTube (Enlace externo oficial)">
+                class="p-3 rounded-2xl bg-slate-100 dark:bg-zinc-800 hover:bg-red-50 dark:hover:bg-red-950 text-slate-700 dark:text-slate-200 hover:text-red-600 border border-slate-200 dark:border-rose-900/40 transition" 
+                title="Ver directamente en YouTube (Enlace oficial)">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
               </a>
             </div>
@@ -723,11 +743,9 @@ function clearCatalogFilters() {
   if (searchInput) searchInput.value = '';
   document.querySelectorAll('.level-btn').forEach((b, idx) => {
     if (idx === 0) {
-      b.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-      b.classList.remove('text-slate-700', 'hover:text-slate-900', 'hover:bg-white');
+      b.className = 'level-btn px-4 py-2.5 rounded-xl text-xs font-extrabold bg-rose-600 text-white shadow-md shadow-rose-600/30 transition-all shrink-0';
     } else {
-      b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-      b.classList.add('text-slate-700', 'hover:text-slate-900', 'hover:bg-white');
+      b.className = 'level-btn px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:bg-white dark:hover:bg-zinc-800 transition-all shrink-0';
     }
   });
   renderCatalog();
@@ -769,20 +787,20 @@ function openVideoModal(movieId) {
   if (vocabContainer) {
     if (movie.vocabulary && movie.vocabulary.length > 0) {
       vocabContainer.innerHTML = movie.vocabulary.map(v => `
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-1.5 hover:border-indigo-300 transition shadow-2xs">
-          <div class="flex items-center justify-between gap-1">
-            <span class="font-heading font-black text-sm text-indigo-700">${v.word}</span>
+        <div class="p-4 rounded-2xl bg-white dark:bg-zinc-800/90 border border-slate-200 dark:border-rose-900/40 flex flex-col justify-between space-y-2 hover:border-rose-400 transition shadow-2xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-heading font-black text-base text-rose-600 dark:text-pink-400">${v.word}</span>
             <button 
               type="button" 
               onclick="speakEnglish('${v.word.replace(/'/g, "\\'")}')" 
-              class="w-7 h-7 rounded-xl bg-indigo-100 hover:bg-indigo-600 text-indigo-700 hover:text-white flex items-center justify-center transition shadow-2xs" 
+              class="w-8 h-8 rounded-xl bg-rose-50 dark:bg-zinc-700 hover:bg-rose-600 text-rose-700 dark:text-rose-200 hover:text-white flex items-center justify-center transition shadow-2xs" 
               title="Escuchar pronunciación nativa">
               🔊
             </button>
           </div>
-          <span class="text-[10px] font-mono text-slate-400 font-bold">${v.phonetic || ''}</span>
-          <p class="text-[11px] text-slate-600 font-medium leading-snug">${v.definition}</p>
-          ${v.example ? `<p class="text-[10px] italic text-slate-500 border-l-2 border-indigo-200 pl-2">"${v.example}"</p>` : ''}
+          <span class="text-xs font-mono text-slate-500 dark:text-slate-400 font-bold">${v.phonetic || ''}</span>
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium leading-relaxed">${v.definition}</p>
+          ${v.example ? `<p class="text-xs italic text-slate-600 dark:text-slate-300 border-l-2 border-rose-300 dark:border-rose-700 pl-2">"${v.example}"</p>` : ''}
         </div>
       `).join('');
     } else {
@@ -794,22 +812,22 @@ function openVideoModal(movieId) {
   if (quizContainer) {
     if (movie.quiz && movie.quiz.length > 0) {
       quizContainer.innerHTML = movie.quiz.map((q, qIndex) => `
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-2xs">
-          <div class="flex items-start gap-2">
-            <span class="px-2 py-0.5 rounded-lg bg-indigo-100 text-indigo-800 font-mono text-[10px] font-black">Q${qIndex + 1}</span>
-            <h5 class="text-xs font-bold text-slate-800 leading-snug">${q.question}</h5>
+        <div class="p-5 rounded-2xl bg-white dark:bg-zinc-800/90 border border-slate-200 dark:border-rose-900/40 space-y-3 shadow-2xs">
+          <div class="flex items-start gap-2.5">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-200 font-mono text-xs font-black">Q${qIndex + 1}</span>
+            <h5 class="text-sm font-bold text-slate-900 dark:text-white leading-snug">${q.question}</h5>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="quiz-options-${qIndex}">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="quiz-options-${qIndex}">
             ${q.options.map((opt, optIndex) => `
               <button 
                 type="button" 
                 onclick="checkVideoQuizAnswer(${movie.id}, ${qIndex}, ${optIndex})" 
-                class="quiz-btn text-left p-2.5 rounded-xl border border-slate-200 text-xs font-medium text-slate-700 hover:bg-indigo-50 hover:border-indigo-300 transition">
+                class="quiz-btn text-left p-3 rounded-xl border border-slate-200 dark:border-rose-900/40 text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-rose-50 dark:hover:bg-zinc-700 hover:border-rose-300 transition">
                 ${opt}
               </button>
             `).join('')}
           </div>
-          <div id="quiz-feedback-${qIndex}" class="hidden text-[11px] font-medium p-2 rounded-xl"></div>
+          <div id="quiz-feedback-${qIndex}" class="hidden text-xs font-medium p-3 rounded-xl"></div>
         </div>
       `).join('');
     } else {
@@ -897,11 +915,9 @@ function switchMiniGame(gameKey) {
   document.querySelectorAll('.game-tab-btn').forEach(b => {
     const isTarget = b.getAttribute('data-game') === gameKey;
     if (isTarget) {
-      b.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
-      b.classList.remove('text-slate-600', 'hover:bg-white');
+      b.className = 'game-tab-btn px-4 py-2.5 rounded-2xl text-xs font-extrabold transition bg-rose-600 text-white shadow-md shadow-rose-600/30';
     } else {
-      b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
-      b.classList.add('text-slate-600', 'hover:bg-white');
+      b.className = 'game-tab-btn px-4 py-2.5 rounded-2xl text-xs font-extrabold transition text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-zinc-800';
     }
   });
 
@@ -946,13 +962,11 @@ function startWordMatchGame() {
 
   container.innerHTML = deck.map((card, idx) => `
     <div 
-      class="match-card p-4 rounded-2xl bg-white border-2 border-slate-200 text-xs font-semibold text-slate-800 shadow-sm flex items-center justify-center text-center min-h-[90px]"
+      class="match-card p-4 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-rose-900/40 text-sm font-bold text-slate-900 dark:text-white shadow-sm flex items-center justify-center text-center min-h-[85px] active:scale-95 transition"
       data-card-idx="${idx}"
-      data-pair-id="${card.id}"
-      data-card-type="${card.type}"
-      data-term="${card.termWord}"
-      onclick="handleMatchCardClick(this)">
-      ${card.text}
+      onclick="handleCardClick(${idx})"
+    >
+      <span>${card.text}</span>
     </div>
   `).join('');
 }
@@ -1034,34 +1048,34 @@ function renderDialogueClozeGame() {
 
   container.innerHTML = `
     <div class="max-w-2xl mx-auto space-y-6">
-      <div class="p-6 rounded-3xl bg-indigo-50/80 border border-indigo-200/90 shadow-sm space-y-4">
+      <div class="p-6 sm:p-7 rounded-3xl bg-rose-50/90 dark:bg-zinc-900 border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-4">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-indigo-600 text-white font-mono text-[11px] font-bold">
+          <span class="px-3.5 py-1.5 rounded-full bg-rose-600 text-white font-mono text-xs font-bold">
             🎬 ${current.scene}
           </span>
-          <span class="text-xs font-mono font-bold text-slate-500">Diálogo ${STATE.clozeIndex + 1} de ${items.length}</span>
+          <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">Diálogo ${STATE.clozeIndex + 1} de ${items.length}</span>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-inner space-y-2">
+        <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-zinc-800/90 border border-slate-200 dark:border-rose-900/40 shadow-inner space-y-2.5">
           <div class="flex items-center gap-2">
-            <span class="font-bold text-indigo-700 text-xs">${current.speaker}</span>
-            <button onclick="speakEnglish('${current.sentence.replace('_____', current.blank_answer).replace(/'/g, "\\'")}')" class="text-slate-400 hover:text-indigo-600" title="Escuchar frase">
+            <span class="font-bold text-rose-600 dark:text-pink-400 text-xs uppercase tracking-wider">${current.speaker}</span>
+            <button onclick="speakEnglish('${current.sentence.replace('_____', current.blank_answer).replace(/'/g, "\\'")}')" class="text-slate-400 hover:text-rose-600 dark:hover:text-pink-400 text-sm" title="Escuchar frase">
               🔊
             </button>
           </div>
-          <p class="font-heading text-lg sm:text-xl font-bold text-slate-900 leading-relaxed">
-            "${current.sentence.replace('_____', `<span id="cloze-blank-slot" class="inline-block px-4 py-1 mx-1 border-b-4 border-indigo-600 bg-indigo-100 text-indigo-900 font-black rounded-lg">_____</span>`)}"
+          <p class="font-heading text-xl sm:text-2xl font-bold text-slate-900 dark:text-white leading-relaxed">
+            "${current.sentence.replace('_____', `<span id="cloze-blank-slot" class="inline-block px-4 py-1 mx-1 border-b-4 border-rose-600 bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-200 font-black rounded-lg">_____</span>`)}"
           </p>
         </div>
 
-        <div class="flex items-center justify-between text-xs text-slate-600 pt-1">
+        <div class="flex flex-wrap items-center justify-between text-xs text-slate-700 dark:text-slate-200 pt-1 gap-2">
           <span>💡 <strong>Pista Contextual:</strong> ${current.hint}</span>
-          <button onclick="toggleClozeTranslation()" class="text-indigo-600 font-bold hover:underline">
+          <button onclick="toggleClozeTranslation()" class="text-rose-600 dark:text-pink-400 font-bold hover:underline">
             [Ver traducción]
           </button>
         </div>
 
-        <p id="cloze-trans-text" class="hidden text-xs text-slate-500 italic bg-white/70 p-3 rounded-xl border border-slate-200">
+        <p id="cloze-trans-text" class="hidden text-xs text-slate-600 dark:text-slate-300 italic bg-white/90 dark:bg-zinc-800 p-3.5 rounded-xl border border-slate-200 dark:border-rose-900/40">
           ${current.translation_es}
         </p>
       </div>
@@ -1071,7 +1085,7 @@ function renderDialogueClozeGame() {
           <button 
             type="button" 
             onclick="handleClozeSelect('${opt}', '${current.blank_answer}', this)" 
-            class="cloze-option p-4 rounded-2xl bg-white border-2 border-slate-200 font-heading font-black text-slate-800 text-sm hover:border-indigo-400 shadow-sm active:scale-95 transition">
+            class="cloze-option p-4.5 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-rose-900/40 font-heading font-black text-slate-900 dark:text-white text-base hover:border-rose-500 shadow-sm active:scale-95 transition">
             ${opt}
           </button>
         `).join('')}
@@ -1134,21 +1148,21 @@ function renderSentenceScrambleGame() {
 
   container.innerHTML = `
     <div class="max-w-2xl mx-auto space-y-6">
-      <div class="p-6 rounded-3xl bg-purple-50/80 border border-purple-200/90 shadow-sm space-y-4">
+      <div class="p-6 sm:p-7 rounded-3xl bg-rose-50/90 dark:bg-zinc-900 border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-4">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-purple-600 text-white font-mono text-[11px] font-bold">
+          <span class="px-3.5 py-1.5 rounded-full bg-rose-600 text-white font-mono text-xs font-bold">
             🧠 Laboratorio de Sintaxis Krashen (${current.level})
           </span>
-          <span class="text-xs font-mono font-bold text-slate-500">Oración ${STATE.scrambleIndex + 1} de ${items.length}</span>
+          <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">Oración ${STATE.scrambleIndex + 1} de ${items.length}</span>
         </div>
 
-        <p class="text-xs text-slate-600">Arma las palabras en el orden natural del inglés hablado:</p>
+        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium">Arma las palabras en el orden natural del inglés hablado:</p>
 
-        <div id="scramble-drop-area" class="min-h-[70px] p-4 rounded-2xl bg-white border-2 border-dashed border-purple-300 flex flex-wrap items-center gap-2 shadow-inner">
-          <span id="scramble-placeholder" class="text-xs text-slate-400 font-medium">Haz clic en las fichas de abajo para construir la frase...</span>
+        <div id="scramble-drop-area" class="min-h-[75px] p-4 rounded-2xl bg-white dark:bg-zinc-800 border-2 border-dashed border-rose-300 dark:border-rose-800 flex flex-wrap items-center gap-2 shadow-inner">
+          <span id="scramble-placeholder" class="text-xs text-slate-500 dark:text-slate-400 font-medium">Haz clic en las fichas de abajo para construir la frase...</span>
         </div>
 
-        <p class="text-[11px] text-slate-500 italic">Significado: "${current.translation_es}"</p>
+        <p class="text-xs text-slate-600 dark:text-slate-300 italic font-medium">Significado: "${current.translation_es}"</p>
       </div>
 
       <div id="scramble-tokens-pool" class="flex flex-wrap gap-2.5 justify-center">
@@ -1156,17 +1170,17 @@ function renderSentenceScrambleGame() {
           <button 
             type="button" 
             onclick="addScrambleToken(this, '${w}')" 
-            class="scramble-token px-4 py-2.5 rounded-2xl bg-white border border-slate-200 hover:border-purple-500 font-heading font-black text-slate-800 text-sm shadow-sm active:scale-95 transition">
+            class="scramble-token px-4 py-3 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-rose-900/40 hover:border-rose-500 font-heading font-black text-slate-900 dark:text-white text-base shadow-sm active:scale-95 transition">
             ${w}
           </button>
         `).join('')}
       </div>
 
       <div class="flex items-center justify-center gap-3">
-        <button onclick="resetScrambleSentence()" class="px-5 py-2.5 rounded-2xl bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold transition">
+        <button onclick="resetScrambleSentence()" class="px-5 py-3 rounded-2xl bg-slate-200 dark:bg-zinc-800 hover:bg-slate-300 dark:hover:bg-zinc-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition">
           ↺ Reiniciar
         </button>
-        <button onclick="checkScrambleSolution('${current.solution}')" class="px-6 py-2.5 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold shadow-md transition">
+        <button onclick="checkScrambleSolution('${current.solution}')" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white text-xs font-bold shadow-md transition active:scale-95">
           ✓ Verificar Oración
         </button>
       </div>
@@ -1185,7 +1199,7 @@ function addScrambleToken(btn, word) {
   STATE.scrambleCurrentTokens.push({ word, btnRef: btn });
 
   const tokenChip = document.createElement('span');
-  tokenChip.className = 'px-3.5 py-1.5 rounded-xl bg-purple-600 text-white font-heading font-black text-xs shadow-sm cursor-pointer hover:bg-purple-700';
+  tokenChip.className = 'px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 text-white font-heading font-black text-sm shadow-sm cursor-pointer hover:opacity-90 active:scale-95';
   tokenChip.textContent = word;
   tokenChip.onclick = () => {
     tokenChip.remove();
@@ -1245,36 +1259,36 @@ function renderIdiomDetectiveGame() {
 
   container.innerHTML = `
     <div class="max-w-xl mx-auto space-y-6">
-      <div class="p-6 rounded-3xl bg-amber-50/80 border border-amber-200/90 shadow-sm space-y-4 text-center">
+      <div class="p-6 sm:p-8 rounded-3xl bg-rose-50/90 dark:bg-zinc-900 border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-4 text-center">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-amber-600 text-white font-mono text-[11px] font-bold">
+          <span class="px-3.5 py-1.5 rounded-full bg-rose-600 text-white font-mono text-xs font-bold">
             🕵️ Detective de Modismos
           </span>
-          <span class="text-xs font-mono font-bold text-slate-500">Modismo ${STATE.idiomIndex + 1} de ${items.length}</span>
+          <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">Modismo ${STATE.idiomIndex + 1} de ${items.length}</span>
         </div>
 
         <div class="text-5xl py-2">${current.icon}</div>
 
-        <div class="flex items-center justify-center gap-2">
-          <h3 class="font-heading text-2xl font-black text-slate-900 tracking-tight">
+        <div class="flex items-center justify-center gap-3">
+          <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
             "${current.idiom}"
           </h3>
-          <button onclick="speakEnglish('${current.idiom.replace(/'/g, "\\'")}')" class="text-slate-400 hover:text-amber-600 text-lg" title="Pronunciar">
+          <button onclick="speakEnglish('${current.idiom.replace(/'/g, "\\'")}')" class="w-9 h-9 rounded-xl bg-rose-100 dark:bg-zinc-800 hover:bg-rose-600 text-rose-700 dark:text-rose-300 hover:text-white flex items-center justify-center transition shadow-2xs text-lg" title="Pronunciar">
             🔊
           </button>
         </div>
 
-        <div class="p-3.5 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600 italic">
+        <div class="p-4 rounded-2xl bg-white dark:bg-zinc-800 border border-slate-200 dark:border-rose-900/40 text-xs sm:text-sm text-slate-700 dark:text-slate-200 italic font-medium">
           🎬 En el cortometraje: "${current.cartoon_example}"
         </div>
       </div>
 
-      <div class="space-y-2.5">
+      <div class="space-y-3">
         ${current.options.map((opt, idx) => `
           <button 
             type="button" 
             onclick="handleIdiomChoice(${idx}, ${current.correctIndex}, this)" 
-            class="idiom-option w-full p-4 rounded-2xl bg-white border-2 border-slate-200 text-left font-semibold text-slate-800 text-xs hover:border-amber-400 shadow-sm transition">
+            class="idiom-option w-full p-4.5 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-rose-900/40 text-left font-bold text-slate-900 dark:text-white text-sm hover:border-rose-400 shadow-sm transition active:scale-98">
             ${opt}
           </button>
         `).join('')}
@@ -1329,26 +1343,26 @@ function renderAudioListeningGame() {
 
   container.innerHTML = `
     <div class="max-w-xl mx-auto space-y-6 text-center">
-      <div class="p-6 rounded-3xl bg-emerald-50/80 border border-emerald-200/90 shadow-sm space-y-5">
+      <div class="p-6 sm:p-8 rounded-3xl bg-rose-50/90 dark:bg-zinc-900 border border-rose-200 dark:border-rose-900/40 shadow-sm space-y-5">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-emerald-600 text-white font-mono text-[11px] font-bold">
+          <span class="px-3.5 py-1.5 rounded-full bg-rose-600 text-white font-mono text-xs font-bold">
             🎧 Laboratorio de Discriminación Auditiva
           </span>
-          <span class="text-xs font-mono font-bold text-slate-500">Par ${STATE.audioIndex + 1} de ${items.length}</span>
+          <span class="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">Par ${STATE.audioIndex + 1} de ${items.length}</span>
         </div>
 
         <div class="py-4 space-y-3">
           <button 
             type="button" 
             onclick="speakEnglish('${current.target_word}', 0.8)" 
-            class="w-20 h-20 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-3xl shadow-xl shadow-emerald-600/30 active:scale-95 transition mx-auto flex items-center justify-center cursor-pointer">
+            class="w-22 h-22 rounded-full bg-gradient-to-tr from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white text-3xl shadow-xl shadow-rose-600/30 active:scale-95 transition mx-auto flex items-center justify-center cursor-pointer">
             🔊
           </button>
-          <p class="text-xs font-bold text-slate-700">Haz clic en el altavoz para escuchar la palabra</p>
-          <p class="text-[11px] text-slate-500">Foco Fonético: ${current.vowel_sound}</p>
+          <p class="text-sm font-bold text-slate-900 dark:text-white">Haz clic en el altavoz para escuchar la palabra</p>
+          <p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Foco Fonético: ${current.vowel_sound}</p>
         </div>
 
-        <div class="p-3.5 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600">
+        <div class="p-4 rounded-2xl bg-white dark:bg-zinc-800 border border-slate-200 dark:border-rose-900/40 text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium">
           💡 Pista: "${current.hint}"
         </div>
       </div>
@@ -1358,7 +1372,7 @@ function renderAudioListeningGame() {
           <button 
             type="button" 
             onclick="handleAudioChoice('${opt}', '${current.target_word}', this)" 
-            class="audio-option p-6 rounded-2xl bg-white border-2 border-slate-200 font-heading font-black text-slate-900 text-xl hover:border-emerald-500 shadow-sm active:scale-95 transition">
+            class="audio-option p-6 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-slate-200 dark:border-rose-900/40 font-heading font-black text-slate-900 dark:text-white text-2xl hover:border-rose-500 shadow-sm active:scale-95 transition">
             ${opt}
           </button>
         `).join('')}
@@ -1410,32 +1424,32 @@ function renderSeriesHub() {
   if (!container || !STATE.series) return;
 
   container.innerHTML = STATE.series.map(s => `
-    <div class="glass-panel rounded-3xl overflow-hidden card-interactive flex flex-col justify-between group">
+    <div class="glass-panel rounded-3xl overflow-hidden card-interactive flex flex-col justify-between group bg-white dark:bg-zinc-900 border border-slate-200 dark:border-rose-900/40">
       <div class="relative h-60 overflow-hidden bg-slate-900">
         <img src="${s.cover}" alt="${s.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
         <div class="absolute bottom-3 left-3 right-3 text-white">
-          <span class="px-2.5 py-1 rounded-xl bg-indigo-600/90 text-[10px] font-mono font-bold">${s.cefr_level || 'B2'}</span>
-          <h3 class="font-heading text-xl font-black mt-1 leading-tight">${s.title}</h3>
+          <span class="px-3 py-1 rounded-xl bg-rose-600 text-xs font-mono font-bold">${s.cefr_level || 'B2'}</span>
+          <h3 class="font-heading text-xl font-black mt-1 leading-tight text-white">${s.title}</h3>
         </div>
       </div>
 
       <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
         <div class="space-y-2">
-          <div class="flex items-center justify-between text-xs text-slate-500 font-mono">
+          <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
             <span>${s.creator}</span>
             <span class="font-bold">${s.episodesCount}</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">${s.synopsis}</p>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-semibold">${s.synopsis}</p>
         </div>
 
-        <div class="pt-3 border-t border-slate-100 space-y-3">
+        <div class="pt-3 border-t border-slate-100 dark:border-zinc-800 space-y-3">
           ${s.key_phrases ? `
-            <div class="space-y-1">
-              <span class="text-[10px] font-mono font-black text-indigo-700 uppercase">Frases Coloquiales Clave:</span>
-              <div class="flex flex-wrap gap-1">
+            <div class="space-y-1.5">
+              <span class="text-xs font-mono font-black text-rose-600 dark:text-pink-400 uppercase">Frases Coloquiales Clave:</span>
+              <div class="flex flex-wrap gap-1.5">
                 ${s.key_phrases.map(kp => `
-                  <span class="px-2 py-0.5 rounded-lg bg-indigo-50 text-indigo-700 text-[10px] font-bold" title="${kp.meaning}">${kp.phrase}</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-rose-50 dark:bg-zinc-800 text-rose-700 dark:text-rose-300 text-xs font-bold" title="${kp.meaning}">${kp.phrase}</span>
                 `).join('')}
               </div>
             </div>
@@ -1445,9 +1459,9 @@ function renderSeriesHub() {
             href="https://www.youtube.com/watch?v=${s.firstVideoId}&list=${s.playlistId}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="w-full py-2.5 px-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-600/25 flex items-center justify-center gap-2 transition">
+            class="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white text-xs font-bold shadow-md shadow-rose-600/25 flex items-center justify-center gap-2 transition active:scale-95">
             <span>Ver Serie Completa en YouTube</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
       </div>
@@ -1463,25 +1477,25 @@ function renderPodcastsHub() {
   if (!container || !STATE.podcasts) return;
 
   container.innerHTML = STATE.podcasts.map(p => `
-    <div class="glass-panel rounded-3xl p-6 card-interactive space-y-4 flex flex-col justify-between">
+    <div class="glass-panel rounded-3xl p-6 card-interactive space-y-4 flex flex-col justify-between bg-white dark:bg-zinc-900 border border-slate-200 dark:border-rose-900/40">
       <div class="flex items-start gap-4">
         <img src="${p.cover}" alt="${p.title}" class="w-20 h-20 rounded-2xl object-cover shadow-md shrink-0">
         <div class="space-y-1">
-          <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-mono font-bold">
+          <span class="px-3 py-1 rounded-full bg-rose-50 dark:bg-zinc-800 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-mono font-bold">
             ${p.cefr_level || 'B2'}
           </span>
-          <h3 class="font-heading text-lg font-black text-slate-900 leading-snug">${p.title}</h3>
-          <p class="text-[11px] font-mono text-slate-400 font-bold">${p.author}</p>
+          <h3 class="font-heading text-xl font-black text-slate-900 dark:text-white leading-snug">${p.title}</h3>
+          <p class="text-xs font-mono text-slate-500 dark:text-slate-400 font-bold">${p.author}</p>
         </div>
       </div>
 
-      <p class="text-xs text-slate-600 leading-relaxed">${p.description}</p>
+      <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-semibold">${p.description}</p>
 
-      <div class="space-y-3 pt-3 border-t border-slate-100">
+      <div class="space-y-3 pt-3 border-t border-slate-100 dark:border-zinc-800">
         ${p.vocabNotes ? `
-          <div class="flex flex-wrap gap-1">
+          <div class="flex flex-wrap gap-1.5">
             ${p.vocabNotes.map(n => `
-              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">${n}</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-200 text-xs font-mono font-bold">${n}</span>
             `).join('')}
           </div>
         ` : ''}
@@ -1490,9 +1504,9 @@ function renderPodcastsHub() {
           href="https://www.youtube.com/watch?v=${p.firstVideoId}&list=${p.playlistId}" 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="w-full py-2.5 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-md shadow-emerald-600/25 flex items-center justify-center gap-2 transition">
+          class="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white text-xs font-bold shadow-md shadow-rose-600/25 flex items-center justify-center gap-2 transition active:scale-95">
           <span>🎧 Escuchar Episodios de Audio</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
       </div>
     </div>
@@ -1599,15 +1613,16 @@ function initEventListeners() {
   document.querySelectorAll('.level-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.level-btn').forEach(b => {
-        b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-        b.classList.add('text-slate-700', 'hover:text-slate-900', 'hover:bg-white');
+        b.className = 'level-btn px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:bg-white dark:hover:bg-zinc-800 transition-all shrink-0';
       });
-      btn.classList.add('bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-600/30');
-      btn.classList.remove('text-slate-700', 'hover:text-slate-900', 'hover:bg-white');
+      btn.className = 'level-btn px-4 py-2.5 rounded-xl text-xs font-extrabold bg-rose-600 text-white shadow-md shadow-rose-600/30 transition-all shrink-0';
       STATE.currentFilter = btn.getAttribute('data-level');
       renderCatalog();
     });
   });
+
+  // Mobile Touch Gestures (Swipe between views)
+  initMobileGestures();
 
   const closeModalBtn = document.getElementById('close-video-modal');
   const modal = document.getElementById('catalog-modal');
@@ -1630,6 +1645,38 @@ function initEventListeners() {
   if (customForm) {
     customForm.addEventListener('submit', handleAddVideoSubmit);
   }
+}
+
+function initMobileGestures() {
+  let touchStartX = 0;
+  let touchStartY = 0;
+  const tabs = ['catalog', 'minigames', 'series', 'podcasts', 'comics', 'tracker', 'roulette', 'theory'];
+
+  document.addEventListener('touchstart', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchend', (e) => {
+    if (!e.changedTouches || !e.changedTouches[0]) return;
+    const touchEndX = e.changedTouches[0].screenX;
+    const touchEndY = e.changedTouches[0].screenY;
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaX) > 90 && Math.abs(deltaY) < 60) {
+      const currentIdx = tabs.indexOf(STATE.activeTab);
+      if (currentIdx !== -1) {
+        if (deltaX < 0 && currentIdx < tabs.length - 1) {
+          window.location.hash = tabs[currentIdx + 1];
+        } else if (deltaX > 0 && currentIdx > 0) {
+          window.location.hash = tabs[currentIdx - 1];
+        }
+      }
+    }
+  }, { passive: true });
 }
 
 function renderApp() {
