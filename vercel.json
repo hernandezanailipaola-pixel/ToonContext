@@ -1,7 +1,7 @@
 {
   "version": 2,
+  "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -19,7 +19,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|data/).*)",
       "destination": "/index.html"
     }
   ]
