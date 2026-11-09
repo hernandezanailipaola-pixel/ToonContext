@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "Pip: El Perro Guía en Entrenamiento",
+    "nivel_i_mas_uno": "Principiante",
+    "duracion": "4 mins",
+    "descripcion_contexto": "Un tierno cachorro ingresa a una academia para perros guía. La animación ultra-expresiva transmite todo el significado sin necesidad de diálogos complejos, ideal para reducir el filtro afectivo.",
+    "url_thumbnail": "https://img.youtube.com/vi/07d2dXHYb94/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/07d2dXHYb94",
+    "tags": ["#SinAnsiedad", "#VisualStorytelling", "#A1-A2"]
+  },
+  {
+    "id": 2,
+    "titulo": "The Present - Historia Emotiva",
+    "nivel_i_mas_uno": "Principiante",
+    "duracion": "4 mins",
+    "descripcion_contexto": "Un joven aficionado a los videojuegos recibe un regalo inesperado de su madre. Las pistas del entorno y el lenguaje corporal proporcionan el contexto i+1 perfecto.",
+    "url_thumbnail": "https://img.youtube.com/vi/WjqiU5FgsYc/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/WjqiU5FgsYc",
+    "tags": ["#HistoriaEmotiva", "#ContextoClaro", "#A2"]
+  },
+  {
+    "id": 3,
+    "titulo": "Coin Operated - Rumbo a la Luna",
+    "nivel_i_mas_uno": "Principiante",
+    "duracion": "5 mins",
+    "descripcion_contexto": "Un niño con una gran pasión por el espacio encuentra un cohete de monedas. Un relato visual inspirador que refuerza la asimilación natural de vocabulario.",
+    "url_thumbnail": "https://img.youtube.com/vi/5L4DQfVIcdg/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/5L4DQfVIcdg",
+    "tags": ["#InmersiónVisual", "#Aventuras", "#A2"]
+  },
+  {
+    "id": 4,
+    "titulo": "Snack Attack - El Incidente de las Galletas",
+    "nivel_i_mas_uno": "Intermedio",
+    "duracion": "5 mins",
+    "descripcion_contexto": "Una anciana en una estación de tren protagoniza un divertido malentendido por un paquete de galletas. El humor visual directo elimina las barreras lingüísticas.",
+    "url_thumbnail": "https://img.youtube.com/vi/38y_1EWIE9I/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/38y_1EWIE9I",
+    "tags": ["#HumorSituacional", "#Expresivo", "#B1"]
+  },
+  {
+    "id": 5,
+    "titulo": "One Small Step - Hacia las Estrellas",
+    "nivel_i_mas_uno": "Intermedio",
+    "duracion": "8 mins",
+    "descripcion_contexto": "Luna sueña con ser astronauta con el apoyo incondicional de su padre. Animación de nivel Oscar que potencia la comprensión auditiva y emocional.",
+    "url_thumbnail": "https://img.youtube.com/vi/yWd4mzGqQYo/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/yWd4mzGqQYo",
+    "tags": ["#Inspiración", "#VínculoFamiliar", "#B1-B2"]
+  },
+  {
+    "id": 6,
+    "titulo": "In a Heartbeat - Romance Visual",
+    "nivel_i_mas_uno": "Intermedio",
+    "duracion": "4 mins",
+    "descripcion_contexto": "El corazón de un tímido chico salta de su pecho para perseguir a su enamorado. Narrativa dinámica y emotiva que reduce el filtro afectivo a cero.",
+    "url_thumbnail": "https://img.youtube.com/vi/2REkk9SCRn0/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/2REkk9SCRn0",
+    "tags": ["#SinAnsiedad", "#ContextoVisual", "#B1"]
+  },
+  {
+    "id": 7,
+    "titulo": "Simon's Cat - La Hora de Comer (Cat Man Do)",
+    "nivel_i_mas_uno": "Avanzado",
+    "duracion": "4 mins",
+    "descripcion_contexto": "Un divertido gato hace lo imposible por despertar a su dueño. Ofrece modismos rápidos y lenguaje corporal cómico ideal para estudiantes avanzados que buscan input auténtico.",
+    "url_thumbnail": "https://img.youtube.com/vi/w0ffwDYo00Q/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/w0ffwDYo00Q",
+    "tags": ["#HumorBritanico", "#InputAutentico", "#B2-C1"]
+  }
+]

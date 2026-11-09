@@ -1,0 +1,38 @@
+[
+  {
+    "id": "magnus-archives",
+    "title": "The Magnus Archives",
+    "playlistId": "PLSbuB1AyaJk8zTF3nE2KRxuixG_A5gBKJ",
+    "firstVideoId": "AdiUHYacaRI",
+    "cover": "https://img.youtube.com/vi/AdiUHYacaRI/hqdefault.jpg",
+    "description": "A weekly horror fiction podcast examining the archives of the Magnus Institute, an organization dedicated to researching the esoteric and the weird. Features crystal-clear British English enunciation ideal for auditory immersion.",
+    "genre": "Horror / Mystery Drama",
+    "author": "Rusty Quill / Jonathan Sims",
+    "episodesCount": "Full Audio Series",
+    "vocabNotes": ["Statement", "Archivist", "Esoteric", "Subterranean", "Paranormal", "Recordings"]
+  },
+  {
+    "id": "crash-course-literature",
+    "title": "Crash Course Literature & Stories",
+    "playlistId": "PL8dPuuaLjXtMwmepBjTSG593eG7ObzO7s",
+    "firstVideoId": "MSYw502dJNY",
+    "cover": "https://img.youtube.com/vi/MSYw502dJNY/hqdefault.jpg",
+    "description": "Engaging, high-paced explorations of world-famous stories, metaphors, and character journeys. Delivered with lively, articulate American English pronunciation to build rapid language acquisition.",
+    "genre": "Literature / Story Analysis",
+    "author": "CrashCourse / John Green",
+    "episodesCount": "Complete Audio/Video Series",
+    "vocabNotes": ["Metaphor", "Narrative", "Protagonist", "Symbolism", "Perspective", "Catharsis"]
+  },
+  {
+    "id": "ted-talks-daily",
+    "title": "TED Talks Daily & Global Ideas",
+    "playlistId": "PLOGi5-fAu8bEU70_3xVngEaJ7h1V9f_vW",
+    "firstVideoId": "8S0FDjFBj8o",
+    "cover": "https://img.youtube.com/vi/8S0FDjFBj8o/hqdefault.jpg",
+    "description": "Thought-provoking ideas on every subject imaginable, spoken by world-class scientists, innovators, and thinkers in clear, highly articulate international English.",
+    "genre": "Education / Science & Culture",
+    "author": "TED Audio Collective",
+    "episodesCount": "Daily Audio Feed",
+    "vocabNotes": ["Innovation", "Neuroscience", "Perspective", "Hypothesis", "Breakthrough", "Cognition"]
+  }
+]

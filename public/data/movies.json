@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "Pip: Guide Dog in Training",
+    "nivel_i_mas_uno": "Beginner",
+    "duracion_minutos": 4,
+    "descripcion_contexto": "A small, spirited puppy enters a guide dog academy facing big obstacles. Ultra-expressive animation conveys full meaning without complex dialogues, perfect for lowering the affective filter.",
+    "url_thumbnail": "https://img.youtube.com/vi/07d2dXHYb94/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/07d2dXHYb94",
+    "tags": ["#NoAnxiety", "#VisualStorytelling", "#A1-A2"]
+  },
+  {
+    "id": 2,
+    "titulo": "The Present - Touching Animated Story",
+    "nivel_i_mas_uno": "Beginner",
+    "duracion_minutos": 4,
+    "descripcion_contexto": "A young boy obsessed with videogames receives an unexpected gift from his mom. Rich environmental cues and body language offer crystal-clear contextual immersion.",
+    "url_thumbnail": "https://img.youtube.com/vi/WjqiU5FgsYc/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/WjqiU5FgsYc",
+    "tags": ["#EmotionalStory", "#ClearContext", "#A2"]
+  },
+  {
+    "id": 3,
+    "titulo": "Coin Operated - Chasing the Moon",
+    "nivel_i_mas_uno": "Beginner",
+    "duracion_minutos": 5,
+    "descripcion_contexto": "A young boy with an immense passion for space exploration encounters a coin-operated rocket. An inspiring visual tale that bridges curiosity with subconscious vocabulary retention.",
+    "url_thumbnail": "https://img.youtube.com/vi/5L4DQfVIcdg/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/5L4DQfVIcdg",
+    "tags": ["#SpaceDreams", "#VisualImmersion", "#A2"]
+  },
+  {
+    "id": 4,
+    "titulo": "Snack Attack - The Cookie Incident",
+    "nivel_i_mas_uno": "Intermediate",
+    "duracion_minutos": 5,
+    "descripcion_contexto": "An elderly lady at a train station engages in a hilarious battle over a bag of cookies with a teenager. Situational visual humor eliminates language barriers completely.",
+    "url_thumbnail": "https://img.youtube.com/vi/38y_1EWIE9I/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/38y_1EWIE9I",
+    "tags": ["#SituationalHumor", "#Expressive", "#B1"]
+  },
+  {
+    "id": 5,
+    "titulo": "One Small Step - Journey to the Stars",
+    "nivel_i_mas_uno": "Intermediate",
+    "duracion_minutos": 8,
+    "descripcion_contexto": "Luna dreams of reaching the moon with the loving support of her humble shoemaker father. Oscar-nominated storytelling that strengthens comprehension through emotional resonance.",
+    "url_thumbnail": "https://img.youtube.com/vi/yWd4mzGqQYo/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/yWd4mzGqQYo",
+    "tags": ["#Inspirational", "#FamilyBonds", "#B1-B2"]
+  },
+  {
+    "id": 6,
+    "titulo": "In a Heartbeat - Silent Romance",
+    "nivel_i_mas_uno": "Intermediate",
+    "duracion_minutos": 4,
+    "descripcion_contexto": "A boy's runaway heart pops out of his chest to chase after his secret crush. Fast, colorful, and highly emotive storytelling that lowers anxiety to zero.",
+    "url_thumbnail": "https://img.youtube.com/vi/2REkk9SCRn0/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/2REkk9SCRn0",
+    "tags": ["#ZeroAnxiety", "#HighContext", "#B1"]
+  },
+  {
+    "id": 7,
+    "titulo": "Simon's Cat - Feeding Time (Cat Man Do)",
+    "nivel_i_mas_uno": "Advanced",
+    "duracion_minutos": 4,
+    "descripcion_contexto": "A persistent cat uses every comedic trick imaginable to wake up his sleeping owner for breakfast. Fast comedic timing and native British cultural nuance.",
+    "url_thumbnail": "https://img.youtube.com/vi/w0ffwDYo00Q/hqdefault.jpg",
+    "url_video_embed": "https://www.youtube.com/embed/w0ffwDYo00Q",
+    "tags": ["#BritishHumor", "#AuthenticInput", "#B2-C1"]
+  }
+]

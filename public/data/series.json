@@ -1,0 +1,41 @@
+[
+  {
+    "id": "digital-circus",
+    "title": "The Amazing Digital Circus",
+    "playlistId": "PLHovnlOusNLgvAbnxluXCVB3KLj8e4QB-",
+    "firstVideoId": "HwAPLk_sQ3w",
+    "cover": "https://img.youtube.com/vi/HwAPLk_sQ3w/maxresdefault.jpg",
+    "banner": "https://img.youtube.com/vi/HwAPLk_sQ3w/maxresdefault.jpg",
+    "synopsis": "A human woman gets trapped in a surreal virtual reality circus alongside five other lost souls, now subject to the eccentric whims of an erratic AI ringmaster named Caine. High-speed, expressive English dialogue ideal for language acquisition.",
+    "genre": "Dark Comedy / Sci-Fi Animation",
+    "creator": "Glitch Productions / Gooseworx",
+    "episodesCount": "Full Season 1 Playlist",
+    "featured": true
+  },
+  {
+    "id": "murder-drones",
+    "title": "Murder Drones",
+    "playlistId": "PLHovnlOusNLgzAe826D1XFf56tP0TjApt",
+    "firstVideoId": "mImFz8mkaHo",
+    "cover": "https://img.youtube.com/vi/mImFz8mkaHo/maxresdefault.jpg",
+    "banner": "https://img.youtube.com/vi/mImFz8mkaHo/maxresdefault.jpg",
+    "synopsis": "In a post-apocalyptic frozen exoplanet, rogue worker drones fight for survival against lethal Murder Drones sent by their corporate creators. Fast-paced comedic action packed with colloquial American English dialogue.",
+    "genre": "Sci-Fi / Action Comedy",
+    "creator": "Glitch Productions / Liam Vickers",
+    "episodesCount": "Complete Series",
+    "featured": false
+  },
+  {
+    "id": "helluva-boss",
+    "title": "Helluva Boss",
+    "playlistId": "PL-uopgYBi65HwiiDR9Y23lomAkGr9j-hj",
+    "firstVideoId": "el_PChGfJN8",
+    "cover": "https://img.youtube.com/vi/el_PChGfJN8/maxresdefault.jpg",
+    "banner": "https://img.youtube.com/vi/el_PChGfJN8/maxresdefault.jpg",
+    "synopsis": "Follow I.M.P, an immediate murder professional assassin company operating in the Underworld. Packed with theatrical songs, quick banter, and distinctive character voices for advanced native speech rhythm practice.",
+    "genre": "Animated Musical Comedy",
+    "creator": "SpindleHorse / Vivienne Medrano",
+    "episodesCount": "Season 1 & 2 Playlist",
+    "featured": false
+  }
+]
