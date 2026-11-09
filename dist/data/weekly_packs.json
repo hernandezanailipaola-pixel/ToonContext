@@ -1,0 +1,376 @@
+{
+  "packs": [
+    {
+      "week_id": 1,
+      "theme": "Urban Slang & Street Smarts",
+      "theme_es": "Modismos Urbanos y Astucia Callejera",
+      "badge": "Semana Activa: Modismos Cotidianos",
+      "featured_movie_id": 11,
+      "featured_podcast_id": "bbc-6-minute-english",
+      "challenge_title": "Misión Espía: Decodifica 3 Diálogos",
+      "challenge_desc": "Mira 'Pigeon: Impossible' y completa el minijuego de Dialogue Cloze con puntuación perfecta.",
+      "target_minutes": 25,
+      "phrases": [
+        {
+          "phrase": "Piece of cake",
+          "phonetic": "/piːs əv keɪk/",
+          "meaning": "Very easy and uncomplicated to do.",
+          "meaning_es": "Pan comido / Muy fácil de hacer.",
+          "example": "Passing the flight test was a piece of cake for the veteran pilot.",
+          "icon": "🍰"
+        },
+        {
+          "phrase": "Hold your horses",
+          "phonetic": "/hoʊld jʊər ˈhɔːrsɪz/",
+          "meaning": "Wait a moment; be patient and slow down.",
+          "meaning_es": "Espera un momento / Ten paciencia / No te apresures.",
+          "example": "Hold your horses! We can't launch the rocket until the countdown hits zero.",
+          "icon": "🐎"
+        },
+        {
+          "phrase": "Bite the bullet",
+          "phonetic": "/baɪt ðə ˈbʊlɪt/",
+          "meaning": "Face a painful or difficult situation bravely.",
+          "meaning_es": "Hacer de tripas corazón / Afrontar una situación difícil con valentía.",
+          "example": "He decided to bite the bullet and apologize for the misunderstanding.",
+          "icon": "🎯"
+        },
+        {
+          "phrase": "Catch you later",
+          "phonetic": "/kætʃ juː ˈleɪtər/",
+          "meaning": "Goodbye; an informal way of saying see you later.",
+          "meaning_es": "¡Nos vemos luego! / Hasta más tarde.",
+          "example": "I've gotta run to the train station, catch you later!",
+          "icon": "👋"
+        },
+        {
+          "phrase": "No big deal",
+          "phonetic": "/noʊ bɪɡ diːl/",
+          "meaning": "Not important or not a serious problem.",
+          "meaning_es": "No es para tanto / No hay problema.",
+          "example": "Thanks for sharing your cookies! — No big deal, anytime!",
+          "icon": "👌"
+        }
+      ]
+    },
+    {
+      "week_id": 2,
+      "theme": "Empathy, Family & Resilience",
+      "theme_es": "Empatía, Familia y Resiliencia",
+      "badge": "Semana de Emociones y Lazos Familiares",
+      "featured_movie_id": 5,
+      "featured_podcast_id": "crash-course-literature",
+      "challenge_title": "Desafío de la Empatía: Alcanza las Estrellas",
+      "challenge_desc": "Mira 'One Small Step' y escribe una reflexión en tu diario de inmersión.",
+      "target_minutes": 30,
+      "phrases": [
+        {
+          "phrase": "Keep your chin up",
+          "phonetic": "/kiːp jʊər tʃɪn ʌp/",
+          "meaning": "Remain cheerful and hopeful in a difficult situation.",
+          "meaning_es": "Mantén la cabeza en alto / No te desanimes.",
+          "example": "Even after receiving the rejection letter, her father told her to keep her chin up.",
+          "icon": "✨"
+        },
+        {
+          "phrase": "Against all odds",
+          "phonetic": "/əˈɡeɪnst ɔːl ɒdz/",
+          "meaning": "Despite very low probability of success.",
+          "meaning_es": "Contra todo pronóstico / A pesar de las dificultades.",
+          "example": "Against all odds, the tiny puppy Pip passed every obstacle course.",
+          "icon": "🏆"
+        },
+        {
+          "phrase": "Through thick and thin",
+          "phonetic": "/θruː θɪk ænd θɪn/",
+          "meaning": "Under all circumstances, no matter how difficult.",
+          "meaning_es": "En las buenas y en las malas.",
+          "example": "Her father supported her astronaut dreams through thick and thin.",
+          "icon": "🤝"
+        },
+        {
+          "phrase": "A blessing in disguise",
+          "phonetic": "/ə ˈblesɪŋ ɪn dɪsˈɡaɪz/",
+          "meaning": "An apparent misfortune that eventually results in something good.",
+          "meaning_es": "No hay mal que por bien no venga / Una bendición disfrazada.",
+          "example": "Missing the early train was a blessing in disguise because she met her best friend.",
+          "icon": "🍀"
+        },
+        {
+          "phrase": "Follow in someone's footsteps",
+          "phonetic": "/ˈfɒloʊ ɪn ˈfʊtsteps/",
+          "meaning": "To do the same job or pursue the same path as someone before you.",
+          "meaning_es": "Seguir los pasos de alguien.",
+          "example": "She wanted to follow in the footsteps of legendary NASA astronauts.",
+          "icon": "👣"
+        }
+      ]
+    },
+    {
+      "week_id": 3,
+      "theme": "Animal Bonds & Unlikely Friendships",
+      "theme_es": "Amistades Inesperadas y Naturaleza",
+      "badge": "Semana de la Naturaleza y Amistad",
+      "featured_movie_id": 9,
+      "featured_podcast_id": "luke-english-podcast",
+      "challenge_title": "Pacto Callejero: Domina el Word Match",
+      "challenge_desc": "Empareja 10 términos de animales y rescate en el minijuego de Context Word Match.",
+      "target_minutes": 20,
+      "phrases": [
+        {
+          "phrase": "Unlikely friends",
+          "phonetic": "/ʌnˈlaɪkli frendz/",
+          "meaning": "Two completely different individuals who forge a deep bond.",
+          "meaning_es": "Amigos improbables / Una amistad inesperada.",
+          "example": "The fierce alley kitten and the giant pitbull became unlikely friends.",
+          "icon": "🐱"
+        },
+        {
+          "phrase": "Barking up the wrong tree",
+          "phonetic": "/ˈbɑːrkɪŋ ʌp ðə rɒŋ triː/",
+          "meaning": "Pursuing a mistaken line of thought or accusing the wrong person.",
+          "meaning_es": "Buscando en el lugar equivocado / Meando fuera del tiesto.",
+          "example": "If you think the dog ate your homework, you're barking up the wrong tree!",
+          "icon": "🌳"
+        },
+        {
+          "phrase": "Let sleeping dogs lie",
+          "phonetic": "/let ˈsliːpɪŋ dɒɡz laɪ/",
+          "meaning": "Avoid restarting a conflict or bringing up an old argument.",
+          "meaning_es": "No busques tres pies al gato / Deja las cosas como están.",
+          "example": "We resolved the argument yesterday, let's just let sleeping dogs lie.",
+          "icon": "🐶"
+        },
+        {
+          "phrase": "Break the ice",
+          "phonetic": "/breɪk ði aɪs/",
+          "meaning": "To relieve tension and start conversation with a stranger.",
+          "meaning_es": "Romper el hielo.",
+          "example": "The kitten tapped the tennis ball to break the ice with the new puppy.",
+          "icon": "🧊"
+        },
+        {
+          "phrase": "Curiosity killed the cat",
+          "phonetic": "/ˌkjʊəriˈɒsəti kɪld ðə kæt/",
+          "meaning": "Being too inquisitive can lead one into dangerous trouble.",
+          "meaning_es": "La curiosidad mató al gato.",
+          "example": "Be careful opening that secret briefcase; curiosity killed the cat!",
+          "icon": "🐾"
+        }
+      ]
+    },
+    {
+      "week_id": 4,
+      "theme": "British Humor & Everyday Mischief",
+      "theme_es": "Humor Británico y Travesuras Cotidianas",
+      "badge": "Semana del Humor y la Ironía",
+      "featured_movie_id": 7,
+      "featured_podcast_id": "bbc-6-minute-english",
+      "challenge_title": "Despertador Felino: Escucha Activa",
+      "challenge_desc": "Identifica los modismos en Simon's Cat y supera el laboratorio auditivo de pares mínimos.",
+      "target_minutes": 25,
+      "phrases": [
+        {
+          "phrase": "Up to no good",
+          "phonetic": "/ʌp tə noʊ ɡʊd/",
+          "meaning": "Doing or planning something dishonest or mischievous.",
+          "meaning_es": "Tramando algo malo / Haciendo travesuras.",
+          "example": "Look at Simon's cat sneaking under the blanket; he's up to no good!",
+          "icon": "😼"
+        },
+        {
+          "phrase": "Drive someone up the wall",
+          "phonetic": "/draɪv ˈsʌmwʌn ʌp ðə wɔːl/",
+          "meaning": "To make someone extremely annoyed or irritated.",
+          "meaning_es": "Sacar a alguien de sus casillas / Desesperar.",
+          "example": "The constant meowing at 5 AM was driving him up the wall.",
+          "icon": "🧱"
+        },
+        {
+          "phrase": "Pull someone's leg",
+          "phonetic": "/pʊl ˈsʌmwʌnz leɡ/",
+          "meaning": "To playfully deceive someone as a joke.",
+          "meaning_es": "Tomarle el pelo a alguien.",
+          "example": "Relax! I didn't actually eat your whole box of cookies, I was just pulling your leg!",
+          "icon": "😜"
+        },
+        {
+          "phrase": "At the crack of dawn",
+          "phonetic": "/æt ðə kræk əv dɔːn/",
+          "meaning": "Very early in the morning as soon as daylight breaks.",
+          "meaning_es": "Al rayar el alba / Al amanecer.",
+          "example": "The rooster and the cat both woke the farm up at the crack of dawn.",
+          "icon": "🌅"
+        },
+        {
+          "phrase": "Cost an arm and a leg",
+          "phonetic": "/kɒst ən ɑːrm ænd ə leɡ/",
+          "meaning": "To be extremely expensive.",
+          "meaning_es": "Costar un ojo de la cara / Ser carísimo.",
+          "example": "That artisanal espresso in the hipster cafe cost an arm and a leg!",
+          "icon": "💸"
+        }
+      ]
+    },
+    {
+      "week_id": 5,
+      "theme": "Cosmic Curiosity & Big Dreams",
+      "theme_es": "Curiosidad Cósmica y Grandes Sueños",
+      "badge": "Semana de la Ciencia y la Imaginación",
+      "featured_movie_id": 3,
+      "featured_podcast_id": "ted-talks-daily",
+      "challenge_title": "Expedición Lunar: Inmersión Total",
+      "challenge_desc": "Mira 'Coin Operated' y completa el Sentence Scramble en menos de 2 minutos.",
+      "target_minutes": 35,
+      "phrases": [
+        {
+          "phrase": "Over the moon",
+          "phonetic": "/ˈoʊvər ðə muːn/",
+          "meaning": "Extremely delighted, happy, and thrilled.",
+          "meaning_es": "Más feliz que una lombriz / En las nubes de alegría.",
+          "example": "The little boy was over the moon when his coin rocket finally rattled to life.",
+          "icon": "🚀"
+        },
+        {
+          "phrase": "Reach for the stars",
+          "phonetic": "/riːtʃ fər ðə stɑːrz/",
+          "meaning": "To aim for the highest goals and never limit yourself.",
+          "meaning_es": "Apunta a las estrellas / Apunta alto.",
+          "example": "Her shoemaker dad always told her to reach for the stars.",
+          "icon": "⭐"
+        },
+        {
+          "phrase": "Out of this world",
+          "phonetic": "/aʊt əv ðɪs wɜːrld/",
+          "meaning": "Extremely good, impressive, or extraordinary.",
+          "meaning_es": "Fuera de este mundo / Extraordinario.",
+          "example": "The 3D animation quality of Blender Studio's Spring is out of this world!",
+          "icon": "🪐"
+        },
+        {
+          "phrase": "Down to earth",
+          "phonetic": "/daʊn tə ɜːrθ/",
+          "meaning": "Practical, realistic, and unpretentious.",
+          "meaning_es": "Con los pies en la tierra / Sencillo y humilde.",
+          "example": "Despite winning an Oscar, the director remained completely down to earth.",
+          "icon": "🌱"
+        },
+        {
+          "phrase": "Once in a blue moon",
+          "phonetic": "/wʌns ɪn ə bluː muːn/",
+          "meaning": "Happening only very rarely.",
+          "meaning_es": "Una vez a las mil quinientas / Muy rara vez.",
+          "example": "A student finds input so engaging only once in a blue moon.",
+          "icon": "🌕"
+        }
+      ]
+    }
+  ],
+  "daily_phrases_bank": [
+    {
+      "phrase": "Speak of the devil",
+      "phonetic": "/spiːk əv ðə ˈdevl/",
+      "meaning": "When the person you were just talking about suddenly appears.",
+      "meaning_es": "Hablando del rey de Roma.",
+      "icon": "😈"
+    },
+    {
+      "phrase": "Spill the beans",
+      "phonetic": "/spɪl ðə biːnz/",
+      "meaning": "To disclose a secret prematurely.",
+      "meaning_es": "Soltar la sopa / Revelar un secreto.",
+      "icon": "🫘"
+    },
+    {
+      "phrase": "Under the weather",
+      "phonetic": "/ˈʌndər ðə ˈweðər/",
+      "meaning": "Feeling slightly ill or unwell.",
+      "meaning_es": "Sentirse indispuesto o enfermo.",
+      "icon": "🌧️"
+    },
+    {
+      "phrase": "Hit the sack",
+      "phonetic": "/hɪt ðə sæk/",
+      "meaning": "To go to bed and sleep.",
+      "meaning_es": "Irse a dormir / Pegar la oreja.",
+      "icon": "🛏️"
+    },
+    {
+      "phrase": "Hit the books",
+      "phonetic": "/hɪt ðə bʊks/",
+      "meaning": "To begin studying with focus.",
+      "meaning_es": "Ponerse a estudiar con ganas.",
+      "icon": "📚"
+    },
+    {
+      "phrase": "Break a leg",
+      "phonetic": "/breɪk ə leɡ/",
+      "meaning": "Good luck! (Used before a show or presentation).",
+      "meaning_es": "¡Mucha mierda! / ¡Buena suerte!",
+      "icon": "🎭"
+    },
+    {
+      "phrase": "Call it a day",
+      "phonetic": "/kɔːl ɪt ə deɪ/",
+      "meaning": "To stop working on something for the rest of the day.",
+      "meaning_es": "Dar por terminado el día / Dejarlo por hoy.",
+      "icon": "🏁"
+    },
+    {
+      "phrase": "See eye to eye",
+      "phonetic": "/siː aɪ tuː aɪ/",
+      "meaning": "To agree fully with someone.",
+      "meaning_es": "Estar completamente de acuerdo.",
+      "icon": "👁️"
+    },
+    {
+      "phrase": "Cry over spilled milk",
+      "phonetic": "/kraɪ ˈoʊvər spɪld mɪlk/",
+      "meaning": "To worry or complain about something that already happened and cannot be changed.",
+      "meaning_es": "Llorar sobre leche derramada.",
+      "icon": "🥛"
+    },
+    {
+      "phrase": "Ring a bell",
+      "phonetic": "/rɪŋ ə bel/",
+      "meaning": "To sound familiar, even if you can't remember the details.",
+      "meaning_es": "Sonarle familiar a alguien.",
+      "icon": "🔔"
+    },
+    {
+      "phrase": "Barking up the wrong tree",
+      "phonetic": "/ˈbɑːrkɪŋ ʌp ðə rɒŋ triː/",
+      "meaning": "Looking in the wrong place or blaming the wrong person.",
+      "meaning_es": "Equivocarse de camino / Culpar a la persona equivocada.",
+      "icon": "🌲"
+    },
+    {
+      "phrase": "Cut corners",
+      "phonetic": "/kʌt ˈkɔːrnərz/",
+      "meaning": "To do something in the cheapest or easiest way possible.",
+      "meaning_es": "Tomar atajos / Escatimar esfuerzos.",
+      "icon": "✂️"
+    },
+    {
+      "phrase": "On cloud nine",
+      "phonetic": "/ɒn klaʊd naɪn/",
+      "meaning": "Extremely joyful and elated.",
+      "meaning_es": "Estar en el séptimo cielo / En una nube de felicidad.",
+      "icon": "☁️"
+    },
+    {
+      "phrase": "A hot potato",
+      "phonetic": "/ə hɒt pəˈteɪtoʊ/",
+      "meaning": "A controversial topic that no one wants to deal with.",
+      "meaning_es": "Una patata caliente / Asunto espinoso.",
+      "icon": "🥔"
+    },
+    {
+      "phrase": "Take with a grain of salt",
+      "phonetic": "/teɪk wɪð ə ɡreɪn əv sɔːlt/",
+      "meaning": "To not completely believe something someone tells you.",
+      "meaning_es": "Tomarlo con pinzas / No creerlo al pie de la letra.",
+      "icon": "🧂"
+    }
+  ]
+}

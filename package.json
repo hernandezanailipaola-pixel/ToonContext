@@ -5,8 +5,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "echo 'ToonInput platform built successfully for Vercel'",
-    "dev": "vite"
+    "build": "node build.js",
+    "dev": "node build.js"
   },
   "keywords": [
     "english-learning",
