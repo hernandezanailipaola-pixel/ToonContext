@@ -193,6 +193,36 @@ function applyTheme(theme) {
   });
 }
 
+function openDrawerMenu() {
+  const backdrop = document.getElementById('drawer-backdrop');
+  const panel = document.getElementById('drawer-panel');
+  if (backdrop && panel) {
+    backdrop.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeDrawerMenu() {
+  const backdrop = document.getElementById('drawer-backdrop');
+  const panel = document.getElementById('drawer-panel');
+  if (backdrop && panel) {
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0');
+    panel.classList.remove('translate-x-0');
+    panel.classList.add('translate-x-full');
+    setTimeout(() => {
+      backdrop.classList.add('hidden');
+    }, 300);
+    document.body.style.overflow = '';
+  }
+}
+
 function toggleMobileMenu() {
   const menu = document.getElementById('mobile-nav-menu');
   if (menu) menu.classList.toggle('hidden');
@@ -278,20 +308,23 @@ function setupRouting() {
 function switchTab(tabId) {
   STATE.activeTab = tabId;
 
-  document.querySelectorAll('[data-nav-tab]').forEach(el => {
-    const isTarget = el.getAttribute('data-nav-tab') === tabId;
-    if (el.closest('.mobile-bottom-dock')) {
-      if (isTarget) {
-        el.className = 'flex flex-col items-center gap-1 text-rose-600 dark:text-pink-500 font-black text-xs py-1 px-2';
-      } else {
-        el.className = 'flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2';
-      }
+  // Update mobile bottom dock
+  document.querySelectorAll('[data-mobile-tab]').forEach(el => {
+    const isTarget = el.getAttribute('data-mobile-tab') === tabId;
+    if (isTarget) {
+      el.className = 'flex flex-col items-center gap-1 text-rose-600 dark:text-pink-500 font-black text-xs py-1 px-2';
     } else {
-      if (isTarget) {
-        el.className = 'px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 bg-rose-600 text-white shadow-md shadow-rose-600/30';
-      } else {
-        el.className = 'px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800';
-      }
+      el.className = 'flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2';
+    }
+  });
+
+  // Update drawer menu items
+  document.querySelectorAll('.drawer-nav-item').forEach(el => {
+    const href = el.getAttribute('href');
+    if (href === `#${tabId}`) {
+      el.classList.add('bg-rose-50', 'dark:bg-rose-950/60', 'text-rose-700', 'dark:text-rose-300');
+    } else {
+      el.classList.remove('bg-rose-50', 'dark:bg-rose-950/60', 'text-rose-700', 'dark:text-rose-300');
     }
   });
 
@@ -310,6 +343,7 @@ function switchTab(tabId) {
   if (tabId === 'tracker') renderTrackerView();
   if (tabId === 'roulette') initRouletteView();
 
+  closeDrawerMenu();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1556,6 +1590,10 @@ function updateTrackerUI() {
   if (levelEl) levelEl.textContent = stageTitle;
   if (progressInner) progressInner.style.width = `${progressPct}%`;
   if (pctLabel) pctLabel.textContent = `${progressPct}%`;
+  const drawerStreak = document.getElementById('drawer-streak-label');
+  const drawerMins = document.getElementById('drawer-minutes-label');
+  if (drawerStreak) drawerStreak.textContent = `${streak} Días`;
+  if (drawerMins) drawerMins.textContent = `${totalMins}m`;
 }
 
 function manualLogMinutes(amount) {

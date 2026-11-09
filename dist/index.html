@@ -77,137 +77,97 @@
   <!-- ====================================================================
        SITE NAVIGATION (DESKTOP DOCK & RESPONSIVE MOBILE BAR)
        ==================================================================== -->
+    <!-- ====================================================================
+       SITE NAVIGATION (CLEAN KURO KISS DOCK WITH HAMBURGER MENU)
+       ==================================================================== -->
   <header class="sticky top-2 z-40 px-3 sm:px-6 lg:px-8 py-2 transition-all">
-    <div class="max-w-7xl mx-auto glass-dock rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 shadow-md">
-      <div class="flex items-center justify-between gap-2 sm:gap-4">
-        
-        <!-- Brand Logo & Krashen i+1 Pill (Kuro Kiss Style) -->
-        <a href="#catalog" class="flex items-center gap-3 group focus:outline-none shrink-0">
-          <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-600 via-pink-500 to-purple-600 p-0.5 shadow-lg shadow-rose-600/30 group-hover:scale-105 group-hover:shadow-rose-600/40 transition-all duration-300 flex items-center justify-center text-white font-mono font-black text-base">
-            i+1
-            <div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-rose-500 rounded-full border-2 border-white animate-ping"></div>
-            <div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-rose-500 rounded-full border-2 border-white"></div>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="font-heading text-xl sm:text-2xl font-black tracking-tight group-hover:text-rose-600 transition-colors text-slate-900 dark:text-white">
-                Toon<span class="text-rose-600 dark:text-pink-500">Input</span>
-              </span>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-black bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 font-mono tracking-wider shadow-2xs">
-                Kuro Kiss v2.0
-              </span>
-            </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-bold tracking-tight hidden md:block">
-              Laboratorio de Adquisición Natural i+1 (Stephen Krashen SLA)
-            </p>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Tabs (Clear, Large, High Contrast) -->
-        <nav class="hidden lg:flex items-center gap-1.5 bg-slate-100/90 dark:bg-zinc-900/90 p-1.5 rounded-full border border-slate-200/90 dark:border-rose-900/40 shadow-inner">
-          <a href="#catalog" data-nav-tab="catalog" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 bg-rose-600 text-white shadow-md shadow-rose-600/30">
-            <span>🎬 Cortometrajes</span>
-          </a>
-          <a href="#minigames" data-nav-tab="minigames" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>🎮 Minijuegos</span>
-          </a>
-          <a href="#series" data-nav-tab="series" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>📺 Series</span>
-          </a>
-          <a href="#podcasts" data-nav-tab="podcasts" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>🎙️ Podcasts</span>
-          </a>
-          <a href="#comics" data-nav-tab="comics" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>📖 Cómics</span>
-          </a>
-          <a href="#tracker" data-nav-tab="tracker" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>📊 Diario</span>
-          </a>
-          <a href="#roulette" data-nav-tab="roulette" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>🎲 Ruleta</span>
-          </a>
-          <a href="#theory" data-nav-tab="theory" class="px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-700 dark:text-slate-200 hover:text-rose-600 dark:hover:text-pink-400 hover:bg-white/80 dark:hover:bg-zinc-800">
-            <span>💡 Teoría SLA</span>
-          </a>
-        </nav>
-
-        <!-- Right Quick Actions -->
-        <div class="flex items-center gap-2.5">
-          <!-- Theme Toggle Button (Day / Night) -->
-          <button 
-            type="button" 
-            onclick="toggleTheme()" 
-            class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-slate-200 dark:border-rose-900/50 flex items-center justify-center transition active:scale-95 shadow-2xs" 
-            title="Cambiar tema Día / Noche (Kuro Kiss)" 
-            aria-label="Cambiar tema">
-            <span class="theme-toggle-icon text-base">🌙</span>
-          </button>
-
-          <!-- Add Content Studio Button (Desktop) -->
-          <button 
-            type="button" 
-            onclick="openAddVideoModal()" 
-            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/80 dark:hover:bg-rose-900/90 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-extrabold transition shadow-2xs active:scale-95">
-            <span>➕ Agregar Video</span>
-          </button>
-
-          <!-- Mobile Hamburger Drawer Button -->
-          <button 
-            id="mobile-nav-toggle" 
-            onclick="toggleMobileMenu()"
-            class="lg:hidden p-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-rose-900/50 transition focus:outline-none" 
-            aria-label="Abrir menú de navegación">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+    <div class="max-w-7xl mx-auto glass-dock rounded-2xl sm:rounded-full px-4 sm:px-6 py-2.5 shadow-md flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Left: Brand Logo & Krashen i+1 Pill (Kuro Kiss Style) -->
+      <a href="#catalog" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0">
+        <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-rose-600 via-pink-500 to-purple-600 p-0.5 shadow-lg shadow-rose-600/30 group-hover:scale-105 transition-all duration-300 flex items-center justify-center text-white font-mono font-black text-sm sm:text-base">
+          i+1
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-rose-500 rounded-full border-2 border-white animate-ping"></div>
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-rose-500 rounded-full border-2 border-white"></div>
         </div>
+        <div>
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="font-heading text-lg sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+              Toon<span class="text-rose-600 dark:text-pink-500">Input</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[11px] sm:text-xs font-black bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 font-mono tracking-wider">
+              Kuro Kiss
+            </span>
+          </div>
+          <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold tracking-tight hidden sm:block">
+            Laboratorio de Adquisición Natural i+1 (Stephen Krashen SLA)
+          </p>
+        </div>
+      </a>
 
+      <!-- Right Quick Actions: Add Video, Theme Toggle & Hamburger Button -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Add Video Button -->
+        <button 
+          type="button" 
+          onclick="openAddVideoModal()" 
+          class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/80 dark:hover:bg-rose-900 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-extrabold transition shadow-2xs active:scale-95">
+          <span class="text-sm">➕</span>
+          <span class="hidden md:inline">Agregar Video</span>
+        </button>
+
+        <!-- Theme Toggle Button (Day / Night) -->
+        <button 
+          type="button" 
+          onclick="toggleTheme()" 
+          class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-slate-200 dark:border-rose-900/50 flex items-center justify-center transition active:scale-95 shadow-2xs" 
+          title="Cambiar tema Día / Noche (Kuro Kiss)" 
+          aria-label="Cambiar tema">
+          <span class="theme-toggle-icon text-base">🌙</span>
+        </button>
+
+        <!-- Hamburger Menu Button (Menú) -->
+        <button 
+          id="hamburger-btn" 
+          onclick="openDrawerMenu()" 
+          class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-rose-600 dark:hover:bg-rose-500 dark:hover:text-white transition-all duration-200 shadow-md active:scale-95 text-xs font-black font-heading cursor-pointer"
+          aria-label="Abrir Menú de Navegación">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span class="font-bold">Menú</span>
+        </button>
       </div>
 
-      <!-- Mobile Dropdown Drawer Menu -->
-      <div id="mobile-nav-menu" class="hidden lg:hidden pt-4 mt-3 border-t border-slate-200 dark:border-rose-900/40 space-y-1.5 text-sm font-bold">
-        <a href="#catalog" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">🎬 Cortometrajes de Inmersión</a>
-        <a href="#minigames" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">🎮 Minijuegos de Inglés</a>
-        <a href="#series" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">📺 Series Animadas Completas</a>
-        <a href="#podcasts" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">🎙️ Audio Podcasts en Inglés</a>
-        <a href="#comics" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">📖 Cómics &amp; Novelas Gráficas</a>
-        <a href="#tracker" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">📊 Mi Diario de Minutos de Input</a>
-        <a href="#roulette" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">🎲 Ruleta Arcade de Inmersión</a>
-        <a href="#theory" onclick="closeMobileMenu()" class="flex items-center gap-2 px-4 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100">💡 Teoría SLA de Stephen Krashen</a>
-        
-        <div class="pt-2">
-          <button onclick="openAddVideoModal(); closeMobileMenu();" class="w-full text-center px-4 py-3 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 text-white font-black text-sm shadow-md">
-            ➕ Agregar Video Personalizado
-          </button>
-        </div>
-      </div>
     </div>
   </header>
 
   <!-- ====================================================================
        MOBILE BOTTOM DOCK (STICKY PHONE NAVIGATION)
        ==================================================================== -->
-  <nav class="lg:hidden mobile-bottom-dock flex items-center justify-around">
-    <a href="#catalog" data-nav-tab="catalog" class="flex flex-col items-center gap-1 text-rose-600 dark:text-pink-500 font-bold text-xs py-1 px-2">
-      <span class="text-lg">🎬</span>
+    <!-- ====================================================================
+       MOBILE BOTTOM DOCK (STICKY PHONE NAVIGATION)
+       ==================================================================== -->
+  <nav class="md:hidden mobile-bottom-dock flex items-center justify-around">
+    <a href="#catalog" data-mobile-tab="catalog" class="flex flex-col items-center gap-1 text-rose-600 dark:text-pink-500 font-black text-xs py-1 px-2">
+      <span class="text-xl">🎬</span>
       <span>Cortos</span>
     </a>
-    <a href="#minigames" data-nav-tab="minigames" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
-      <span class="text-lg">🎮</span>
+    <a href="#minigames" data-mobile-tab="minigames" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
+      <span class="text-xl">🎮</span>
       <span>Juegos</span>
     </a>
-    <a href="#series" data-nav-tab="series" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
-      <span class="text-lg">📺</span>
+    <a href="#series" data-mobile-tab="series" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
+      <span class="text-xl">📺</span>
       <span>Series</span>
     </a>
-    <a href="#podcasts" data-nav-tab="podcasts" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
-      <span class="text-lg">🎙️</span>
+    <a href="#podcasts" data-mobile-tab="podcasts" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2">
+      <span class="text-xl">🎙️</span>
       <span>Podcasts</span>
     </a>
-    <button onclick="toggleMobileMenu()" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2 focus:outline-none">
-      <span class="text-lg">☰</span>
-      <span>Más</span>
+    <button onclick="openDrawerMenu()" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-300 font-bold text-xs py-1 px-2 focus:outline-none cursor-pointer">
+      <span class="text-xl">☰</span>
+      <span>Menú</span>
     </button>
   </nav>
 
@@ -860,6 +820,125 @@
       </div>
     </div>
   </footer>
+
+  
+  <!-- ====================================================================
+       SLIDE-OVER HAMBURGER DRAWER MENU (RESPONSIVE DESKTOP & MOBILE)
+       ==================================================================== -->
+  <div id="drawer-backdrop" onclick="closeDrawerMenu()" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden transition-opacity duration-300 opacity-0 cursor-pointer"></div>
+
+  <aside id="drawer-panel" class="fixed top-0 right-0 bottom-0 z-50 w-full sm:w-96 bg-white dark:bg-zinc-900 border-l border-slate-200 dark:border-rose-900/40 shadow-2xl flex flex-col justify-between transition-transform duration-300 translate-x-full overflow-hidden">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-zinc-800 flex items-center justify-between bg-slate-50/80 dark:bg-zinc-800/80">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-600 to-pink-600 text-white flex items-center justify-center font-mono font-black text-base shadow-md">
+          i+1
+        </div>
+        <div>
+          <h3 class="font-heading font-black text-lg text-slate-900 dark:text-white leading-tight">Menú ToonInput</h3>
+          <span class="text-xs font-mono text-rose-600 dark:text-pink-400 font-bold">Kuro Kiss Edition</span>
+        </div>
+      </div>
+      
+      <button onclick="closeDrawerMenu()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-zinc-700 hover:bg-slate-200 dark:hover:bg-zinc-600 text-slate-700 dark:text-slate-200 flex items-center justify-center transition active:scale-95 text-lg font-bold cursor-pointer" aria-label="Cerrar menú">
+        ✕
+      </button>
+    </div>
+
+    <!-- Drawer Links -->
+    <div class="overflow-y-auto p-4 sm:p-5 space-y-2 flex-1">
+      
+      <!-- Quick Status Pill -->
+      <div class="p-3.5 rounded-2xl bg-rose-50/80 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/40 flex items-center justify-between text-xs font-mono font-bold text-slate-700 dark:text-slate-200 mb-3">
+        <div class="flex items-center gap-1.5">
+          <span class="text-rose-600 dark:text-pink-400">🔥 Racha:</span>
+          <span id="drawer-streak-label">1 Día</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-rose-600 dark:text-pink-400">⏱️ Input:</span>
+          <span id="drawer-minutes-label">0m</span>
+        </div>
+      </div>
+
+      <a href="#catalog" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">🎬</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Cortometrajes</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">20 cortos con pistas de comprensión</div>
+        </div>
+      </a>
+
+      <a href="#minigames" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">🎮</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Minijuegos de Inglés</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">5 juegos con audio nativo y confeti</div>
+        </div>
+      </a>
+
+      <a href="#series" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">📺</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Series Animadas</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Capítulos y diálogos auténticos</div>
+        </div>
+      </a>
+
+      <a href="#podcasts" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">🎙️</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Audio Podcasts</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Inmersión auditiva sin pantallas</div>
+        </div>
+      </a>
+
+      <a href="#comics" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">📖</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Cómics &amp; Novelas Gráficas</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Lectura contextual con viñetas</div>
+        </div>
+      </a>
+
+      <a href="#tracker" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">📊</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Mi Diario de Input</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Registro de minutos y racha</div>
+        </div>
+      </a>
+
+      <a href="#roulette" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">🎲</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Ruleta Arcade</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Lanzador aleatorio sin fatiga</div>
+        </div>
+      </a>
+
+      <a href="#theory" onclick="closeDrawerMenu()" class="drawer-nav-item flex items-center gap-3.5 p-3.5 rounded-2xl hover:bg-rose-50 dark:hover:bg-rose-950/40 text-slate-800 dark:text-slate-100 font-bold transition">
+        <span class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-zinc-800 text-rose-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">💡</span>
+        <div class="flex-1">
+          <div class="text-sm font-heading font-black">Teoría de Stephen Krashen</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-normal">Las 5 hipótesis científicas</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-5 border-t border-slate-100 dark:border-zinc-800 space-y-3 bg-slate-50/80 dark:bg-zinc-800/80">
+      <button onclick="openAddVideoModal(); closeDrawerMenu();" class="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-heading font-black text-xs shadow-md shadow-rose-600/30 transition flex items-center justify-center gap-2 active:scale-95">
+        <span>➕ Agregar Video al Catálogo</span>
+      </button>
+      
+      <div class="text-[11px] font-mono text-center text-slate-500 dark:text-slate-400">
+        Investigación &amp; Desarrollo: <strong class="text-slate-800 dark:text-white">Ing. Anaili Hernández</strong> &amp; equipo
+      </div>
+    </div>
+
+  </aside>
 
   <!-- Core Application Scripts -->
   <script src="assets/js/toon-app.js"></script>
