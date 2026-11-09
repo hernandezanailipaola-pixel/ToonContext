@@ -1,5 +1,19 @@
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /ToonContext/
+    
+    # Si el archivo o directorio existe, servirlo directamente
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # De lo contrario redirigir a index.html (SPA Router)
+    RewriteRule ^(.*)$ index.html [L]
+</IfModule>
+
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
 </IfModule>

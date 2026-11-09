@@ -1,24 +1,25 @@
-*.log
-.DS_Store
+# Large binary archive comics (Exceeds GitHub 100MB limit)
+*.cbr
+*.CBR
+/public/comics_files/judas/*.cbr
+/resources/views/comic/judas/*.cbr
+
+# Node & dependencies
+/node_modules
+/vendor
+npm-debug.log
+yarn-error.log
+
+# Environment & Cache
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
+*.log
+.DS_Store
 Thumbs.db
+.phpunit.result.cache
+
+# IDEs
+/.idea
+/.vscode
+/.fleet

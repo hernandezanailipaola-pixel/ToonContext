@@ -6,11 +6,26 @@
     "firstVideoId": "HwAPLk_sQ3w",
     "cover": "https://img.youtube.com/vi/HwAPLk_sQ3w/maxresdefault.jpg",
     "banner": "https://img.youtube.com/vi/HwAPLk_sQ3w/maxresdefault.jpg",
-    "synopsis": "A human woman gets trapped in a surreal virtual reality circus alongside five other lost souls, now subject to the eccentric whims of an erratic AI ringmaster named Caine. High-speed, expressive English dialogue ideal for language acquisition.",
+    "synopsis": "A human woman gets trapped in a surreal virtual reality circus alongside five other lost souls, subject to the unpredictable whims of an eccentric AI ringmaster named Caine. Rapid-fire comedic dialogue, witty banter, and visual paradoxes.",
     "genre": "Dark Comedy / Sci-Fi Animation",
     "creator": "Glitch Productions / Gooseworx",
-    "episodesCount": "Full Season 1 Playlist",
-    "featured": true
+    "episodesCount": "Full Season 1",
+    "cefr_level": "B2 - Upper-Intermediate",
+    "featured": true,
+    "key_phrases": [
+      {
+        "phrase": "Hold on to your sanity",
+        "meaning": "Try to stay calm and rational despite chaos."
+      },
+      {
+        "phrase": "Welcome to the show!",
+        "meaning": "An energetic greeting to spectators."
+      },
+      {
+        "phrase": "Are you out of your mind?",
+        "meaning": "Are you acting completely crazy?"
+      }
+    ]
   },
   {
     "id": "murder-drones",
@@ -19,11 +34,26 @@
     "firstVideoId": "mImFz8mkaHo",
     "cover": "https://img.youtube.com/vi/mImFz8mkaHo/maxresdefault.jpg",
     "banner": "https://img.youtube.com/vi/mImFz8mkaHo/maxresdefault.jpg",
-    "synopsis": "In a post-apocalyptic frozen exoplanet, rogue worker drones fight for survival against lethal Murder Drones sent by their corporate creators. Fast-paced comedic action packed with colloquial American English dialogue.",
+    "synopsis": "On a frozen post-apocalyptic exoplanet, quirky worker drones struggle to survive against rogue Disassembly Drones sent by humanity. Action-comedy packed with colloquial teenage American phrasing.",
     "genre": "Sci-Fi / Action Comedy",
     "creator": "Glitch Productions / Liam Vickers",
-    "episodesCount": "Complete Series",
-    "featured": false
+    "episodesCount": "Complete 8-Episode Series",
+    "cefr_level": "B1-B2 - Intermediate",
+    "featured": false,
+    "key_phrases": [
+      {
+        "phrase": "Bite me!",
+        "meaning": "An informal slang expression of defiance or annoyance."
+      },
+      {
+        "phrase": "No hard feelings",
+        "meaning": "No lingering resentment or anger after a conflict."
+      },
+      {
+        "phrase": "I've got your back",
+        "meaning": "I will protect and support you."
+      }
+    ]
   },
   {
     "id": "helluva-boss",
@@ -32,10 +62,81 @@
     "firstVideoId": "el_PChGfJN8",
     "cover": "https://img.youtube.com/vi/el_PChGfJN8/maxresdefault.jpg",
     "banner": "https://img.youtube.com/vi/el_PChGfJN8/maxresdefault.jpg",
-    "synopsis": "Follow I.M.P, an immediate murder professional assassin company operating in the Underworld. Packed with theatrical songs, quick banter, and distinctive character voices for advanced native speech rhythm practice.",
+    "synopsis": "Follow I.M.P (Immediate Murder Professionals), an eccentric assassination agency operating in the Underworld. Musical Broadway-style songs and sharp comedic timing for native speech rhythm practice.",
     "genre": "Animated Musical Comedy",
     "creator": "SpindleHorse / Vivienne Medrano",
-    "episodesCount": "Season 1 & 2 Playlist",
-    "featured": false
+    "episodesCount": "Seasons 1 & 2",
+    "cefr_level": "B2-C1 - Advanced",
+    "featured": false,
+    "key_phrases": [
+      {
+        "phrase": "Down to business",
+        "meaning": "Start focusing on the real task at hand."
+      },
+      {
+        "phrase": "Piece of work",
+        "meaning": "An eccentric or difficult personality."
+      },
+      {
+        "phrase": "Give it your all",
+        "meaning": "Put 100% of your energy and effort."
+      }
+    ]
+  },
+  {
+    "id": "lackadaisy",
+    "title": "Lackadaisy (1920s Prohibition)",
+    "playlistId": "PLoB4n9nO4lI_z40Z52iJ6B6cZ0r-mG5Gf",
+    "firstVideoId": "vffu6FG4YP4",
+    "cover": "https://img.youtube.com/vi/vffu6FG4YP4/maxresdefault.jpg",
+    "banner": "https://img.youtube.com/vi/vffu6FG4YP4/maxresdefault.jpg",
+    "synopsis": "In 1927 St. Louis, Missouri, a band of anthropomorphic jazz-age cats run an underground speakeasy during the height of American Prohibition. Superb vocal performances and historical slang.",
+    "genre": "Period Drama / Action Comedy",
+    "creator": "Iron Circus Animation / Tracy Butler",
+    "episodesCount": "Pilot & Season 1",
+    "cefr_level": "B2 - Upper-Intermediate",
+    "featured": true,
+    "key_phrases": [
+      {
+        "phrase": "The bee's knees",
+        "meaning": "1920s slang for something exceptionally good or cool."
+      },
+      {
+        "phrase": "Keep your voice down",
+        "meaning": "Speak quietly so others don't overhear."
+      },
+      {
+        "phrase": "In the nick of time",
+        "meaning": "At the very last possible moment before disaster."
+      }
+    ]
+  },
+  {
+    "id": "over-garden-wall",
+    "title": "Over the Garden Wall (Mini-Episodes)",
+    "playlistId": "PLZ66w6lqL-28uS1-d6T3T5j8bI0",
+    "firstVideoId": "G97-q71w8eE",
+    "cover": "https://img.youtube.com/vi/G97-q71w8eE/hqdefault.jpg",
+    "banner": "https://img.youtube.com/vi/G97-q71w8eE/hqdefault.jpg",
+    "synopsis": "Two half-brothers, Wirt and Greg, find themselves lost in a strange forest adrift in time known as the Unknown. A lyrical, poetic masterpiece rich in autumn folklore and timeless spoken English.",
+    "genre": "Folk Gothic / Adventure",
+    "creator": "Cartoon Network / Patrick McHale",
+    "episodesCount": "Complete Anthology",
+    "cefr_level": "B1-B2 - Intermediate",
+    "featured": false,
+    "key_phrases": [
+      {
+        "phrase": "Lost in the woods",
+        "meaning": "Disoriented and unsure of which path to take."
+      },
+      {
+        "phrase": "And that's a rock fact!",
+        "meaning": "Greg's humorous assertion that a quirky statement is true."
+      },
+      {
+        "phrase": "Keep moving forward",
+        "meaning": "Continue despite fear or uncertainty."
+      }
+    ]
   }
 ]

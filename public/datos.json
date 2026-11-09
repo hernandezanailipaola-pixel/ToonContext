@@ -1,72 +1,1141 @@
 [
   {
     "id": 1,
-    "titulo": "Pip: El Perro Guía en Entrenamiento",
-    "nivel_i_mas_uno": "Principiante",
-    "duracion": "4 mins",
-    "descripcion_contexto": "Un tierno cachorro ingresa a una academia para perros guía. La animación ultra-expresiva transmite todo el significado sin necesidad de diálogos complejos, ideal para reducir el filtro afectivo.",
-    "url_thumbnail": "https://img.youtube.com/vi/07d2dXHYb94/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/07d2dXHYb94",
-    "tags": ["#SinAnsiedad", "#VisualStorytelling", "#A1-A2"]
+    "title": "Pip: Guide Dog in Training",
+    "title_es": "Pip: El Perro Guía en Entrenamiento",
+    "level": "Beginner",
+    "cefr": "A1-A2",
+    "duration": "4 mins",
+    "duration_minutes": 4,
+    "youtube_id": "07d2dXHYb94",
+    "embed_url": "https://www.youtube-nocookie.com/embed/07d2dXHYb94?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/07d2dXHYb94/hqdefault.jpg",
+    "description": "A small, spirited puppy enters a prestigious guide dog academy. Despite failing physical trials initially due to his size, his persistence, quick thinking, and empathy make him a true hero.",
+    "krashen_factor": "Zero affective filter: Ultra-expressive visual storytelling transmits complete narrative context without language anxiety.",
+    "tags": [
+      "#NoAnxiety",
+      "#VisualStorytelling",
+      "#Determination",
+      "#A1-A2"
+    ],
+    "category": "Inspirational",
+    "vocabulary": [
+      {
+        "word": "Guide dog",
+        "phonetic": "/ɡaɪd dɒɡ/",
+        "definition": "A dog specially trained to assist a visually impaired person.",
+        "example": "Pip graduated as a certified guide dog."
+      },
+      {
+        "word": "Obstacle",
+        "phonetic": "/ˈɒbstəkl/",
+        "definition": "A thing that blocks one's way or prevents progress.",
+        "example": "He jumped over every obstacle in the academy."
+      },
+      {
+        "word": "Overcome",
+        "phonetic": "/ˌoʊvərˈkʌm/",
+        "definition": "Succeed in dealing with a problem or difficulty.",
+        "example": "Never give up; you can overcome any hurdle."
+      },
+      {
+        "word": "Harness",
+        "phonetic": "/ˈhɑːrnɪs/",
+        "definition": "A set of straps fitted to an animal to control or guide it.",
+        "example": "The trainer placed the yellow harness on Pip."
+      },
+      {
+        "word": "Graduation",
+        "phonetic": "/ˌɡrædʒuˈeɪʃn/",
+        "definition": "The receiving or conferring of an academic degree or diploma.",
+        "example": "All proud puppies celebrated graduation day."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What main challenge did Pip face at the guide dog academy?",
+        "options": [
+          "He was too small for the training apparatus",
+          "He was afraid of humans",
+          "He refused to wear his vest",
+          "He fell asleep during tests"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pip was noticeably smaller than other dogs, making it difficult to reach levers and cross elevated ramps."
+      },
+      {
+        "question": "How did Pip prove he was ready to be a guide dog?",
+        "options": [
+          "By winning a race",
+          "By heroically saving a blind woman from a falling construction beam",
+          "By barking loudly at a burglar",
+          "By doing gymnastics"
+        ],
+        "correctIndex": 1,
+        "explanation": "He put his real-world training to test when he guided a woman safely away from falling debris."
+      }
+    ]
   },
   {
     "id": 2,
-    "titulo": "The Present - Historia Emotiva",
-    "nivel_i_mas_uno": "Principiante",
-    "duracion": "4 mins",
-    "descripcion_contexto": "Un joven aficionado a los videojuegos recibe un regalo inesperado de su madre. Las pistas del entorno y el lenguaje corporal proporcionan el contexto i+1 perfecto.",
-    "url_thumbnail": "https://img.youtube.com/vi/WjqiU5FgsYc/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/WjqiU5FgsYc",
-    "tags": ["#HistoriaEmotiva", "#ContextoClaro", "#A2"]
+    "title": "The Present",
+    "title_es": "El Regalo - Historia Emotiva",
+    "level": "Beginner",
+    "cefr": "A2",
+    "duration": "4 mins",
+    "duration_minutes": 4,
+    "youtube_id": "WjqiU5FgsYc",
+    "embed_url": "https://www.youtube-nocookie.com/embed/WjqiU5FgsYc?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/WjqiU5FgsYc/hqdefault.jpg",
+    "description": "A boy addicted to indoor videogames receives an unexpected puppy as a gift from his mother. At first, he rejects the dog for having three legs, until the pup's joyful resilience changes his perspective.",
+    "krashen_factor": "Rich environmental cues, expressive body language, and relatable household context decode deep emotional meaning effortlessly.",
+    "tags": [
+      "#EmotionalStory",
+      "#ClearContext",
+      "#Resilience",
+      "#A2"
+    ],
+    "category": "Emotional",
+    "vocabulary": [
+      {
+        "word": "Present",
+        "phonetic": "/ˈpreznt/",
+        "definition": "A thing given to someone as a gift.",
+        "example": "His mother placed a cardboard box present on the table."
+      },
+      {
+        "word": "Reluctant",
+        "phonetic": "/rɪˈlʌktənt/",
+        "definition": "Unwilling and hesitant; disinclined.",
+        "example": "He was reluctant to stop playing his shooter game."
+      },
+      {
+        "word": "Resilience",
+        "phonetic": "/rɪˈzɪliəns/",
+        "definition": "The capacity to recover quickly from difficulties.",
+        "example": "The puppy showed immense resilience playing with the red ball."
+      },
+      {
+        "word": "Crutches",
+        "phonetic": "/ˈkrʌtʃɪz/",
+        "definition": "Supports used as an aid in walking when injured.",
+        "example": "The boy stood up and reached for his crutches."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Why did the boy initially push the puppy away?",
+        "options": [
+          "The puppy was barking too loudly",
+          "The puppy only had three legs",
+          "The boy preferred cats",
+          "The box smelled bad"
+        ],
+        "correctIndex": 1,
+        "explanation": "The boy was frustrated seeing the puppy's physical disability because it mirrored his own condition."
+      },
+      {
+        "question": "What did the boy finally decide to do at the end of the short?",
+        "options": [
+          "Play video games until midnight",
+          "Go outside to play catch with the puppy",
+          "Return the dog to the shelter",
+          "Call his friend on the phone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Inspired by the puppy's cheerful spirit, the boy grabbed his crutches and went outside into the sunlight."
+      }
+    ]
   },
   {
     "id": 3,
-    "titulo": "Coin Operated - Rumbo a la Luna",
-    "nivel_i_mas_uno": "Principiante",
-    "duracion": "5 mins",
-    "descripcion_contexto": "Un niño con una gran pasión por el espacio encuentra un cohete de monedas. Un relato visual inspirador que refuerza la asimilación natural de vocabulario.",
-    "url_thumbnail": "https://img.youtube.com/vi/5L4DQfVIcdg/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/5L4DQfVIcdg",
-    "tags": ["#InmersiónVisual", "#Aventuras", "#A2"]
+    "title": "Coin Operated",
+    "title_es": "Coin Operated - Rumbo a la Luna",
+    "level": "Beginner",
+    "cefr": "A2",
+    "duration": "5 mins",
+    "duration_minutes": 5,
+    "youtube_id": "5L4DQfVIcdg",
+    "embed_url": "https://www.youtube-nocookie.com/embed/5L4DQfVIcdg?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/5L4DQfVIcdg/hqdefault.jpg",
+    "description": "In 1953, an adventurous young boy discovers a mechanical coin-operated rocket. He sets up a lemonade stand and works for decades to accumulate enough coins to reach outer space.",
+    "krashen_factor": "Repetitive situational visual motifs reinforce time progression and vocabulary retention subconsciously.",
+    "tags": [
+      "#SpaceDreams",
+      "#VisualImmersion",
+      "#Perseverance",
+      "#A2"
+    ],
+    "category": "Adventure",
+    "vocabulary": [
+      {
+        "word": "Coin-operated",
+        "phonetic": "/kɔɪn ˈɒpəreɪtɪd/",
+        "definition": "Working when coins are put in a slot.",
+        "example": "The mechanical rocket ride was coin-operated."
+      },
+      {
+        "word": "Lemonade stand",
+        "phonetic": "/ˌleməˈneɪd stænd/",
+        "definition": "A small stall selling lemonade, often run by children.",
+        "example": "He sold drinks at his curbside lemonade stand."
+      },
+      {
+        "word": "Lifelong",
+        "phonetic": "/ˈlaɪflɒŋ/",
+        "definition": "Lasting or remaining throughout a person's life.",
+        "example": "Traveling into the cosmos was his lifelong passion."
+      },
+      {
+        "word": "Launch pad",
+        "phonetic": "/lɔːntʃ pæd/",
+        "definition": "An area from which a rocket is sent into the sky.",
+        "example": "The sidewalk became his launch pad to the stars."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "How did the protagonist collect all his coins?",
+        "options": [
+          "He found a treasure chest",
+          "He sold lemonade continuously from childhood to old age",
+          "He won the lottery",
+          "He worked at a bank"
+        ],
+        "correctIndex": 1,
+        "explanation": "He persevered over decades running a lemonade stand through spring, summer, fall, and winter."
+      }
+    ]
   },
   {
     "id": 4,
-    "titulo": "Snack Attack - El Incidente de las Galletas",
-    "nivel_i_mas_uno": "Intermedio",
-    "duracion": "5 mins",
-    "descripcion_contexto": "Una anciana en una estación de tren protagoniza un divertido malentendido por un paquete de galletas. El humor visual directo elimina las barreras lingüísticas.",
-    "url_thumbnail": "https://img.youtube.com/vi/38y_1EWIE9I/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/38y_1EWIE9I",
-    "tags": ["#HumorSituacional", "#Expresivo", "#B1"]
+    "title": "Snack Attack",
+    "title_es": "Snack Attack - El Incidente de las Galletas",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "5 mins",
+    "duration_minutes": 5,
+    "youtube_id": "38y_1EWIE9I",
+    "embed_url": "https://www.youtube-nocookie.com/embed/38y_1EWIE9I?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/38y_1EWIE9I/hqdefault.jpg",
+    "description": "An elderly lady waiting for her train gets furious when a teenage boy on the station bench seemingly eats her cookies. An unforgettable comic twist about human assumptions.",
+    "krashen_factor": "Situational irony and visual comedy break down affective barriers, providing high-engagement input.",
+    "tags": [
+      "#SituationalHumor",
+      "#Expressive",
+      "#TwistEnding",
+      "#B1"
+    ],
+    "category": "Humor",
+    "vocabulary": [
+      {
+        "word": "Vending machine",
+        "phonetic": "/ˈvendɪŋ məʃiːn/",
+        "definition": "An automatic machine that sells snacks or drinks.",
+        "example": "She bought cookies from the station vending machine."
+      },
+      {
+        "word": "Misunderstanding",
+        "phonetic": "/ˌmɪsʌndərˈstændɪŋ/",
+        "definition": "A failure to understand something correctly.",
+        "example": "The entire argument was an innocent misunderstanding."
+      },
+      {
+        "word": "Generosity",
+        "phonetic": "/ˌdʒenəˈrɒsəti/",
+        "definition": "The quality of being kind and sharing with others.",
+        "example": "The teenager showed immense generosity splitting the last cookie."
+      },
+      {
+        "word": "Embarrassed",
+        "phonetic": "/ɪmˈbærəst/",
+        "definition": "Feeling awkward, self-conscious, or ashamed.",
+        "example": "She felt deeply embarrassed when discovering her own unopened pack."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Where were the lady's original cookies all along?",
+        "options": [
+          "Left inside the vending machine",
+          "Stolen by a pigeon",
+          "Safely inside her handbag",
+          "Eaten by the train conductor"
+        ],
+        "correctIndex": 2,
+        "explanation": "When she boarded the train and opened her purse for her glasses, her untouched pack was sitting right there."
+      }
+    ]
   },
   {
     "id": 5,
-    "titulo": "One Small Step - Hacia las Estrellas",
-    "nivel_i_mas_uno": "Intermedio",
-    "duracion": "8 mins",
-    "descripcion_contexto": "Luna sueña con ser astronauta con el apoyo incondicional de su padre. Animación de nivel Oscar que potencia la comprensión auditiva y emocional.",
-    "url_thumbnail": "https://img.youtube.com/vi/yWd4mzGqQYo/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/yWd4mzGqQYo",
-    "tags": ["#Inspiración", "#VínculoFamiliar", "#B1-B2"]
+    "title": "One Small Step",
+    "title_es": "One Small Step - Hacia las Estrellas",
+    "level": "Intermediate",
+    "cefr": "B1-B2",
+    "duration": "8 mins",
+    "duration_minutes": 8,
+    "youtube_id": "yWd4mzGqQYo",
+    "embed_url": "https://www.youtube-nocookie.com/embed/yWd4mzGqQYo?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/yWd4mzGqQYo/hqdefault.jpg",
+    "description": "Luna dreams of becoming a NASA astronaut. With the unconditional devotion of her father, a humble shoemaker, she navigates failure, grief, and rigorous training to walk among the stars.",
+    "krashen_factor": "Emotionally resonant story arcs deepen subconscious cognitive processing according to Krashen's input hypothesis.",
+    "tags": [
+      "#Inspirational",
+      "#FamilyBonds",
+      "#Astronaut",
+      "#B1-B2"
+    ],
+    "category": "Drama / Inspirational",
+    "vocabulary": [
+      {
+        "word": "Astronaut",
+        "phonetic": "/ˈæstrənɔːt/",
+        "definition": "A person trained to travel in a spacecraft.",
+        "example": "Luna wanted more than anything to become an astronaut."
+      },
+      {
+        "word": "Shoemaker",
+        "phonetic": "/ˈʃuːmeɪkər/",
+        "definition": "A person who makes and repairs footwear.",
+        "example": "Her father repaired leather boots in his quiet workshop."
+      },
+      {
+        "word": "Rejection letter",
+        "phonetic": "/rɪˈdʒekʃn ˈletər/",
+        "definition": "A formal notice stating one has not been accepted.",
+        "example": "She cried after opening the university rejection letter."
+      },
+      {
+        "word": "Dedication",
+        "phonetic": "/ˌdedɪˈkeɪʃn/",
+        "definition": "The quality of being committed to a task or purpose.",
+        "example": "Her relentless dedication earned her a spot in the space program."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What heirloom reminded Luna of her father's love during astronaut training?",
+        "options": [
+          "A golden watch",
+          "The hand-stitched astronaut boots he crafted for her",
+          "A postcard of Beijing",
+          "A model telescope"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her father's crafted boots stood as a symbol of sacrifice, giving her the strength to complete the physical test."
+      }
+    ]
   },
   {
     "id": 6,
-    "titulo": "In a Heartbeat - Romance Visual",
-    "nivel_i_mas_uno": "Intermedio",
-    "duracion": "4 mins",
-    "descripcion_contexto": "El corazón de un tímido chico salta de su pecho para perseguir a su enamorado. Narrativa dinámica y emotiva que reduce el filtro afectivo a cero.",
-    "url_thumbnail": "https://img.youtube.com/vi/2REkk9SCRn0/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/2REkk9SCRn0",
-    "tags": ["#SinAnsiedad", "#ContextoVisual", "#B1"]
+    "title": "In a Heartbeat",
+    "title_es": "In a Heartbeat - Romance Visual",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "4 mins",
+    "duration_minutes": 4,
+    "youtube_id": "2REkk9SCRn0",
+    "embed_url": "https://www.youtube-nocookie.com/embed/2REkk9SCRn0?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/2REkk9SCRn0/hqdefault.jpg",
+    "description": "A closeted boy's heart leaps out of his chest to chase after his classmate crush. Dynamic, colorful pacing that captures adolescent vulnerability with warmth.",
+    "krashen_factor": "Metaphorical physicalization of emotions lowers affective resistance, fostering organic language absorption.",
+    "tags": [
+      "#ZeroAnxiety",
+      "#HighContext",
+      "#YouthRomance",
+      "#B1"
+    ],
+    "category": "Romance / Comedy",
+    "vocabulary": [
+      {
+        "word": "Heartbeat",
+        "phonetic": "/ˈhɑːrtbiːt/",
+        "definition": "The pulsation of the heart.",
+        "example": "His rapid heartbeat echoed through the courtyard."
+      },
+      {
+        "word": "Secret crush",
+        "phonetic": "/ˈsiːkrət krʌʃ/",
+        "definition": "A strong feeling of romantic attraction kept private.",
+        "example": "He watched his secret crush read under the tree."
+      },
+      {
+        "word": "Courage",
+        "phonetic": "/ˈkɜːrɪdʒ/",
+        "definition": "The ability to do something that frightens one.",
+        "example": "It took tremendous courage to step forward in front of peers."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What happens when the heart is pulled in opposite directions?",
+        "options": [
+          "It explodes with glitter",
+          "It tears in half",
+          "It turns into a bird",
+          "It stops beating"
+        ],
+        "correctIndex": 1,
+        "explanation": "The heart breaks in two from fear of judgment, but Jonathan returns the missing half with compassion."
+      }
+    ]
   },
   {
     "id": 7,
-    "titulo": "Simon's Cat - La Hora de Comer (Cat Man Do)",
-    "nivel_i_mas_uno": "Avanzado",
-    "duracion": "4 mins",
-    "descripcion_contexto": "Un divertido gato hace lo imposible por despertar a su dueño. Ofrece modismos rápidos y lenguaje corporal cómico ideal para estudiantes avanzados que buscan input auténtico.",
-    "url_thumbnail": "https://img.youtube.com/vi/w0ffwDYo00Q/hqdefault.jpg",
-    "url_video_embed": "https://www.youtube.com/embed/w0ffwDYo00Q",
-    "tags": ["#HumorBritanico", "#InputAutentico", "#B2-C1"]
+    "title": "Simon's Cat: Feeding Time (Cat Man Do)",
+    "title_es": "Simon's Cat - La Hora de Comer",
+    "level": "Advanced",
+    "cefr": "B2-C1",
+    "duration": "4 mins",
+    "duration_minutes": 4,
+    "youtube_id": "w0ffwDYo00Q",
+    "embed_url": "https://www.youtube-nocookie.com/embed/w0ffwDYo00Q?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/w0ffwDYo00Q/hqdefault.jpg",
+    "description": "An insatiable cartoon cat employs increasingly outrageous methods to awaken his sleeping human owner for breakfast. Pure British slapstick timing.",
+    "krashen_factor": "Fast-paced comedic rhythm paired with authentic colloquial gestures creates rich subconscious listening contexts.",
+    "tags": [
+      "#BritishHumor",
+      "#AuthenticInput",
+      "#Cats",
+      "#B2-C1"
+    ],
+    "category": "Humor",
+    "vocabulary": [
+      {
+        "word": "Mischievous",
+        "phonetic": "/ˈmɪstʃɪvəs/",
+        "definition": "Causing or showing a fondness for causing trouble playfully.",
+        "example": "The mischievous feline tapped his owner's nose."
+      },
+      {
+        "word": "Pounce",
+        "phonetic": "/paʊns/",
+        "definition": "Spring or swoop suddenly so as to catch prey.",
+        "example": "The cat prepared to pounce on the bedsheet."
+      },
+      {
+        "word": "Slapstick",
+        "phonetic": "/ˈslæpstɪk/",
+        "definition": "Comedy based on clumsiness or mild physical mishaps.",
+        "example": "Classic British slapstick comedy needs no verbal subtitles."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What tool does Simon's cat finally wield to wake his owner?",
+        "options": [
+          "A loud whistle",
+          "A baseball bat",
+          "A glass of ice water",
+          "An electric razor"
+        ],
+        "correctIndex": 1,
+        "explanation": "In an outrageous cartoon climax, he brings a baseball bat to deliver the ultimate wake-up tap."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Hair Love (Sony Pictures Animation)",
+    "title_es": "Amor al Cabello - Ganador del Oscar",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "7 mins",
+    "duration_minutes": 7,
+    "youtube_id": "kNw8V_Fkw28",
+    "embed_url": "https://www.youtube-nocookie.com/embed/kNw8V_Fkw28?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/kNw8V_Fkw28/hqdefault.jpg",
+    "description": "An African American father steps up to do his daughter Zuri's natural hair for a momentous family reunion. Oscar-winning animated celebration of family love and self-confidence.",
+    "krashen_factor": "Clear colloquial tutorials and visual demonstrations clarify idiomatic daily English effortlessly.",
+    "tags": [
+      "#OscarWinner",
+      "#FamilyLove",
+      "#NaturalHair",
+      "#B1"
+    ],
+    "category": "Family / Drama",
+    "vocabulary": [
+      {
+        "word": "Hairstyle",
+        "phonetic": "/ˈheəstaɪl/",
+        "definition": "The way in which a person's hair is cut or arranged.",
+        "example": "Zuri chose a gorgeous afro puff hairstyle from the tablet."
+      },
+      {
+        "word": "Tutorial",
+        "phonetic": "/tjuːˈtɔːriəl/",
+        "definition": "A period of tuition or instruction giving practical guidance.",
+        "example": "Her mother recorded hairstyle video tutorials."
+      },
+      {
+        "word": "Crown",
+        "phonetic": "/kraʊn/",
+        "definition": "A circular ornamental headdress worn as a symbol of dignity.",
+        "example": "Natural hair is described as a glorious crown."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Why was styling Zuri's hair so vital on this particular morning?",
+        "options": [
+          "It was school picture day",
+          "Her mother was returning home from the hospital",
+          "She had a dance audition",
+          "It was her birthday party"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her mother had been undergoing cancer treatment, and the family was reuniting to welcome her home."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Kitbull (Pixar SparkShorts)",
+    "title_es": "Kitbull - Amistad Inesperada",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "9 mins",
+    "duration_minutes": 9,
+    "youtube_id": "AZS5cgybKcI",
+    "embed_url": "https://www.youtube-nocookie.com/embed/AZS5cgybKcI?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/AZS5cgybKcI/hqdefault.jpg",
+    "description": "An intensely fierce stray kitten living in a junk-filled alley develops a surprising bond with a gentle pitbull facing mistreatment. Hand-drawn 2D animation with deep emotional resonance.",
+    "krashen_factor": "Raw, expressive animal psychology creates immediate empathy and effortless contextual language acquisition.",
+    "tags": [
+      "#Pixar",
+      "#UnlikelyFriends",
+      "#AnimalRescue",
+      "#B1"
+    ],
+    "category": "Drama / Friendship",
+    "vocabulary": [
+      {
+        "word": "Stray",
+        "phonetic": "/streɪ/",
+        "definition": "A domestic animal found wandering with no owner.",
+        "example": "The little stray kitten took shelter beneath an old car."
+      },
+      {
+        "word": "Fierce",
+        "phonetic": "/fɪəs/",
+        "definition": "Having or displaying an intense or aggressive aggressiveness.",
+        "example": "Despite his small size, the kitten looked fiercely defensive."
+      },
+      {
+        "word": "Unlikely bond",
+        "phonetic": "/ʌnˈlaɪkli bɒnd/",
+        "definition": "A strong connection between two unexpected partners.",
+        "example": "They forged an unlikely bond of trust in the backyard."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What object did the kitten use as its safe fortress?",
+        "options": [
+          "An abandoned doghouse",
+          "A cardboard box",
+          "A hollow tree",
+          "A garbage can"
+        ],
+        "correctIndex": 1,
+        "explanation": "The kitten guarded its damp cardboard box fiercely until trusting the pitbull."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Ormie the Pig",
+    "title_es": "Ormie el Cerdo - La Misión de las Galletas",
+    "level": "Beginner",
+    "cefr": "A1",
+    "duration": "4 mins",
+    "duration_minutes": 4,
+    "youtube_id": "EUm-vAOmV1o",
+    "embed_url": "https://www.youtube-nocookie.com/embed/EUm-vAOmV1o?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/EUm-vAOmV1o/hqdefault.jpg",
+    "description": "Ormie is a lovable, persistent pig who wants a jar of chocolate chip cookies sitting just out of reach on top of the refrigerator. He tries trampolines, helicopters, parachutes, and physics.",
+    "krashen_factor": "Simple, slapstick objective with rapid physical problem-solving vocabulary that requires zero translation.",
+    "tags": [
+      "#Slapstick",
+      "#ActionVerbs",
+      "#Cookies",
+      "#A1"
+    ],
+    "category": "Comedy",
+    "vocabulary": [
+      {
+        "word": "Refrigerator",
+        "phonetic": "/rɪˈfrɪdʒəreɪtər/",
+        "definition": "An appliance that is artificially kept cool for food.",
+        "example": "The cookie jar sat high atop the white refrigerator."
+      },
+      {
+        "word": "Trampoline",
+        "phonetic": "/ˈtræmpəliːn/",
+        "definition": "A strong fabric sheet strapped to a frame for bouncing.",
+        "example": "Ormie bounced vigorously on a tiny trampoline."
+      },
+      {
+        "word": "Plunge",
+        "phonetic": "/plʌndʒ/",
+        "definition": "Jump or dive quickly and energetically.",
+        "example": "He took a fearless plunge from the kitchen ceiling."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Where was the cookie jar placed?",
+        "options": [
+          "Inside the locked pantry",
+          "On top of the refrigerator",
+          "Underneath the kitchen table",
+          "On the windowsill"
+        ],
+        "correctIndex": 1,
+        "explanation": "The cookies were teasingly placed right on top of the tall refrigerator."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "For the Birds (Pixar Classic)",
+    "title_es": "Para los Pájaros - Corto Clásico de Pixar",
+    "level": "Beginner",
+    "cefr": "A1",
+    "duration": "3 mins",
+    "duration_minutes": 3,
+    "youtube_id": "mo6fTU373tE",
+    "embed_url": "https://www.youtube-nocookie.com/embed/mo6fTU373tE?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/mo6fTU373tE/hqdefault.jpg",
+    "description": "A flock of tiny, haughty birds sitting on a telephone wire tease a friendly, goofy, large bird who lands in their midst. Oscar-winning comedic timing.",
+    "krashen_factor": "Pure physical comedy with expressive chirps that illustrate social group dynamics and cause-and-effect thinking.",
+    "tags": [
+      "#Pixar",
+      "#OscarWinner",
+      "#Snobbish",
+      "#A1"
+    ],
+    "category": "Comedy",
+    "vocabulary": [
+      {
+        "word": "Telephone wire",
+        "phonetic": "/ˈtelɪfəʊn waɪər/",
+        "definition": "A suspended cable used to transmit telecommunications.",
+        "example": "The tiny birds perched side-by-side on the telephone wire."
+      },
+      {
+        "word": "Mock",
+        "phonetic": "/mɒk/",
+        "definition": "Tease or laugh at in a scornful or contemptuous manner.",
+        "example": "They began to mock his funny honking chirp."
+      },
+      {
+        "word": "Feather",
+        "phonetic": "/ˈfeðər/",
+        "definition": "Any of the flat appendages growing from a bird's skin.",
+        "example": "The high tension slingshot stripped every single feather off them."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What happens when the big bird finally slips off the wire?",
+        "options": [
+          "The wire snaps and breaks",
+          "The small birds are catapulted into the air and lose their feathers",
+          "It starts raining",
+          "The big bird flies away angry"
+        ],
+        "correctIndex": 1,
+        "explanation": "The wire acts like an elastic slingshot, flipping the little birds into the clouds and shooting off their plumage."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Partly Cloudy (Pixar)",
+    "title_es": "Parcialmente Nublado - Corto Pixar",
+    "level": "Beginner",
+    "cefr": "A2",
+    "duration": "6 mins",
+    "duration_minutes": 6,
+    "youtube_id": "-a6Pe1ovKHg",
+    "embed_url": "https://www.youtube-nocookie.com/embed/-a6Pe1ovKHg?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/-a6Pe1ovKHg/hqdefault.jpg",
+    "description": "Clouds sculpt adorable newborn babies for loyal storks to deliver. But Gus, a stormy gray cloud, creates prickly alligators, biting rams, and electric eels.",
+    "krashen_factor": "Visual metaphors regarding loyalty and partnership reinforce adjective and action vocabulary effortlessly.",
+    "tags": [
+      "#Pixar",
+      "#Clouds",
+      "#Storks",
+      "#Loyalty",
+      "#A2"
+    ],
+    "category": "Fantasy / Comedy",
+    "vocabulary": [
+      {
+        "word": "Stork",
+        "phonetic": "/stɔːk/",
+        "definition": "A tall, long-legged bird known in folklore for delivering babies.",
+        "example": "The brave stork delivered dangerous creatures with love."
+      },
+      {
+        "word": "Porcupine",
+        "phonetic": "/ˈpɔːrkjupaɪn/",
+        "definition": "A small mammal covered with sharp protective quills.",
+        "example": "A spiky baby porcupine poked holes in the delivery cloth."
+      },
+      {
+        "word": "Thunderstorm",
+        "phonetic": "/ˈθʌndərstɔːrm/",
+        "definition": "A storm with thunder and lightning and typically heavy rain.",
+        "example": "Gus cried a thunderstorm when feeling rejected."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Why did the stork temporarily leave Gus to visit another cloud?",
+        "options": [
+          "To quit his delivery job",
+          "To get protective football gear to keep delivering safely",
+          "To steal a cute kitten",
+          "To take a vacation"
+        ],
+        "correctIndex": 1,
+        "explanation": "The stork proved his loyalty by returning wearing a helmet and body pads to survive Gus's spiky creations."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Presto (Pixar Magician Duel)",
+    "title_es": "Presto - El Mago y el Conejo",
+    "level": "Beginner",
+    "cefr": "A2",
+    "duration": "5 mins",
+    "duration_minutes": 5,
+    "youtube_id": "4mnyWlOls24",
+    "embed_url": "https://www.youtube-nocookie.com/embed/4mnyWlOls24?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/4mnyWlOls24/hqdefault.jpg",
+    "description": "A 19th-century stage magician forgets to feed his rabbit Alec before a packed performance. When he refuses to give Alec his carrot, the rabbit wages magical portal warfare on stage.",
+    "krashen_factor": "Fast-paced cause-and-effect slapstick anchors action verbs and theatrical vocabulary directly into sensory memory.",
+    "tags": [
+      "#Pixar",
+      "#MagicShow",
+      "#Carrot",
+      "#A2"
+    ],
+    "category": "Comedy",
+    "vocabulary": [
+      {
+        "word": "Magician",
+        "phonetic": "/məˈdʒɪʃn/",
+        "definition": "A person who performs magic tricks for entertainment.",
+        "example": "The dressed-up magician bowed politely to his audience."
+      },
+      {
+        "word": "Top hat",
+        "phonetic": "/ˈtɒp hæt/",
+        "definition": "A man's tall, cylindrical hat made of silk.",
+        "example": "The top hat was connected through an interdimensional portal."
+      },
+      {
+        "word": "Carrot",
+        "phonetic": "/ˈkærət/",
+        "definition": "A tapering orange-colored root eaten as a vegetable.",
+        "example": "Alec the rabbit refused to cooperate without his crunchy carrot."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What caused the backstage fight between Presto and his rabbit?",
+        "options": [
+          "Presto lost his magic wand",
+          "Presto withheld the rabbit's carrot dinner",
+          "The rabbit wanted to wear the tuxedo",
+          "The audience was booing"
+        ],
+        "correctIndex": 1,
+        "explanation": "Alec the rabbit was starving and demanded his carrot before stepping on stage."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "La Luna (Pixar Lyrical Fable)",
+    "title_es": "La Luna - Cuento Lírico de Pixar",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "7 mins",
+    "duration_minutes": 7,
+    "youtube_id": "k_k0N2o4Bw0",
+    "embed_url": "https://www.youtube-nocookie.com/embed/k_k0N2o4Bw0?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/k_k0N2o4Bw0/hqdefault.jpg",
+    "description": "A young Italian boy goes to sea with his father and grandfather for the first time. In the dead of night, they row out to sea and climb a ladder to sweep fallen glowing stars off the moon.",
+    "krashen_factor": "Lyrical poetic pacing gives learners time to absorb subtle environmental cues and cultural generational dialogue.",
+    "tags": [
+      "#Pixar",
+      "#MoonSweepers",
+      "#Generational",
+      "#B1"
+    ],
+    "category": "Fantasy / Poetry",
+    "vocabulary": [
+      {
+        "word": "Broom",
+        "phonetic": "/bruːm/",
+        "definition": "A cleaning tool consisting of stiff fibers attached to a handle.",
+        "example": "His grandfather insisted on using a coarse bristle broom."
+      },
+      {
+        "word": "Tradition",
+        "phonetic": "/trəˈdɪʃn/",
+        "definition": "The transmission of customs or beliefs from generation to generation.",
+        "example": "Sweeping the moon's surface was an ancient family tradition."
+      },
+      {
+        "word": "Luminescent",
+        "phonetic": "/ˌluːmɪˈnesnt/",
+        "definition": "Emitting light not caused by heat; glowing.",
+        "example": "Thousands of luminescent golden stars covered the lunar surface."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "How did the boy resolve the argument between his father and grandfather's tools?",
+        "options": [
+          "He threw both brooms into the ocean",
+          "He discovered his own unique tool: a rake",
+          "He refused to work",
+          "He went back to sleep in the boat"
+        ],
+        "correctIndex": 1,
+        "explanation": "He broke free from dogmatic arguments by carving his own path with a gardening rake."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "The Fantastic Flying Books of Mr. Morris Lessmore",
+    "title_es": "Los Fantásticos Libros Voladores del Sr. Morris Lessmore",
+    "level": "Advanced",
+    "cefr": "B2",
+    "duration": "15 mins",
+    "duration_minutes": 15,
+    "youtube_id": "Ad3CMri3hKs",
+    "embed_url": "https://www.youtube-nocookie.com/embed/Ad3CMri3hKs?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/Ad3CMri3hKs/hqdefault.jpg",
+    "description": "After a hurricane devastates his home and town, Morris Lessmore discovers a wondrous sanctuary where living books fly like birds. A cinematic allegory of reading, memory, and healing.",
+    "krashen_factor": "Deep metaphorical depth combined with literary vocabulary builds higher-order language comprehension.",
+    "tags": [
+      "#OscarWinner",
+      "#Literacy",
+      "#Books",
+      "#B2"
+    ],
+    "category": "Literary / Fantasy",
+    "vocabulary": [
+      {
+        "word": "Sanctuary",
+        "phonetic": "/ˈsæŋktʃuəri/",
+        "definition": "A place of refuge or safety.",
+        "example": "The old library became a vibrant sanctuary for lost wanderers."
+      },
+      {
+        "word": "Mend",
+        "phonetic": "/mend/",
+        "definition": "Repair something that is broken or damaged.",
+        "example": "He spent gentle hours mending loose pages and worn bindings."
+      },
+      {
+        "word": "Allegory",
+        "phonetic": "/ˈæləɡəri/",
+        "definition": "A story that can be interpreted to reveal a hidden moral meaning.",
+        "example": "The film functions as an allegory for the enduring human spirit."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What brings color back to the black-and-white townspeople?",
+        "options": [
+          "Drinking magic potion",
+          "Reading and sharing books from the library",
+          "Listening to radio broadcasts",
+          "Planting flower gardens"
+        ],
+        "correctIndex": 1,
+        "explanation": "Every time Morris hands a tailored book to a downtrodden citizen, vibrant color restores their world."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Bluey: Camping (Natural English Dialogue)",
+    "title_es": "Bluey: De Campamento - Lenguaje Auténtico",
+    "level": "Beginner",
+    "cefr": "A2",
+    "duration": "7 mins",
+    "duration_minutes": 7,
+    "youtube_id": "f0QkG2lB4oE",
+    "embed_url": "https://www.youtube-nocookie.com/embed/f0QkG2lB4oE?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/f0QkG2lB4oE/hqdefault.jpg",
+    "description": "While on a family bush camping trip, Bluey meets Jean-Luc, a French-speaking Labrador. Even though they do not speak the same language, they understand each other through play, context, and shared goals.",
+    "krashen_factor": "The ultimate live demonstration of Krashen's Comprehensible Input: human communication happens through shared message meaning!",
+    "tags": [
+      "#Bluey",
+      "#KrashenInAction",
+      "#NaturalLanguage",
+      "#A2"
+    ],
+    "category": "Family / Authentic Speech",
+    "vocabulary": [
+      {
+        "word": "Campsite",
+        "phonetic": "/ˈkæmpsaɪt/",
+        "definition": "A place used for camping, especially one equipped for holidaymakers.",
+        "example": "They pitched their tent at the scenic Australian campsite."
+      },
+      {
+        "word": "Language barrier",
+        "phonetic": "/ˈlæŋɡwɪdʒ ˈbæriər/",
+        "definition": "A barrier to communication between people who speak different languages.",
+        "example": "Their shared games effortlessly conquered the language barrier."
+      },
+      {
+        "word": "Reunion",
+        "phonetic": "/ˌriːˈjuːniən/",
+        "definition": "The act of coming together again after being separated.",
+        "example": "Years later, their teenage reunion under the tall tree warmed millions of hearts."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "How did Bluey and Jean-Luc cooperate without sharing English or French?",
+        "options": [
+          "Using a digital translation app",
+          "Through body language, pantomime, and shared objectives like hunting the wild pig",
+          "By writing letters in code",
+          "Their parents translated for them"
+        ],
+        "correctIndex": 1,
+        "explanation": "They proved Stephen Krashen's core thesis: message comprehension precedes grammatical language acquisition."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "We Bare Bears: Coffee Craze & Slang",
+    "title_es": "Escandalosos: La Fiebre del Café y Modismos",
+    "level": "Intermediate",
+    "cefr": "B1-B2",
+    "duration": "5 mins",
+    "duration_minutes": 5,
+    "youtube_id": "32uLwY404C4",
+    "embed_url": "https://www.youtube-nocookie.com/embed/32uLwY404C4?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/32uLwY404C4/hqdefault.jpg",
+    "description": "Grizz, Panda, and Ice Bear discover artisanal coffee shops in San Francisco. A treasure trove of colloquial American phrasing, ordering etiquette, and caffeine satire.",
+    "krashen_factor": "Contemporary American conversational speed and slang situated in everyday real-world social environments.",
+    "tags": [
+      "#WeBareBears",
+      "#AmericanSlang",
+      "#CoffeeShop",
+      "#B1-B2"
+    ],
+    "category": "Comedy / Slang",
+    "vocabulary": [
+      {
+        "word": "Barista",
+        "phonetic": "/bəˈriːstə/",
+        "definition": "A person who prepares and serves coffee in a café.",
+        "example": "The trendy barista steamed the oat milk latte to perfection."
+      },
+      {
+        "word": "Jitters",
+        "phonetic": "/ˈdʒɪtərz/",
+        "definition": "Feelings of extreme nervousness or caffeine-induced shaking.",
+        "example": "Three double espressos gave Panda serious caffeine jitters."
+      },
+      {
+        "word": "On the house",
+        "phonetic": "/ɒn ðə haʊs/",
+        "definition": "Provided free of charge by the establishment.",
+        "example": "The owner smiled and said: 'This pastry is on the house!'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What does the idiom 'on the house' mean in everyday spoken English?",
+        "options": [
+          "Served on the rooftop patio",
+          "Free of charge as a courtesy from the business",
+          "Extremely expensive",
+          "Available only to employees"
+        ],
+        "correctIndex": 1,
+        "explanation": "When a barista or bartender says 'it is on the house', it means you don't have to pay for it."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Crash Course: How and Why We Read",
+    "title_es": "Crash Course: Por Qué Leemos Historias",
+    "level": "Advanced",
+    "cefr": "B2-C1",
+    "duration": "12 mins",
+    "duration_minutes": 12,
+    "youtube_id": "MSYw502dJNY",
+    "embed_url": "https://www.youtube-nocookie.com/embed/MSYw502dJNY?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/MSYw502dJNY/hqdefault.jpg",
+    "description": "Best-selling author John Green presents an explosive, articulate exploration of why human brains need stories. Packed with rich rhetorical figures, academic pace, and clear articulation.",
+    "krashen_factor": "High-velocity authentic input that stretches advanced listeners to the i+1 frontier while sustaining high intrigue.",
+    "tags": [
+      "#JohnGreen",
+      "#Literature",
+      "#Empathy",
+      "#B2-C1"
+    ],
+    "category": "Education / Analysis",
+    "vocabulary": [
+      {
+        "word": "Empathy",
+        "phonetic": "/ˈempəθi/",
+        "definition": "The ability to understand and share the feelings of another.",
+        "example": "Reading trains our capacity for deep social empathy."
+      },
+      {
+        "word": "Protagonist",
+        "phonetic": "/prəˈtæɡənɪst/",
+        "definition": "The leading character or one of the major figures in a drama.",
+        "example": "We experience moral dilemmas through the eyes of the protagonist."
+      },
+      {
+        "word": "Articulate",
+        "phonetic": "/ɑːrˈtɪkjuleɪt/",
+        "definition": "Having or showing the ability to speak fluently and coherently.",
+        "example": "John Green is celebrated for his articulate presentation delivery."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "According to John Green, what is literature's unique cognitive power?",
+        "options": [
+          "Teaching grammar rules",
+          "Allowing us to live thousands of lives and building empathy",
+          "Passing university entrance exams",
+          "Memorizing dates and facts"
+        ],
+        "correctIndex": 1,
+        "explanation": "Stories allow us to step out of our isolated skulls and inhabit other perspectives with compassion."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "TED-Ed: Questions No One Knows the Answers To",
+    "title_es": "Preguntas Sin Respuesta en la Ciencia",
+    "level": "Advanced",
+    "cefr": "B2-C1",
+    "duration": "9 mins",
+    "duration_minutes": 9,
+    "youtube_id": "7BhpMjbht14",
+    "embed_url": "https://www.youtube-nocookie.com/embed/7BhpMjbht14?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/7BhpMjbht14/hqdefault.jpg",
+    "description": "A mind-expanding dive into the deepest mysteries of physics, consciousness, and the cosmos. Illustrated with crystal-clear visual analogies and formal English pronunciation.",
+    "krashen_factor": "Abstract scientific and philosophical concepts made comprehensible through cutting-edge animations and visual analogies.",
+    "tags": [
+      "#TEDEd",
+      "#Science",
+      "#Philosophy",
+      "#B2-C1"
+    ],
+    "category": "Science / Philosophy",
+    "vocabulary": [
+      {
+        "word": "Hypothesis",
+        "phonetic": "/haɪˈpɒθəsɪs/",
+        "definition": "A proposed explanation made as a starting point for investigation.",
+        "example": "Physicists debate whether the multiverse hypothesis can be tested."
+      },
+      {
+        "word": "Paradox",
+        "phonetic": "/ˈpærədɒks/",
+        "definition": "A statement that seems self-contradictory but expresses possible truth.",
+        "example": "The quantum measurement paradox continues to puzzle researchers."
+      },
+      {
+        "word": "Infinite",
+        "phonetic": "/ˈɪnfɪnət/",
+        "definition": "Limitless or endless in space, extent, or size.",
+        "example": "Is the observable universe embedded in an infinite sea of space?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What makes the questions in this talk so philosophically profound?",
+        "options": [
+          "They are written in Latin",
+          "Science has mathematical tools to formulate them, but definitive proof remains elusive",
+          "Nobody cares about them",
+          "They were solved in 1850"
+        ],
+        "correctIndex": 1,
+        "explanation": "They lie at the very edge of theoretical physics and epistemology."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "BBC 6-Minute English: The Power of Cartoons",
+    "title_es": "BBC 6 Minutos: El Poder de los Dibujos Animados",
+    "level": "Intermediate",
+    "cefr": "B1",
+    "duration": "6 mins",
+    "duration_minutes": 6,
+    "youtube_id": "aGg8i-XkQ44",
+    "embed_url": "https://www.youtube-nocookie.com/embed/aGg8i-XkQ44?autoplay=1",
+    "thumbnail": "https://img.youtube.com/vi/aGg8i-XkQ44/hqdefault.jpg",
+    "description": "British BBC Learning English broadcasters discuss why animated cartoons possess unmatched storytelling velocity. Features received pronunciation (RP) and lexical breakdowns.",
+    "krashen_factor": "Designed specifically for second language acquisition with natural conversational pacing and explicit lexical commentary.",
+    "tags": [
+      "#BBCLearning",
+      "#BritishEnglish",
+      "#Podcasts",
+      "#B1"
+    ],
+    "category": "Education / Linguistics",
+    "vocabulary": [
+      {
+        "word": "Universal",
+        "phonetic": "/ˌjuːnɪˈvɜːrsl/",
+        "definition": "Done by or affecting all people or things in the world.",
+        "example": "Facial expressions in animation constitute a universal visual language."
+      },
+      {
+        "word": "Caricature",
+        "phonetic": "/ˈkærɪkətʃʊər/",
+        "definition": "A depiction of a person using exaggerated features for comic effect.",
+        "example": "Cartoon caricatures amplify emotional cues for instant decoding."
+      },
+      {
+        "word": "Subconscious",
+        "phonetic": "/sʌbˈkɒnʃəs/",
+        "definition": "Existing in the mind without being immediately conscious of it.",
+        "example": "Comprehensible input builds grammar models subconsciously."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Why do cartoons communicate faster than live-action film across international cultures?",
+        "options": [
+          "Because they are always cheaper to produce",
+          "Because they strip away cultural clutter and emphasize universal body language",
+          "Because they use fewer colors",
+          "Because actors refuse to travel"
+        ],
+        "correctIndex": 1,
+        "explanation": "Caricature and animation distill core human emotions into instantly recognizable signs."
+      }
+    ]
   }
 ]

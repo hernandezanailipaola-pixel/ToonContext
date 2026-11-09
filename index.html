@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToonInput | Stress-Free English Acquisition (Stephen Krashen SLA)</title>
+  <meta name="description" content="Acquire English naturally through animated shorts, interactive mini-games, web series, podcasts and comprehensible input (i+1). Zero anxiety, 100% immersion.">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234f46e5'/><text x='50' y='66' font-family='sans-serif' font-size='45' font-weight='black' fill='%23ffffff' text-anchor='middle'>i+1</text></svg>">
+
+  <!-- Typography: Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/toon-custom.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-indigo-600 selection:text-white">
+
+  <!-- Top Ambient Glow Line -->
+  <div class="fixed top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-500 via-emerald-500 to-rose-500 z-50 pointer-events-none"></div>
+
+  <!-- ====================================================================
+       SITE FLOATING GLASS DOCK NAVIGATION
+       ==================================================================== -->
+  <header class="sticky top-2 z-40 px-3 sm:px-6 lg:px-8 py-2 transition-all">
+    <div class="max-w-7xl mx-auto glass-dock rounded-2xl sm:rounded-full px-4 sm:px-6 py-2.5 shadow-sm">
+      <div class="flex items-center justify-between gap-2 sm:gap-4">
+        
+        <!-- Brand Logo & Krashen i+1 Pill -->
+        <a href="#catalog" class="flex items-center gap-3 group focus:outline-none shrink-0">
+          <div class="relative w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-500 p-0.5 shadow-lg shadow-indigo-600/30 group-hover:scale-105 group-hover:shadow-indigo-600/40 transition-all duration-300 flex items-center justify-center text-white font-mono font-black text-sm">
+            i+1
+            <div class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white animate-pulse"></div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-heading text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
+                Toon<span class="text-indigo-600">Input</span>
+              </span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-indigo-50 text-indigo-700 border border-indigo-200/80 font-mono tracking-wider shadow-2xs">
+                SLA Lab
+              </span>
+            </div>
+            <p class="text-[10px] text-slate-500 font-semibold tracking-tight hidden md:block">
+              Stress-Free Comprehensible Input
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Tabs -->
+        <nav class="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 shadow-inner">
+          <a href="#catalog" data-nav-tab="catalog" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 bg-indigo-600 text-white shadow-md shadow-indigo-600/30">
+            <span>🎬 Shorts</span>
+          </a>
+          <a href="#minigames" data-nav-tab="minigames" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>🎮 Mini-Games</span>
+          </a>
+          <a href="#series" data-nav-tab="series" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>📺 Series</span>
+          </a>
+          <a href="#podcasts" data-nav-tab="podcasts" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>🎙️ Podcasts</span>
+          </a>
+          <a href="#comics" data-nav-tab="comics" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>📖 Comics</span>
+          </a>
+          <a href="#tracker" data-nav-tab="tracker" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>📊 Tracker</span>
+          </a>
+          <a href="#roulette" data-nav-tab="roulette" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>🎲 Roulette</span>
+          </a>
+          <a href="#theory" data-nav-tab="theory" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 hover:bg-white/80">
+            <span>💡 Theory</span>
+          </a>
+        </nav>
+
+        <!-- Right Quick Action -->
+        <div class="flex items-center gap-2">
+          <a href="#roulette" class="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-extrabold transition-all shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-indigo-600 animate-ping"></span>
+            <span>Give Me Input!</span>
+          </a>
+
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition focus:outline-none" aria-label="Toggle navigation menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-nav-menu" class="hidden lg:hidden pt-3 mt-3 border-t border-slate-200/80 space-y-1 text-xs font-bold">
+        <a href="#catalog" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">🎬 Video Catalog</a>
+        <a href="#minigames" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">🎮 Mini-Games Lab</a>
+        <a href="#series" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">📺 Web Series</a>
+        <a href="#podcasts" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">🎙️ Audio Podcasts</a>
+        <a href="#comics" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">📖 Comic Library</a>
+        <a href="#tracker" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">📊 Immersion Tracker</a>
+        <a href="#roulette" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">🎲 Input Roulette</a>
+        <a href="#theory" class="block px-3.5 py-2 rounded-xl text-slate-700 hover:bg-slate-100">💡 Krashen Theory</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       MAIN CONTENT CONTAINER (SPA VIEWS)
+       ==================================================================== -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-12">
+
+    <!-- ================================================================
+         VIEW 1: ANIMATED SHORTS CATALOG (#catalog)
+         ================================================================ -->
+    <section id="view-catalog" class="view-section space-y-10">
+      
+      <!-- Hero Header -->
+      <div class="text-center max-w-4xl mx-auto space-y-5 pt-2 pb-2">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold shadow-2xs">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+          </span>
+          <span>Krashen Second Language Acquisition (SLA) â€¢ Input i+1</span>
+        </div>
+        
+        <h1 class="font-heading text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          Acquire English Naturally with <span class="text-gradient-indigo">Animated Context</span>
+        </h1>
+        
+        <p class="text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
+          Eliminate mental translation and anxiety. High-expression animated shorts provide visual context clues that unlock natural English vocabulary and syntax directly into your subconscious.
+        </p>
+
+        <!-- Academic Research Credits -->
+        <div class="inline-flex items-center gap-2 text-[11px] font-mono text-slate-500 bg-white/90 px-4 py-1.5 rounded-full border border-slate-200 shadow-2xs">
+          <span class="text-indigo-600 font-bold">Curated by:</span>
+          <span>Ing. Anaili Hernández, Miliangel Morillo, Mauricio Guevara, Ana Urrutia &amp; Isamar Rodriguez</span>
+        </div>
+      </div>
+
+      <!-- Filter & Search Toolbar -->
+      <div class="glass-panel p-4 sm:p-5 rounded-3xl space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between gap-4">
+        <!-- Search input -->
+        <div class="relative w-full sm:w-84">
+          <input 
+            type="text" 
+            id="catalog-search" 
+            placeholder="Search title, context clue, or tag..." 
+            class="w-full bg-slate-50/90 border border-slate-200 focus:border-indigo-600 focus:bg-white text-slate-900 placeholder-slate-400 text-xs font-semibold rounded-2xl pl-10 pr-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-100 transition-all shadow-inner"
+          />
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <!-- Level Filter Buttons -->
+        <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto p-1 bg-slate-100/90 rounded-2xl border border-slate-200/90" id="level-filters">
+          <button data-level="All" class="level-btn px-4 py-2 rounded-xl text-xs font-extrabold bg-indigo-600 text-white shadow-md shadow-indigo-600/30 transition-all">All Shorts</button>
+          <button data-level="Beginner" class="level-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-white transition-all">Beginner (A1-A2)</button>
+          <button data-level="Intermediate" class="level-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-white transition-all">Intermediate (B1)</button>
+          <button data-level="Advanced" class="level-btn px-4 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-white transition-all">Advanced (B2-C1)</button>
+        </div>
+      </div>
+
+      <!-- Active Filter Counter & Quick Status -->
+      <div class="flex items-center justify-between text-xs text-slate-500 px-2 font-mono">
+        <span id="catalog-count-label" class="font-bold text-slate-700">Loading catalog items...</span>
+        <span class="text-indigo-600 font-extrabold">Instant i+1 Acquisition Active</span>
+      </div>
+
+      <!-- Video Grid Container -->
+      <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Renderizado dinámicamente mediante toon-app.js -->
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 2: THE 5 INTERACTIVE MINI-GAMES (#minigames)
+         ================================================================ -->
+    <section id="view-minigames" class="view-section hidden space-y-10">
+      
+      <!-- Games Header Banner -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 relative overflow-hidden text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-extrabold font-mono shadow-2xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span>Interactive English Game Lab â€¢ Gamified Acquisition</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Learn English by Playing: <br/>
+          <span class="text-gradient-emerald">Contextual Game Center</span>
+        </h2>
+
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
+          Strengthen vocabulary, colloquial idioms, natural syntax, and native auditory discrimination through fun interactive challenges with instant speech pronunciation feedback.
+        </p>
+
+        <!-- Mini-Games Navigation Bar -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-2">
+          <button onclick="switchMiniGame('match')" data-game="match" class="game-tab-btn px-4 py-2 rounded-2xl text-xs font-extrabold transition bg-indigo-600 text-white shadow-md">
+            🃏 1. Context Word Match
+          </button>
+          <button onclick="switchMiniGame('cloze')" data-game="cloze" class="game-tab-btn px-4 py-2 rounded-2xl text-xs font-extrabold transition text-slate-600 hover:bg-white">
+            💬 2. Dialogue Cloze
+          </button>
+          <button onclick="switchMiniGame('scramble')" data-game="scramble" class="game-tab-btn px-4 py-2 rounded-2xl text-xs font-extrabold transition text-slate-600 hover:bg-white">
+            🧩 3. Sentence Scramble
+          </button>
+          <button onclick="switchMiniGame('idiom')" data-game="idiom" class="game-tab-btn px-4 py-2 rounded-2xl text-xs font-extrabold transition text-slate-600 hover:bg-white">
+            🕵️ 4. Idiom Detective
+          </button>
+          <button onclick="switchMiniGame('audio')" data-game="audio" class="game-tab-btn px-4 py-2 rounded-2xl text-xs font-extrabold transition text-slate-600 hover:bg-white">
+            🎧 5. Listening &amp; Accent Lab
+          </button>
+        </div>
+      </div>
+
+      <!-- GAME 1: WORD MATCH CONTAINER -->
+      <div id="game-stage-match" class="game-stage space-y-6 max-w-4xl mx-auto">
+        <div class="flex items-center justify-between p-4 rounded-2xl bg-white border border-slate-200 text-xs font-mono font-bold text-slate-600">
+          <div>Score: <span id="match-score" class="text-indigo-600 text-base">0</span></div>
+          <div>Streak Combo: <span id="match-streak" class="text-emerald-600 text-base">x0</span></div>
+          <div>Pairs Matched: <span id="match-progress" class="text-purple-600 text-base">0/6</span></div>
+          <button onclick="startWordMatchGame()" class="px-3 py-1 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">↺ New Deck</button>
+        </div>
+        <p class="text-center text-xs text-slate-500 font-medium">Click a term and its matching context definition. Pairs speak native English when matched!</p>
+        <div id="match-cards-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5"></div>
+      </div>
+
+      <!-- GAME 2: DIALOGUE CLOZE CONTAINER -->
+      <div id="game-stage-cloze" class="game-stage hidden">
+        <div id="cloze-game-container"></div>
+      </div>
+
+      <!-- GAME 3: SENTENCE SCRAMBLE CONTAINER -->
+      <div id="game-stage-scramble" class="game-stage hidden">
+        <div id="scramble-game-container"></div>
+      </div>
+
+      <!-- GAME 4: IDIOM DETECTIVE CONTAINER -->
+      <div id="game-stage-idiom" class="game-stage hidden">
+        <div id="idiom-game-container"></div>
+      </div>
+
+      <!-- GAME 5: AUDIO DISCRIMINATION CONTAINER -->
+      <div id="game-stage-audio" class="game-stage hidden">
+        <div id="audio-game-container"></div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 3: WEB SERIES PLATFORM (#series)
+         ================================================================ -->
+    <section id="view-series" class="view-section hidden space-y-10">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 max-w-4xl mx-auto text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-xs font-extrabold font-mono shadow-2xs">
+          <span>📺 High-Immersion Narrative Series</span>
+        </span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Web Series &amp; <span class="text-gradient-indigo">Authentic Speech</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
+          Immerse yourself in full episodic animated series. Distinctive voice acting, modern colloquial humor, and dramatic arcs train listening stamina.
+        </p>
+      </div>
+
+      <div id="series-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 4: AUDIO PODCASTS HUB (#podcasts)
+         ================================================================ -->
+    <section id="view-podcasts" class="view-section hidden space-y-10">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 max-w-4xl mx-auto text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-extrabold font-mono shadow-2xs">
+          <span>🎙️ Auditory Immersion Podcasts</span>
+        </span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Audio Immersion &amp; <span class="text-gradient-emerald">Podcast Library</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
+          Train your ear to natural conversational cadences, diverse British and American accents, and articulate storytelling without reading strain.
+        </p>
+      </div>
+
+      <div id="podcasts-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 5: GRAPHIC NOVELS & COMICS (#comics)
+         ================================================================ -->
+    <section id="view-comics" class="view-section hidden space-y-10">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 max-w-4xl mx-auto text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-800 text-xs font-extrabold font-mono shadow-2xs">
+          <span>📖 Graphic Novels &amp; Comic Readers</span>
+        </span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Visual Reading &amp; <span class="text-gradient-rose">Graphic Novels</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
+          Absorb speech bubble dialogue, environmental sound effects, and colloquial phrasing with direct visual contextual reinforcement.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Comic 1: Shadowhunters -->
+        <div class="glass-panel rounded-3xl p-6 sm:p-8 space-y-5 card-interactive flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-xl text-xs font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">Graphic Novel</span>
+              <span class="text-xs font-mono font-bold text-slate-400">PDF Reader</span>
+            </div>
+            <h3 class="font-heading text-2xl font-black text-slate-900">Shadowhunters: City of Bones</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Clary Fray discovers the hidden magical world of the Shadowhunters in New York City. Urban fantasy dialogue packed with idiomatic modern English.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#UrbanFantasy</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#DialogueRich</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#B1-B2</span>
+            </div>
+          </div>
+          <button onclick="showToast('Abrir lector PDF en visor integrado')" class="w-full py-3 px-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-600/25 transition">
+            📖 Open Shadowhunters Reader
+          </button>
+        </div>
+
+        <!-- Comic 2: Judas -->
+        <div class="glass-panel rounded-3xl p-6 sm:p-8 space-y-5 card-interactive flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-xl text-xs font-mono font-bold bg-rose-50 text-rose-700 border border-rose-200">4-Issue Series</span>
+              <span class="text-xs font-mono font-bold text-slate-400">High-Res Gallery</span>
+            </div>
+            <h3 class="font-heading text-2xl font-black text-slate-900">Judas (BOOM! Studios)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              An acclaimed four-issue philosophical journey exploring redemption and destiny with poetic, lyrical English prose.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#GraphicDrama</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#LiteraryEnglish</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-mono font-bold">#B2</span>
+            </div>
+          </div>
+          <button onclick="showToast('Capítulo 1 listo para visualización')" class="w-full py-3 px-4 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold shadow-md shadow-rose-600/25 transition">
+            📖 Open Judas Reader
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 6: IMMERSION TRACKER & JOURNAL (#tracker)
+         ================================================================ -->
+    <section id="view-tracker" class="view-section hidden space-y-10">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-6 max-w-5xl mx-auto">
+        <div class="text-center space-y-3">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-extrabold font-mono shadow-2xs">
+            <span>📊 Subconscious Immersion Journal (LocalStorage)</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Track Your <span class="text-gradient-emerald">Input Minutes</span>
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-medium">
+            Language acquisition is a function of comprehensible input hours. Log your immersion sessions without tests, exams, or pressure.
+          </p>
+        </div>
+
+        <!-- 3 Core Metric Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+            <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">Immersion Time</span>
+            <div id="tracker-minutes-val" class="font-heading text-3xl sm:text-4xl font-black text-emerald-600">0 mins</div>
+            <p class="text-[10px] text-slate-500">Cumulative auditory input</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+            <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">Current Streak</span>
+            <div id="tracker-streak-val" class="font-heading text-3xl sm:text-4xl font-black text-amber-500">1 Day 🔥</div>
+            <p class="text-[10px] text-slate-500">Consecutive immersion days</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+            <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">Acquisition Stage</span>
+            <div id="tracker-level-badge" class="font-heading text-xl sm:text-2xl font-black text-indigo-600">Novice Explorer</div>
+            <p class="text-[10px] text-slate-500">Based on Krashen SLA hours</p>
+          </div>
+        </div>
+
+        <!-- Progress to Next Stage -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+            <span>Next Acquisition Milestone</span>
+            <span id="tracker-progress-pct" class="text-indigo-600">0%</span>
+          </div>
+          <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+            <div id="tracker-progress-fill" class="h-full bg-gradient-to-r from-indigo-500 to-emerald-500 rounded-full transition-all duration-700" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Quick Manual Log Action -->
+        <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3">
+          <span class="text-xs font-bold text-slate-700">Quick Log Independent Session:</span>
+          <div class="flex items-center gap-2">
+            <button onclick="manualLogMinutes(5)" class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 shadow-2xs transition">+5m</button>
+            <button onclick="manualLogMinutes(15)" class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 shadow-2xs transition">+15m</button>
+            <button onclick="manualLogMinutes(30)" class="px-3.5 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-xs font-bold text-indigo-700 shadow-2xs transition">+30m</button>
+            <button onclick="manualLogMinutes(60)" class="px-3.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-800 shadow-2xs transition">+1 Hour</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 7: INPUT ROULETTE (#roulette)
+         ================================================================ -->
+    <section id="view-roulette" class="view-section hidden space-y-10 text-center">
+      
+      <div class="max-w-2xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold shadow-2xs">
+          <span>🎲 Zero Decision Fatigue Algorithm</span>
+        </div>
+        <h2 class="font-heading text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          Eliminate Choice Anxiety: <br/>
+          <span class="text-gradient-indigo">Give Me Input!</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+          Don't spend 20 minutes choosing what to watch. Press the arcade button below and our immersion algorithm will pick the ideal animated short for you instantly!
+        </p>
+      </div>
+
+      <!-- Arcade Interactive Launcher Station -->
+      <div class="py-12 flex flex-col items-center justify-center relative">
+        <div class="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-indigo-500/10 animate-pulse-ring pointer-events-none"></div>
+        <div class="absolute w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-indigo-600/15 animate-ping pointer-events-none"></div>
+
+        <button 
+          id="big-roulette-btn" 
+          onclick="spinRoulette()" 
+          class="group relative z-10 inline-flex items-center gap-4 px-10 py-6 sm:px-14 sm:py-7 rounded-3xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-heading font-black text-2xl sm:text-3xl shadow-2xl shadow-indigo-600/40 hover:shadow-indigo-600/60 hover:scale-105 active:scale-95 transition-all duration-300 ring-8 ring-indigo-200/50 cursor-pointer">
+          <svg id="roulette-icon" class="w-8 h-8 group-hover:rotate-180 transition-transform duration-700 text-white drop-shadow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+          <span>Give me Input!</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         VIEW 8: STEPHEN KRASHEN SLA THEORY (#theory)
+         ================================================================ -->
+    <section id="view-theory" class="view-section hidden space-y-10">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 shadow-sm space-y-6 max-w-5xl mx-auto">
+        <div class="text-center space-y-4">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold font-mono shadow-2xs">
+            <span>💡 Second Language Acquisition (SLA) Framework</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Stephen Krashen's <br/>
+            <span class="text-gradient-indigo">5 Hypotheses of Language Acquisition</span>
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-medium">
+            Understand the scientific theory behind why watching cartoons with context acquires language up to 5x faster than grammar drill memorization.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+          <!-- Hypo 1 -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2.5 shadow-2xs">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-mono font-bold flex items-center justify-center text-xs">1</span>
+              <h4 class="font-heading text-lg font-black text-slate-900">The Input Hypothesis (i+1)</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              We acquire language only when we understand messages slightly above our current level (<code class="text-indigo-600 font-bold">i+1</code>). Visual cues bridge the gap without requiring conscious dictionary lookups.
+            </p>
+          </div>
+
+          <!-- Hypo 2 -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2.5 shadow-2xs">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-emerald-600 text-white font-mono font-bold flex items-center justify-center text-xs">2</span>
+              <h4 class="font-heading text-lg font-black text-slate-900">The Affective Filter Hypothesis</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Anxiety, self-consciousness, and stress raise an invisible barrier that blocks language from reaching the brain's acquisition device. Cartoons lower the filter to near zero.
+            </p>
+          </div>
+
+          <!-- Hypo 3 -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2.5 shadow-2xs">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-purple-600 text-white font-mono font-bold flex items-center justify-center text-xs">3</span>
+              <h4 class="font-heading text-lg font-black text-slate-900">Acquisition vs. Learning</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              <strong class="text-slate-800">Acquisition</strong> is a subconscious, natural process identical to how children acquire their first tongue. <strong class="text-slate-800">Learning</strong> is conscious memorization of grammar rules which does not produce fluent speech.
+            </p>
+          </div>
+
+          <!-- Hypo 4 -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-2.5 shadow-2xs">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-amber-600 text-white font-mono font-bold flex items-center justify-center text-xs">4</span>
+              <h4 class="font-heading text-lg font-black text-slate-900">The Natural Order Hypothesis</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+              Grammatical structures are acquired in an innate predictable order, independent of the order in which they are taught in textbooks. Natural immersion respects this innate order.
+            </p>
+          </div>
+
+          <!-- Hypo 5 -->
+          <div class="md:col-span-2 p-6 rounded-2xl bg-indigo-50 border border-indigo-200 space-y-2.5 shadow-2xs">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-indigo-700 text-white font-mono font-bold flex items-center justify-center text-xs">5</span>
+              <h4 class="font-heading text-lg font-black text-indigo-950">The Monitor Hypothesis</h4>
+            </div>
+            <p class="text-xs text-indigo-900 leading-relaxed font-medium">
+              Conscious learning only acts as an internal editor (monitor) to inspect self-produced speech. Over-monitoring causes hesitation, stuttering, and fear of speaking.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       GLOBAL VIDEO PLAYER MODAL & COMPREHENSION LAB
+       ==================================================================== -->
+  <div id="catalog-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md transition-all duration-300">
+    <div class="relative w-full max-w-4xl bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-4 px-6 border-b border-slate-100 bg-slate-50/80">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>
+          <h4 id="modal-title" class="font-heading text-base sm:text-lg font-black text-slate-900 line-clamp-1">Video Player</h4>
+        </div>
+        <button id="close-video-modal" class="p-1.5 rounded-full hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition" aria-label="Close video modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="overflow-y-auto p-4 sm:p-6 space-y-6">
+        
+        <!-- 16:9 YouTube Iframe Container -->
+        <div class="relative w-full pb-[56.25%] rounded-2xl overflow-hidden bg-black shadow-lg">
+          <iframe 
+            id="modal-video-iframe" 
+            class="absolute top-0 left-0 w-full h-full border-0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Description & Krashen Factor -->
+        <div class="space-y-2">
+          <p id="modal-desc" class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium"></p>
+          <div class="p-3.5 rounded-2xl bg-indigo-50/80 border border-indigo-200/90 text-xs text-indigo-900 leading-snug">
+            💡 <strong>Krashen SLA Factor:</strong> <span id="modal-krashen-factor"></span>
+          </div>
+        </div>
+
+        <!-- Vocabulary Acquisition Chips with Audio -->
+        <div class="space-y-3 pt-2 border-t border-slate-100">
+          <h5 class="font-heading text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🗣️ Key Context Vocabulary (Click 🔊 to hear pronunciation):</span>
+          </h5>
+          <div id="modal-vocab-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+        </div>
+
+        <!-- Interactive Comprehension Quiz -->
+        <div class="space-y-3 pt-2 border-t border-slate-100">
+          <h5 class="font-heading text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+            <span>📝 Comprehension Check (No Stress):</span>
+          </h5>
+          <div id="modal-quiz-container" class="space-y-3"></div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer Action -->
+      <div class="p-4 px-6 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
+        <button id="modal-mark-watched-btn" class="px-5 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs font-bold shadow-md shadow-emerald-600/30 transition">
+          Mark as Acquired (+5 mins)
+        </button>
+        <button onclick="closeVideoModal()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition">
+          Close Player
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="relative z-10 border-t border-slate-200 glass-panel py-8 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs font-black font-mono shadow-xs">
+          i+1
+        </div>
+        <div>
+          <span class="font-heading text-sm font-black text-slate-900">ToonInput</span>
+          <span class="block text-[11px] text-slate-500">Stress-Free Language Acquisition Based on Stephen Krashen's SLA Theory</span>
+        </div>
+      </div>
+
+      <div class="font-mono text-[11px] text-slate-500">
+        Research &amp; Development: <strong class="text-slate-800">Anaili Hernández</strong>, Miliangel Morillo, Mauricio Guevara, Ana Urrutia, Isamar Rodriguez
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Application Scripts -->
+  <script src="assets/js/toon-app.js"></script>
+</body>
+</html>

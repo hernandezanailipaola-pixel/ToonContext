@@ -1,27 +1,63 @@
 [
   {
+    "id": "bbc-6-minute-english",
+    "title": "BBC 6 Minute English",
+    "playlistId": "PLcetZ6gSk96-fZLGDnJjM_vC582_aHn8v",
+    "firstVideoId": "aGg8i-XkQ44",
+    "cover": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80",
+    "description": "Short, lively discussions between BBC presenters on current global events, everyday culture, and science. Includes vocabulary explanations and native British pronunciation.",
+    "genre": "Language Learning / British English",
+    "author": "BBC World Service / Learning English",
+    "episodesCount": "Weekly Audio Feed",
+    "cefr_level": "B1-B2",
+    "vocabNotes": [
+      "Colloquial",
+      "Etymology",
+      "Idiomatic",
+      "Contextual",
+      "Nuance",
+      "Pronunciation"
+    ]
+  },
+  {
     "id": "magnus-archives",
     "title": "The Magnus Archives",
     "playlistId": "PLSbuB1AyaJk8zTF3nE2KRxuixG_A5gBKJ",
     "firstVideoId": "AdiUHYacaRI",
     "cover": "https://img.youtube.com/vi/AdiUHYacaRI/hqdefault.jpg",
-    "description": "A weekly horror fiction podcast examining the archives of the Magnus Institute, an organization dedicated to researching the esoteric and the weird. Features crystal-clear British English enunciation ideal for auditory immersion.",
-    "genre": "Horror / Mystery Drama",
+    "description": "A weekly horror fiction podcast examining the archives of the Magnus Institute, dedicated to researching esoteric paranormal phenomena. Crystal-clear British enunciation.",
+    "genre": "Horror / Mystery Audio Drama",
     "author": "Rusty Quill / Jonathan Sims",
-    "episodesCount": "Full Audio Series",
-    "vocabNotes": ["Statement", "Archivist", "Esoteric", "Subterranean", "Paranormal", "Recordings"]
+    "episodesCount": "Full Audio Series (200 Episodes)",
+    "cefr_level": "B2-C1",
+    "vocabNotes": [
+      "Statement",
+      "Archivist",
+      "Esoteric",
+      "Subterranean",
+      "Paranormal",
+      "Recordings"
+    ]
   },
   {
     "id": "crash-course-literature",
-    "title": "Crash Course Literature & Stories",
+    "title": "Crash Course: Literature & Stories",
     "playlistId": "PL8dPuuaLjXtMwmepBjTSG593eG7ObzO7s",
     "firstVideoId": "MSYw502dJNY",
     "cover": "https://img.youtube.com/vi/MSYw502dJNY/hqdefault.jpg",
-    "description": "Engaging, high-paced explorations of world-famous stories, metaphors, and character journeys. Delivered with lively, articulate American English pronunciation to build rapid language acquisition.",
+    "description": "High-paced, witty explorations of world-famous stories, metaphors, and character journeys by author John Green. Delivered with articulate American pronunciation.",
     "genre": "Literature / Story Analysis",
     "author": "CrashCourse / John Green",
-    "episodesCount": "Complete Audio/Video Series",
-    "vocabNotes": ["Metaphor", "Narrative", "Protagonist", "Symbolism", "Perspective", "Catharsis"]
+    "episodesCount": "Complete Series",
+    "cefr_level": "B2-C1",
+    "vocabNotes": [
+      "Metaphor",
+      "Narrative",
+      "Protagonist",
+      "Symbolism",
+      "Perspective",
+      "Catharsis"
+    ]
   },
   {
     "id": "ted-talks-daily",
@@ -29,10 +65,38 @@
     "playlistId": "PLOGi5-fAu8bEU70_3xVngEaJ7h1V9f_vW",
     "firstVideoId": "8S0FDjFBj8o",
     "cover": "https://img.youtube.com/vi/8S0FDjFBj8o/hqdefault.jpg",
-    "description": "Thought-provoking ideas on every subject imaginable, spoken by world-class scientists, innovators, and thinkers in clear, highly articulate international English.",
+    "description": "Thought-provoking ideas on every subject imaginable, spoken by world-class scientists, innovators, and thinkers in articulate international English.",
     "genre": "Education / Science & Culture",
     "author": "TED Audio Collective",
-    "episodesCount": "Daily Audio Feed",
-    "vocabNotes": ["Innovation", "Neuroscience", "Perspective", "Hypothesis", "Breakthrough", "Cognition"]
+    "episodesCount": "Daily Audio Stream",
+    "cefr_level": "B2-C1",
+    "vocabNotes": [
+      "Innovation",
+      "Neuroscience",
+      "Perspective",
+      "Hypothesis",
+      "Breakthrough",
+      "Cognition"
+    ]
+  },
+  {
+    "id": "luke-english-podcast",
+    "title": "Luke's English Podcast (Stand-Up Teacher)",
+    "playlistId": "PLcetZ6gSk968qM7u9A9kXyN5q5eKk8v1o",
+    "firstVideoId": "pP44EPBMbHM",
+    "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
+    "description": "Award-winning podcast by British teacher and stand-up comedian Luke Thompson. Warm, funny, unscripted natural conversations that teach real English.",
+    "genre": "Comedy / Language Acquisition",
+    "author": "Luke Thompson, DELTA",
+    "episodesCount": "800+ Episodes",
+    "cefr_level": "A2-B2",
+    "vocabNotes": [
+      "Banter",
+      "Punchline",
+      "Natural Speech",
+      "Filler Words",
+      "Chuckle",
+      "Intonation"
+    ]
   }
 ]

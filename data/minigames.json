@@ -1,0 +1,388 @@
+{
+  "word_match": [
+    {
+      "id": 1,
+      "term": "Guide dog",
+      "definition": "A trained dog that assists a visually impaired person",
+      "level": "A1-A2",
+      "icon": "🐕"
+    },
+    {
+      "id": 2,
+      "term": "Obstacle",
+      "definition": "Something that blocks your path or makes progress difficult",
+      "level": "A2",
+      "icon": "🚧"
+    },
+    {
+      "id": 3,
+      "term": "Reluctant",
+      "definition": "Unwilling and hesitant to do something",
+      "level": "B1",
+      "icon": "✋"
+    },
+    {
+      "id": 4,
+      "term": "Coin-operated",
+      "definition": "A machine that functions when you insert money coins",
+      "level": "A2",
+      "icon": "🪙"
+    },
+    {
+      "id": 5,
+      "term": "Misunderstanding",
+      "definition": "A failure to understand a situation or person correctly",
+      "level": "B1",
+      "icon": "❓"
+    },
+    {
+      "id": 6,
+      "term": "Astronaut",
+      "definition": "A person trained to travel and work in outer space",
+      "level": "A2-B1",
+      "icon": "🚀"
+    },
+    {
+      "id": 7,
+      "term": "Heartbeat",
+      "definition": "The pulsating rhythm of the heart pumping blood",
+      "level": "A1-A2",
+      "icon": "💓"
+    },
+    {
+      "id": 8,
+      "term": "Mischievous",
+      "definition": "Playfully causing harmless trouble or teasing",
+      "level": "B2",
+      "icon": "😼"
+    },
+    {
+      "id": 9,
+      "term": "Empathy",
+      "definition": "The ability to understand and share the feelings of others",
+      "level": "B2",
+      "icon": "🤝"
+    },
+    {
+      "id": 10,
+      "term": "Language barrier",
+      "definition": "Difficulty in communication caused by speaking different tongues",
+      "level": "B1",
+      "icon": "🗣️"
+    },
+    {
+      "id": 11,
+      "term": "On the house",
+      "definition": "Free of charge as a courtesy from the café or restaurant",
+      "level": "B1-B2",
+      "icon": "☕"
+    },
+    {
+      "id": 12,
+      "term": "Subconscious",
+      "definition": "Operating in the mind below the level of conscious awareness",
+      "level": "B2-C1",
+      "icon": "🧠"
+    }
+  ],
+  "dialogue_cloze": [
+    {
+      "id": 1,
+      "scene": "The Present (Boy and Mom)",
+      "speaker": "Mom:",
+      "sentence": "I brought you a surprise! Open the box, it's a special _____ for you.",
+      "blank_answer": "present",
+      "options": [
+        "present",
+        "homework",
+        "pillow",
+        "videogame"
+      ],
+      "hint": "Something given with love to celebrate or encourage someone.",
+      "translation_es": "¡Te traje una sorpresa! Abre la caja, es un regalo especial para ti."
+    },
+    {
+      "id": 2,
+      "scene": "Coin Operated (Little Boy's Lemonade Stand)",
+      "speaker": "Boy:",
+      "sentence": "Fresh cold lemonade! Only five cents per glass to fund my _____ flight!",
+      "blank_answer": "rocket",
+      "options": [
+        "rocket",
+        "submarine",
+        "bicycle",
+        "shopping"
+      ],
+      "hint": "A vehicle used to travel past Earth's atmosphere into space.",
+      "translation_es": "¡Limonada fresca! ¡Solo cinco centavos por vaso para financiar mi vuelo en cohete!"
+    },
+    {
+      "id": 3,
+      "scene": "Snack Attack (Train Station Bench)",
+      "speaker": "Elderly Lady:",
+      "sentence": "Excuse me young man, those are _____ my cookies you are eating!",
+      "blank_answer": "actually",
+      "options": [
+        "actually",
+        "never",
+        "quietly",
+        "sometimes"
+      ],
+      "hint": "Used to emphasize the truth or contrast with a misconception.",
+      "translation_es": "¡Disculpe joven, esas son en realidad mis galletas las que se está comiendo!"
+    },
+    {
+      "id": 4,
+      "scene": "Bluey: Camping (Bluey & Jean-Luc)",
+      "speaker": "Bluey:",
+      "sentence": "Even if we don't speak the same words, we can still be best _____ !",
+      "blank_answer": "friends",
+      "options": [
+        "friends",
+        "strangers",
+        "teachers",
+        "shadows"
+      ],
+      "hint": "People who share affection, trust, and companionship.",
+      "translation_es": "¡Incluso si no hablamos las mismas palabras, aún podemos ser los mejores amigos!"
+    },
+    {
+      "id": 5,
+      "scene": "We Bare Bears (Ordering Coffee)",
+      "speaker": "Barista:",
+      "sentence": "Here is your triple espresso. Don't worry about the tip, this one is on the _____ !",
+      "blank_answer": "house",
+      "options": [
+        "house",
+        "street",
+        "table",
+        "ground"
+      ],
+      "hint": "Famous idiom meaning the establishment is paying for it.",
+      "translation_es": "Aquí tiene su espresso triple. No se preocupe por la propina, ¡esta cortesía va por la casa!"
+    },
+    {
+      "id": 6,
+      "scene": "Kitbull (Rescue Day)",
+      "speaker": "Rescuer:",
+      "sentence": "Come here little buddy, you are completely _____ now in our warm home.",
+      "blank_answer": "safe",
+      "options": [
+        "safe",
+        "loud",
+        "heavy",
+        "spiky"
+      ],
+      "hint": "Protected from or not exposed to danger or harm.",
+      "translation_es": "Ven aquí pequeño amiguito, estás completamente a salvo ahora en nuestro cálido hogar."
+    }
+  ],
+  "sentence_scramble": [
+    {
+      "id": 1,
+      "words": [
+        "We",
+        "acquire",
+        "language",
+        "when",
+        "we",
+        "understand",
+        "messages"
+      ],
+      "solution": "We acquire language when we understand messages",
+      "translation_es": "Adquirimos el lenguaje cuando comprendemos los mensajes (Principio de Stephen Krashen).",
+      "level": "Core Krashen SLA"
+    },
+    {
+      "id": 2,
+      "words": [
+        "What",
+        "on",
+        "earth",
+        "are",
+        "you",
+        "doing",
+        "here"
+      ],
+      "solution": "What on earth are you doing here",
+      "translation_es": "¿Qué demonios estás haciendo aquí? (Expresión coloquial común en animaciones).",
+      "level": "Everyday Slang"
+    },
+    {
+      "id": 3,
+      "words": [
+        "I",
+        "have",
+        "been",
+        "looking",
+        "for",
+        "you",
+        "all",
+        "morning"
+      ],
+      "solution": "I have been looking for you all morning",
+      "translation_es": "Te he estado buscando toda la mañana.",
+      "level": "Present Perfect Continuous"
+    },
+    {
+      "id": 4,
+      "words": [
+        "Don't",
+        "worry",
+        "everything",
+        "is",
+        "going",
+        "to",
+        "be",
+        "fine"
+      ],
+      "solution": "Don't worry everything is going to be fine",
+      "translation_es": "No te preocupes, todo va a salir bien.",
+      "level": "Conversational"
+    },
+    {
+      "id": 5,
+      "words": [
+        "The",
+        "more",
+        "you",
+        "listen",
+        "the",
+        "easier",
+        "it",
+        "gets"
+      ],
+      "solution": "The more you listen the easier it gets",
+      "translation_es": "Cuanto más escuchas, más fácil se vuelve (Input Comprensible).",
+      "level": "Double Comparative"
+    }
+  ],
+  "idiom_detective": [
+    {
+      "id": 1,
+      "idiom": "Piece of cake",
+      "icon": "🍰",
+      "meaning": "Something that is very easy and simple to do.",
+      "cartoon_example": "Don't stress about the pilot test; for Pip, it will be a piece of cake!",
+      "options": [
+        "Something very easy",
+        "A delicious dessert",
+        "A very difficult task",
+        "A recipe book"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": 2,
+      "idiom": "Break a leg",
+      "icon": "🎭",
+      "meaning": "Good luck! (Used traditionally in theater and stage performances).",
+      "cartoon_example": "Before the magician stepped on stage in Presto, his assistant whispered: 'Break a leg!'",
+      "options": [
+        "Have an accident",
+        "Good luck in your performance",
+        "Sit down immediately",
+        "Cancel the show"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": 3,
+      "idiom": "Spill the beans",
+      "icon": "🫘",
+      "meaning": "To disclose a secret prematurely or by accident.",
+      "cartoon_example": "We planned a surprise birthday party for Grizz, but Panda spilled the beans!",
+      "options": [
+        "Cook dinner",
+        "Make a mess in the kitchen",
+        "Reveal a secret",
+        "Drop your grocery bag"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": 4,
+      "idiom": "Under the weather",
+      "icon": "🌧️",
+      "meaning": "Feeling slightly ill, tired, or unwell.",
+      "cartoon_example": "Gus the little raincloud felt under the weather when his stork partner went away.",
+      "options": [
+        "Standing in the rain",
+        "Feeling slightly sick or unwell",
+        "Predicting storms",
+        "Traveling by airplane"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": 5,
+      "idiom": "Once in a blue moon",
+      "icon": "🌕",
+      "meaning": "Happening very rarely or almost never.",
+      "cartoon_example": "A short animated film wins an Oscar only once in a blue moon.",
+      "options": [
+        "Every single night",
+        "Very rarely",
+        "During a solar eclipse",
+        "On Monday mornings"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": 6,
+      "idiom": "Hit the nail on the head",
+      "icon": "🔨",
+      "meaning": "To describe exactly what is causing a situation or problem.",
+      "cartoon_example": "Stephen Krashen hit the nail on the head when he said language is acquired, not drilled.",
+      "options": [
+        "Cause a construction injury",
+        "Get something exactly right",
+        "Repair a wooden chair",
+        "Argue loudly"
+      ],
+      "correctIndex": 1
+    }
+  ],
+  "audio_listening": [
+    {
+      "id": 1,
+      "target_word": "Ship",
+      "phonetic": "/ʃɪp/",
+      "pair_word": "Sheep",
+      "pair_phonetic": "/ʃiːp/",
+      "vowel_sound": "Short vowel /ɪ/ vs Long vowel /iː/",
+      "sentence": "The large ship sailed across the ocean.",
+      "hint": "Listen carefully to the vowel length: is it a short crisp sound or an elongated sound?"
+    },
+    {
+      "id": 2,
+      "target_word": "Three",
+      "phonetic": "/θriː/",
+      "pair_word": "Tree",
+      "pair_phonetic": "/triː/",
+      "vowel_sound": "Voiceless dental fricative /θ/ vs Alveolar plosive /t/",
+      "sentence": "He counted one, two, and three.",
+      "hint": "Listen for the tongue-between-teeth soft 'th' sound."
+    },
+    {
+      "id": 3,
+      "target_word": "Thought",
+      "phonetic": "/θɔːt/",
+      "pair_word": "Though",
+      "pair_phonetic": "/ðoʊ/",
+      "vowel_sound": "Final 't' sound vs Diphthong ending /oʊ/",
+      "sentence": "She thought about her childhood dream.",
+      "hint": "Listen for the crisp final 't' consonant."
+    },
+    {
+      "id": 4,
+      "target_word": "Can't",
+      "phonetic": "/kænt/ (US) or /kɑːnt/ (UK)",
+      "pair_word": "Can",
+      "pair_phonetic": "/kæn/",
+      "vowel_sound": "Negative glottal stop /t/ with stress",
+      "sentence": "I can't believe what happened today.",
+      "hint": "Negatives in English are spoken with heavier stress and pitch drop."
+    }
+  ]
+}
